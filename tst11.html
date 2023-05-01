@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maqueta de imágenes</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+
+<section class="iconosBotones">
+    <div class="contenedorBotones">
+        <img src="images/ie.png" class="Imagen1">
+        <img src="images/ce.png" class="Imagen2">
+        <img src="images/tf.png" class="Imagen3">
+        <img src="images/eb.png" class="Imagen4">
+        <img src="images/pt.png" class="Imagen5">
+    </div>
+    <div class="white" id="contenido-oculto0">
+        <p class="teOferecemos1">Te ofrecemos un lugar para...</p>
+        <p class="mejorar">Mejorar el día a día de más personas</p>
+        <div class="lineVertical"></div>
+    </div>
+
+    <div class="blue" id="contenido-oculto1">
+        <div class="contenedorIzquierdo">
+            <p style="color: #FFFFFF;" class="teOferecemos2">Te ofrecemos un lugar para...</p>
+            <p class="innovar">INNOVAR Y EVOLUCIONAR</p>
+        </div>
+        <div class="contenedorDerecho">
+            <img class="iconIe" src="images/IconIe.png" alt="">
+            <p class="hacemos">Hacemos más simple la vida de nuestros clientes, nos anticipamos a sus necesidades y
+                creamos soluciones disruptivas.</p>
+            <p class="tenemos">Tenemos un gran desafío, transformar la banca y la forma de hacer negocios.</p>
+        </div>
+    </div>
+    <div class="pink" id="contenido-oculto2">
+        <div class="contenedorIzquierdo">
+            <p style="color: #FFFFFF;" class="teOferecemos2">Te ofrecemos un lugar para...</p>
+            <p class="innovar">INNOVAR Y EVOLUCIONAR</p>
+        </div>
+        <div class="contenedorDerecho">
+            <img class="iconIe" src="images/IconIe.png" alt="">
+            <p class="hacemos">Creemos en las fortalezas de los equipos para diseñar experiencias increíbles.</p>
+            <p class="tenemos">El trabajo colaborativo con equipos diversos nos nutre, nos hace crecer y nos potencia.
+            </p>
+        </div>
+    </div>
+    <div class="orange" id="contenido-oculto3">
+        <div class="contenedorIzquierdo">
+            <p style="color: #FFFFFF;" class="teOferecemos2">Te ofrecemos un lugar para...</p>
+            <p class="innovar">TRABAJAR CON FLEXIBILIDAD</p>
+        </div>
+        <div class="contenedorDerecho">
+            <img class="iconIe" src="images/IconTe.png" alt="">
+            <p class="hacemos">Cuando diseñamos nuestras modalidades de trabajo pensamos en los clientes y nuestros
+                colaboradores, en generar las mejores experiencias.</p>
+            <p class="tenemos">Pensamos en formas y espacios de trabajo que potencien la creación de soluciones de valor
+                y nos hagan ser más eficientes.</p>
+        </div>
+    </div>
+    <div class="violet" id="contenido-oculto4">
+        <div class="contenedorIzquierdo">
+            <p style="color: #FFFFFF;" class="teOferecemos2">Te ofrecemos un lugar para...</p>
+            <p class="innovar">ESTAR BIEN</p>
+        </div>
+        <div class="contenedorDerecho">
+            <img class="iconIe" src="images/IconEb.png" alt="">
+            <p class="hacemos">Necesitamos de tu mejor versión para poder construir un negocio centrado 100% en
+                nuestros clientes.</p>
+            <p class="tenemos">Buscamos espacios de conexión y cuidamos tu bienestar. Construimos una cultura que
+                reconoce y celebra los hitos que logramos.</p>
+        </div>
+    </div>
+    <div class="sky" id="contenido-oculto5">
+        <div class="contenedorIzquierdo">
+            <p style="color: #FFFFFF;" class="teOferecemos2">Te ofrecemos un lugar para...</p>
+            <p class="innovar">POTENCIAR EL TALENTO</p>
+        </div>
+        <div class="contenedorDerecho">
+            <img class="iconIe" src="images/IconEb.png" alt="">
+            <p class="hacemos">NNuestros clientes evolucionan, y nosotros crecemos con ellos para poder darles el valor
+                que necesitan.</p>
+            <p class="tenemos">En Galicia vas a encontrar herramientas para transformarte y que ese camino, nos
+                transforme a todos.</p>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .iconIe {
+        /* Icon */
+
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 30px;
+        gap: 10px;
+
+        width: 135px;
+        height: 126px;
+
+
+        border-radius: 30px;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .tenemos {
+        /* Tenemos un gran desafío, transformar la banca y la forma de hacer negocios. */
+
+        margin-left: 40px;
+        width: 393px;
+        height: 120px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        /* or 125% */
+
+        letter-spacing: -0.03em;
+
+        /* White */
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .hacemos {
+        /* Hacemos más simple la vida de nuestros clientes, nos anticipamos a sus necesidades y creamos soluciones disruptivas. */
+
+        margin-left: 40px;
+        width: 393px;
+        height: 69px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        /* or 128% */
+
+
+        /* White */
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .contenedorIzquierdo {
+        margin-top: 100px;
+        margin-left: 80px;
+        width: 647px;
+        height: 500px;
+        border-right: solid white;
+    }
+
+    .contenedorDerecho {
+        margin-top: 100px;
+        width: 473px;
+        height: 500px;
+
+    }
+
+
+    .white {
+        /* BG-Gray */
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+
+
+        /* Gray Light */
+
+        background: #F2F2F2;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+
+    }
+
+    .blue {
+        /* BG-blue */
+
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+        /* Blue */
+
+        background: #497FE7;
+
+        /* Inside auto layout */
+
+        display: flex;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .pink {
+        /* BG-pink */
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+        background: #F4BACC;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 2;
+        flex-grow: 0;
+    }
+
+
+    .orange {
+        /* BG-orange */
+
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+        /* Tangerine */
+
+        background: #E96D2D;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 3;
+        flex-grow: 0;
+
+    }
+
+    .violet {
+        /* BG-violet */
+
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+        /* Purple */
+
+        background: #574D89;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 4;
+        flex-grow: 0;
+    }
+
+    .sky {
+        /* BG-green */
+
+        margin-top: -20px;
+        width: 1280px;
+        height: 754px;
+
+        /* Green */
+
+        background: #67B2A6;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 5;
+        flex-grow: 0;
+    }
+
+    .innovar {
+
+        /* INNOVAR Y EVOLUCIONAR */
+        position: absolute;
+        margin-top: 200px;
+        width: 585px;
+        height: 124px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 80px;
+        line-height: 65px;
+        /* or 78% */
+
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+
+        /* White */
+
+        color: #FFFFFF;
+
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 1;
+
+    }
+
+    .mejorar {
+        /* Mejorar el día a día de más personas */
+
+
+        position: absolute;
+        width: 823px;
+        height: 184px;
+        margin-left: 80px;
+        margin-top: 300px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 96px;
+        line-height: 92px;
+        /* or 96% */
+
+        letter-spacing: -0.03em;
+
+        /* Gray Dark */
+
+        color: #383838;
+
+    }
+
+    .teOferecemos1 {
+        /* Te ofrecemos un lugar para... */
+
+
+        position: absolute;
+        width: 517px;
+        height: 77.75px;
+        margin-left: 80px;
+        margin-top: 200px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 92px;
+        /* or 230% */
+
+        letter-spacing: -0.03em;
+
+        /* Gray Dark */
+
+        color: #383838;
+
+    }
+
+    .teOferecemos2 {
+        /* Te ofrecemos un lugar para... */
+
+
+        position: absolute;
+        width: 517px;
+        height: 77.75px;
+        margin-top: 100px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 92px;
+        /* or 230% */
+
+        letter-spacing: -0.03em;
+
+        /* Gray Dark */
+
+        color: #383838;
+
+    }
+
+    .iconosBotones {
+        border: solid black;
+        /* BG-Gray */
+
+
+        width: 1280px;
+        height: 900px;
+
+        /* Gray Light */
+
+        background: #F2F2F2;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+    }
+
+    .contenedorBotones {
+        width: 1280px;
+        /* Tab-bar-ejes */
+
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        gap: 28px;
+
+        /* position: absolute; */
+        width: 1280px;
+        height: 125px;
+        left: 0px;
+        top: 0px;
+
+        /* Gray Light */
+
+        background: #F2F2F2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    #contenido-oculto0 {
+        display: flex;
+    }
+
+    #contenido-oculto1 {
+        display: none;
+    }
+
+    #contenido-oculto2 {
+        display: none;
+    }
+
+    #contenido-oculto3 {
+        display: none;
+    }
+
+    #contenido-oculto4 {
+        display: none;
+    }
+
+    #contenido-oculto5 {
+        display: none;
+    }
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<script>
+    const contenidoOculto0 = document.querySelector('#contenido-oculto0');
+    const contenedorImagen1 = document.querySelector('.Imagen1');
+    const contenidoOculto1 = document.querySelector('#contenido-oculto1');
+
+    contenedorImagen1.addEventListener('click', () => {
+        contenidoOculto1.style.display = 'flex';
+        contenidoOculto2.style.display = 'none';
+        contenidoOculto3.style.display = 'none';
+        contenidoOculto4.style.display = 'none';
+        contenidoOculto5.style.display = 'none';
+        contenidoOculto0.style.display = 'none';
+        contenidoOculto1.style.animation = "fade-in 1s";
+
+    });
+
+    const contenedorImagen2 = document.querySelector('.Imagen2');
+    const contenidoOculto2 = document.querySelector('#contenido-oculto2');
+
+    contenedorImagen2.addEventListener('click', () => {
+        contenidoOculto1.style.display = 'none';
+        contenidoOculto2.style.display = 'flex';
+        contenidoOculto3.style.display = 'none';
+        contenidoOculto4.style.display = 'none';
+        contenidoOculto5.style.display = 'none';
+        contenidoOculto0.style.display = 'none';
+
+        contenidoOculto2.style.animation = "fade-in 1s";
+
+    });
+
+    const contenedorImagen3 = document.querySelector('.Imagen3');
+    const contenidoOculto3 = document.querySelector('#contenido-oculto3');
+
+    contenedorImagen3.addEventListener('click', () => {
+        contenidoOculto1.style.display = 'none';
+        contenidoOculto2.style.display = 'none';
+        contenidoOculto3.style.display = 'flex';
+        contenidoOculto4.style.display = 'none';
+        contenidoOculto5.style.display = 'none';
+        contenidoOculto0.style.display = 'none';
+
+        contenidoOculto3.style.animation = "fade-in 1s";
+
+    });
+
+    const contenedorImagen4 = document.querySelector('.Imagen4');
+    const contenidoOculto4 = document.querySelector('#contenido-oculto4');
+
+    contenedorImagen4.addEventListener('click', () => {
+        contenidoOculto1.style.display = 'none';
+        contenidoOculto2.style.display = 'none';
+        contenidoOculto3.style.display = 'none';
+        contenidoOculto4.style.display = 'flex';
+        contenidoOculto5.style.display = 'none';
+        contenidoOculto0.style.display = 'none';
+
+        contenidoOculto4.style.animation = "fade-in 1s";
+
+    });
+
+    const contenedorImagen5 = document.querySelector('.Imagen5');
+    const contenidoOculto5 = document.querySelector('#contenido-oculto5');
+
+    contenedorImagen5.addEventListener('click', () => {
+        contenidoOculto1.style.display = 'none';
+        contenidoOculto2.style.display = 'none';
+        contenidoOculto3.style.display = 'none';
+        contenidoOculto4.style.display = 'none';
+        contenidoOculto5.style.display = 'flex';
+        contenidoOculto0.style.display = 'none';
+
+        contenidoOculto5.style.animation = "fade-in 1s";
+
+    });
+
+
+
+
+</script>

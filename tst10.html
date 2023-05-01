@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="miBoton">Mostrar div</button>
+    <div id="miDiv" style="display: none;">Contenido del div</div>
+    
+</body>
+<style>
+/* definir la animación fade-in */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+</style>
+<script>
+// obtener referencias al botón y al div
+const miBoton = document.getElementById("miBoton");
+const miDiv = document.getElementById("miDiv");
+
+// agregar controlador de eventos de clic al botón
+miBoton.addEventListener("click", () => {
+  // cambiar el estilo del div con una animación CSS
+  miDiv.style.display = "block";
+  miDiv.style.animation = "fade-in 0.5s";
+});
+
+
+
+</script>
+</html>

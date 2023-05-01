@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Arrastrar Imagen Horizontalmente</title>
+    <style>
+      #contenedor-imagen {
+        width: 100%;
+        height: 400px;
+        overflow-x: hidden;
+        white-space: nowrap;
+        position: relative;
+      }
+      
+      #imagen {
+        width: 5000px;
+        height: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      #barra-progreso {
+        width: 100%;
+        height: 20px;
+        background-color: #f2f2f2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+      
+      #barra-progreso .relleno {
+        height: 100%;
+        background-color: #4CAF50;
+        width: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contenedor-imagen">
+      <img src="images/total.png" id="imagen" alt="Imagen de prueba">
+      <div id="barra-progreso">
+        <div class="relleno"></div>
+      </div>
+    </div>
+    
+    <script>
+        const contenedorImagen = document.getElementById('contenedor-imagen');
+const imagen = document.getElementById('imagen');
+const barraProgreso = document.querySelector('#barra-progreso .relleno');
+
+let dragging = false;
+let inicioArrastre;
+let finArrastre;
+let porcentajeRecorrido;
+
+contenedorImagen.addEventListener('mousedown', e => {
+  inicioArrastre = e.clientX;
+  dragging = true;
+  imagen.style.cursor = 'grabbing';
+});
+
+contenedorImagen.addEventListener('mousemove', e => {
+  if (dragging) {
+    finArrastre = e.clientX;
+    porcentajeRecorrido = (finArrastre / imagen.offsetWidth) * 100;
+    imagen.style.transform = `translateX(${-porcentajeRecorrido}%)`;
+    barraProgreso.style.width = `${porcentajeRecorrido}%`;
+  }
+});
+
+contenedorImagen.addEventListener('mouseup', () => {
+  dragging = false;
+  imagen.style.cursor = 'grab';
+});
+    </script>
+  </body>
+</html>

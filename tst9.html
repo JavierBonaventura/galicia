@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="galeriaHistorias">
+    <div class="image">
+      <img src="images/person1.png" alt="Imagen 1">
+    </div>
+    <div class="image">
+      <img src="images/person2.png" alt="Imagen 2">
+    </div>
+    <div class="image">
+      <img src="images/person3.png" alt="Imagen 3">
+    </div>
+  </div>
+  
+  
+<style>
+    
+.galeriaHistorias {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  clip-path: polygon(60px 0, calc(100% - 60px) 0, calc(100% - 60px) 100%, 60px 100%);
+  transition: all 1s ease;
+  margin-left: -55px;
+  margin-right: -55px;
+}
+
+
+.image:hover {
+    clip-path: polygon(0px 0, calc(100% - 0px) 0, calc(100% - 0px) 100%, 0px 100%);
+    transition: all 1s ease; 
+  transform: scaleX(1); /* solo escala en el eje X */
+  margin-left: -70px;
+  margin-right: -70px;
+}
+
+
+
+
+.galeriaHistorias:hover .image:not(:hover) {
+    transition: all 1s ease;
+  transform: translateX(-20%); 
+}
+
+.galeriaHistorias:not(:hover){
+    transition: all 1s ease;
+  transform: translateX(0%); 
+}
+
+
+.image:hover ~ .image:not(:hover) {
+    transition: all 1s ease;
+  transform: translateX(20%); 
+}
+
+.image:not(:hover) {
+    transition: all 1s ease;
+  transform: translateX(0%); 
+}
+
+
+
+</style>
+<script>
+
+
+</script>
+</html>

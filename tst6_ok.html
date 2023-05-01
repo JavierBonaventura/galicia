@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div class="gallery">
+    <div class="image">
+      <img src="images/person1_hover.png" alt="Imagen 1">
+    </div>
+    <div class="image">
+      <img src="images/person1_hover.png" alt="Imagen 2">
+    </div>
+    <div class="image">
+      <img src="images/person1_hover.png" alt="Imagen 3">
+    </div>
+  </div>
+  
+  
+<style>
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 0px; /* ajusta el espacio entre las imágenes */
+
+
+}
+
+.image {
+  margin-top: 10px;
+
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.image img {
+  width: 523px;
+  height: auto;
+  object-fit: cover;
+ 
+}
+
+.image .zoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.image:hover .zoom {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+ 
+  
+}
+
+.image:not(:hover) {
+    margin-left: -100px;
+  margin-right: -100px;
+    clip-path: inset(0px 120px 0px 120px);
+
+}
+
+.image:hover img {
+  transform: scaleX(1.5); /* solo escala en el eje X */
+  transition: all 0.5s ease;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.gallery:hover .image:not(:hover) {
+  transform: translateX(-20%); /* desplaza las imágenes hacia la izquierda */
+}
+
+.image:hover ~ .image:not(:hover) {
+  transform: translateX(20%); /* desplaza las imágenes hacia la derecha */
+}
+
+
+</style>
+<script>
+
+
+</script>
+</html>

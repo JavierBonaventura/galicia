@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Imagen horizontal</title>
+	<style>
+		img {
+			width: 5000px;
+			height: auto;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img src="images/total.png" />
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+	var dragging = false,
+		curX, curY,
+		origX, origY,
+		targetImg = $('img');
+	targetImg.on('mousedown', function(e) {
+		origX = e.clientX;
+		origY = e.clientY;
+		dragging = true;
+	});
+	$(document).on('mousemove', function(e) {
+		if (dragging) {
+			curX = e.clientX - origX;
+			targetImg.scrollLeft(targetImg.scrollLeft() - curX);
+			origX = e.clientX;
+		}
+	}).on('mouseup', function(e) {
+		dragging = false;
+	});
+});
+</script>
+</html>

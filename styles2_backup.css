@@ -1,0 +1,1552 @@
+body {
+    /* HOME - 3 */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+  
+    position: relative;
+    width: 1280px;
+    height: 5573px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  }
+  
+  .nav-bar {
+    /* Nav-bar */
+  
+  
+    width: 1280px;
+    height: 95px;
+  
+    background: #FFFFFF;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .frame18 {
+    /* Frame 18 */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+  
+    position: absolute;
+    width: 542px;
+    height: 44px;
+    left: 658px;
+    top: 25px;
+  }
+  
+  .logoGalicia {
+    /* Logo Galicia */
+    margin-left: 114px;
+    margin-top: 19px;
+    /* 
+  position: absolute; */
+    width: 167px;
+    height: 57px;
+    left: 114px;
+    top: calc(50% - 57px/2);
+  }
+  
+  .frame20 {
+    /* Frame 20 */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+  
+    width: 542px;
+    height: 44px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .frame19 {
+    /* Frame 19 */
+    margin-right: 20px;
+    margin-top: -2px;
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+  
+    width: 354px;
+    height: 44px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .button2 {
+    /* Button / secundario / outline / con-icon */
+  
+  
+    box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 20px;
+    gap: 7px;
+  
+    width: 172px;
+    height: 36px;
+  
+    /* Naranja Primario */
+  
+    border: 2px solid #FA6400;
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .button1 {
+    /* Button / secundario / link */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    width: 212px;
+    height: 44px;
+  
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  
+  }
+  
+  .frame9 {
+    /* Frame 9 */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+  
+    width: 6px;
+    height: 44px;
+  
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .line {
+    /* | */
+  
+  
+    width: 6px;
+    height: 19px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+  
+    /* Gris 2 - Light */
+  
+    color: #A6A6A6;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .sumateNav {
+    /* Como sumarte */
+  
+  
+    width: 192px;
+    height: 19px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  
+    /* Naranja Primario */
+  
+    color: #FA6400;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .button3 {
+    /* Button / secundario / link */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    width: 136px;
+    height: 44px;
+  
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  .comoSumarte {
+    /* Como sumarte */
+  
+  
+    width: 116px;
+    height: 19px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+  
+    /* Naranja Primario */
+  
+    color: #FA6400;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .userCircle {
+    /* la:user-circle-solid */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+    color: #FA6400;
+  
+    width: 24px;
+    height: 24px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .vector {
+    /* Vector */
+  
+  
+    position: absolute;
+    left: 9.38%;
+    right: 9.38%;
+    top: 9.38%;
+    bottom: 9.38%;
+  
+    /* Naranja Primario */
+  
+    background: #FA6400;
+  }
+  
+  .creaTuPerfil {
+    /* Creá tu perfil */
+  
+  
+    width: 102px;
+    height: 19px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+  
+    /* Naranja Primario */
+  
+    color: #FA6400;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .group {
+    /* Group */
+  
+  
+    /* position: absolute; */
+    left: 8.08%;
+    right: 2.97%;
+    top: 0.47%;
+    bottom: 11.23%;
+  }
+  
+  header {
+    /* Header-principal */
+  
+  
+    width: 1280px;
+    height: 554px;
+  
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(banner.jpg), #C5C5C5;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .sliderBar {
+    /* slider-bar */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    position: absolute;
+    width: 136px;
+    height: 28px;
+    left: 572px;
+    top: 470px;
+  
+  }
+  
+  .sliderPoint1 {
+    /* slider-point */
+  
+  
+    width: 48px;
+    height: 8px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .esteEquipo {
+    /* Este equipo cree que sí. */
+  
+  
+    position: absolute;
+    width: 368px;
+    height: 39px;
+    left: 82px;
+    top: 400px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+  
+  
+    /* White */
+  
+    color: #FFFFFF;
+  }
+  
+  .crees {
+    /* ¿Creés que un banco puede mejorarle la vida a las personas? */
+  
+  
+    position: absolute;
+    width: 667px;
+    height: 96px;
+    left: 82px;
+    top: 289px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.01em;
+  
+    /* White */
+  
+    color: #FFFFFF;
+  }
+  
+  .rectangle {
+    /* Rectangle 10 */
+  
+  
+    position: absolute;
+    width: 1280px;
+    height: 554px;
+    left: 0px;
+    top: 0px;
+  
+  
+  }
+  
+  .quienesSomos {
+    /* Quienes somos (en numeros) */
+  
+  
+    width: 1280px;
+    height: 892px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  .secuencia {
+    /* Secuencia-slider */
+  
+  
+    /* position: absolute; */
+    width: 1280px;
+    height: 892px;
+    left: 0px;
+    top: 0px;
+  
+  }
+  
+  .bloqNumeros {
+    /* bloq-numeros-slide */
+  
+  
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+  
+  }
+  
+  .boxSearch {
+    /* box-search */
+    position: relative;
+    margin-left: 80px;
+    margin-top: 64px;
+    box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 18px;
+    gap: 16px;
+  
+  
+    width: 1120px;
+    height: 102px;
+    left: calc(50% - 1120px/2);
+    top: 40px;
+  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+  }
+  .input-icon {
+    color: #FA6400;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-30%);
+    scale: 1.5;
+  }
+  input::placeholder {
+  padding-left: 40px;
+  }
+  .inputSearch {
+    
+    /* input-Search */
+  
+  
+    /* Auto layout */
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 16px;
+  
+    width: 838px;
+    height: 54px;
+  
+    background: #FFFFFF;
+    border-radius: 6px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+  
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  
+  }
+  
+  .button4 {
+    /* button */
+  
+  
+    /* Auto layout */
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 10px;
+  
+    width: 230px;
+    height: 54px;
+  
+    /* Naranja Primario */
+  
+    background: #FA6400;
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+  
+    /* Blanco */
+  
+    color: #FFFFFF;
+  }
+  
+  .sliderSolapas {
+    width: 50%;
+  
+  
+  }
+  
+  .row1 {
+    width: 50%;
+  
+  }
+  
+  .somos {
+    /* Somos Galicia */
+    margin-top: 120px;
+    width: 297px;
+    height: 160px;
+    margin-left: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 89px;
+    /* or 193% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .containerNumeros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .h2 {
+    /* h2 */
+  
+  
+    /* Auto layout */
+  
+  
+    /* position: absolute; */
+    width: 306px;
+    left: calc(50% - 306px/2 - 407px);
+    top: 32.17%;
+    bottom: 29.37%;
+  }
+  .line10 {
+    /* Line 10 */
+  
+  margin-top: -40px;
+  margin-left: 80px;
+  width: 90px;
+  height: 0px;
+  left: 0px;
+  top: 0px;
+  
+  /* Gray Medium light */
+  
+  border: 2px solid #9B9B9B;
+  }
+  
+  .galicia {
+    margin-left: 80px;
+    margin-top: -150px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 89px;
+    /* or 193% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  .mientras {
+    /* Mientras leés esto logramos... */
+    margin-left: 83px;
+  
+    /* position: absolute; */
+    width: 276px;
+    height: 88px;
+    left: 3px;
+    top: 36px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 44px;
+    /* or 138% */
+  
+    letter-spacing: -0.01em;
+  
+    /* Gray Dark */
+  
+    color: #383838;
+  
+  
+  }
+  
+  .queBuscamos {
+    /* Que buscamos */
+  
+  
+    width: 1280px;
+    height: 875px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+  }
+  
+  .galleryy {
+    padding: 1rem;
+    display: grid;
+    /* grid-template-columns: repeat(5, 70vw); */
+    grid-template-rows: 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    overflow: scroll;
+    height: 900px;
+    scroll-snap-type: both mandatory;
+    scroll-padding: 1rem;
+    background-color: #e8e8e8;
+  }
+  
+  .active {
+    scroll-snap-type: unset;
+  }
+  
+  li {
+    scroll-snap-align: none;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 0;
+  }
+  
+  .BGColors {
+    /* BG-Colors */
+  
+  
+    width: 1280px;
+    height: 900px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 4;
+    flex-grow: 0;
+  
+  }
+  
+  .tabBar {
+    /* Tab-bar-ejes */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    gap: 28px;
+  
+    /* position: absolute; */
+    width: 1280px;
+    height: 125px;
+    left: 0px;
+    top: 777px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  }
+  
+  .teOfrecemos {
+    /* Te ofrecemos un lugar para... */
+  
+    margin-top: 200px;
+    margin-left: 80px;
+    /* position: absolute; */
+    width: 517px;
+    height: 77.75px;
+    left: 80px;
+    top: 200px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 92px;
+    /* or 230% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Dark */
+  
+    color: #383838;
+  }
+  
+  .mejorar {
+    /* Mejorar el día a día de más personas */
+    margin-top: -30px;
+    margin-left: 80px;
+    /* position: absolute; */
+    width: 823px;
+    height: 184px;
+    left: 80px;
+    top: 291px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 92px;
+    /* or 96% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Dark */
+  
+    color: #383838;
+  }
+  
+  .oficinas {
+    /* Nuestras oficinas - bloques */
+  
+  
+    width: 1280px;
+    height: 820px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+  }
+  
+  
+  .grid2x2 {
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .grid2x2>div {
+    display: flex;
+    flex-basis: calc(50% - 40px);
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .sostenibilidad {
+  
+    margin-top: 70px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+  
+    letter-spacing: -0.02em;
+  
+    /* Orange */
+  
+    color: #FA6400;
+  
+  }
+  
+  .sostenibilidad2 {
+    margin-top: -40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    /* identical to box height, or 132% */
+  
+    letter-spacing: -0.01em;
+  
+    /* Gray Dark */
+  
+    color: #383838;
+  }
+  
+  .sostenibilidad3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    /* or 162% */
+  
+    letter-spacing: 0.01em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  
+  
+  
+  /* Auto layout */
+  .verMas {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 24px;
+    gap: 10px;
+  
+  
+    width: 170px;
+    height: 41px;
+    left: 0px;
+    top: 213px;
+  
+    /* Orange */
+  
+    border: 2px solid #FA6400;
+    border-radius: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  
+    letter-spacing: 0.02em;
+  
+    /* Orange */
+  
+    color: #FA6400;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .box1 {
+    margin-left: 50px;
+  }
+  
+  .historias {
+    width: 1280px;
+    height: 730px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 6;
+    flex-grow: 0;
+  }
+  
+  .historiasDeTalento {
+    /* Historias de talento */
+  
+    margin-left: 465px;
+    /* position: absolute; */
+    width: 351px;
+    height: 48px;
+    left: 465px;
+    top: 77px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  }
+  
+  
+  .gallery {
+  
+    width: 1280px;
+    height: 450px;
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(3, auto);
+  
+  }
+  
+  .gallery>img {
+    padding: 20px;
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .35s linear;
+  }
+  
+  .gallery img:hover {
+    width: calc(20vh*.3/1);
+  }
+  
+  .haceBusqueda {
+    /* Hace-busqueda */
+  
+  
+    width: 1280px;
+    height: 567px;
+  
+    /* Orange */
+  
+    background: #FA6400;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 7;
+    flex-grow: 0;
+  
+  }
+  
+  
+  
+  
+  .encontra {
+    padding-top: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+  
+    text-align: center;
+    letter-spacing: 0.02em;
+  
+    color: #FFFFFF;
+  }
+  
+  .sumate {
+    /* Sumate a ser parte del Equipo Galicia */
+  
+    margin-left: 370px;
+    /* position: absolute; */
+    width: 540px;
+    height: 168px;
+    left: 0px;
+    top: 93px;
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 87px;
+    /* or 198% */
+  
+    text-align: center;
+    letter-spacing: -0.02em;
+  
+    color: #FFFFFF;
+  }
+  
+  .equipo {
+    margin-top: -140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 86px;
+    line-height: 87px;
+    /* or 198% */
+  
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+  
+  .mira {
+    margin-top: -60px;
+    /* ic:twotone-search */
+  
+  
+    box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 26px;
+    gap: 10px;
+  
+    width: 317px;
+    height: 58px;
+    left: 482px;
+    top: 410px;
+  
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+  
+    letter-spacing: -0.01em;
+  
+    /* Orange */
+  
+    color: #FA6400;
+  }
+  
+  .divBoton {
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer {
+    /* Footer */
+  
+  
+    width: 1280px;
+    height: 140px;
+  
+    /* Gray Light */
+  
+    background: #F2F2F2;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 8;
+    align-self: stretch;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .frame24 {
+    margin-top: 51px;
+    margin-left: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 37px;
+  
+    /* position: absolute; */
+    width: 359px;
+    height: 44px;
+    left: 841px;
+    top: 51px;
+    flex: 25%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  
+  }
+  
+  .frame23 {
+    margin-top: 51px;
+    margin-left: 81px;
+    /* Frame 23 */
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 16px;
+  
+    /* position: absolute; */
+    width: 221px;
+    height: 42px;
+    left: 81px;
+    top: 52px;
+  
+    /* Orange */
+  
+    border: 2px solid #FA6400;
+    border-radius: 3px;
+  }
+  
+  .volver {
+    /* Volver arriba */
+  
+  
+    width: 131px;
+    height: 24px;
+    align-items: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  
+    /* Orange */
+  
+    color: #FA6400;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .seguinos {
+    /* Button / secundario / link */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+  
+  
+    /* Naranja Primario */
+  
+    color: #FA6400;
+  
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  
+    width: 136px;
+    height: 44px;
+  
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, sans-serif;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  
+  
+  
+  .slideCard {
+    position: absolute;
+    top: 0;
+    /* left: 0;
+    width: 100%;
+    height: 100%; */
+    padding-top: 800px;
+    padding-left: 150px;
+    margin: 0;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .slideCard img {
+    width: 100%;
+  }
+  
+  
+  
+  
+  .items {
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    user-select: none;
+  }
+  
+  /* slider tarjetas */
+  
+  .items .item {
+    margin-top: -1800px;
+    margin-left: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 250px;
+    height: 250px;
+    scale: 200%;
+  
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item.active2 {
+    opacity: 1;
+    z-index: 99;
+  
+  }
+  
+  .item.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-75%, 0%) rotate(-10deg);
+  }
+  
+  .item.next {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-25%, 0%) rotate(10deg);
+  }
+  
+  
+  
+  
+  
+  .column {
+      margin: 15px 15px 0;
+      padding: 0;
+  }
+  
+  .column div {
+      position: relative;
+      float: left;
+      width: 300px;
+      height: 500px;
+      margin: 0 0 0 25px;
+      padding: 0;
+  }
+  
+  .column div span {
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      z-index: -1;
+      display: block;
+      width: 300px;
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      text-align: center;
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+      opacity: 0;
+  }
+  figure {
+      width: 300px;
+      height: 450px;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      overflow: hidden;
+  }
+  figure:hover+span {
+    z-index: 1;
+      bottom: 140px;
+      opacity: 1;
+  }
+  
+  
+  
+  /* Zoom In #1 */
+  .hover01 figure img {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+  }
+  .hover01 figure:hover img {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+  }
+  
+  .galeriaHistorias{
+    margin-left: 8%;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
