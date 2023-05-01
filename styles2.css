@@ -62,7 +62,7 @@ margin-left: 350px;
   /* Logo Galicia */
 
   margin-top: 0px;
-  /* 
+  /*
 position: absolute; */
   width: 167px;
   height: 57px;
@@ -554,7 +554,7 @@ input::placeholder {
 padding-left: 40px;
 }
 .inputSearch {
-  
+
   /* input-Search */
 
 
@@ -1575,7 +1575,7 @@ border: 1px solid #FFFFFF;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
+
 }
 
 .frame24 {
@@ -1729,21 +1729,19 @@ flex-grow: 0;
 
 
 .items {
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   user-select: none;
 }
 
 /* slider tarjetas */
 
 .items .item {
-  margin-top: -1800px;
-  margin-left: 500px;
+  /* margin-top: -1800px;
+  margin-left: 500px; */
   position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-top: 200px;
+  margin-left: 500px;
+  /* top: 50%;
+  left: 50%; */
   transform: translate(-50%, -0%);
   width: 250px;
   height: 250px;
@@ -1788,7 +1786,7 @@ flex-grow: 0;
 
   width: 600px;
   margin: 0 auto;
- 
+
   display: flex;
   justify-content: center;
 }
@@ -1804,7 +1802,7 @@ flex-grow: 0;
 
 .image:hover {
     clip-path: polygon(0px 0, calc(100% - 0px) 0, calc(100% - 0px) 100%, 0px 100%);
-    transition: all 1s ease; 
+    transition: all 1s ease;
   transform: scaleX(1); /* solo escala en el eje X */
   margin-left: -70px;
   margin-right: -70px;
@@ -1815,23 +1813,23 @@ flex-grow: 0;
 
 .galeriaHistorias:hover .image:not(:hover) {
     transition: all 1s ease;
-  transform: translateX(-20%); 
+  transform: translateX(-20%);
 }
 
 .galeriaHistorias:not(:hover){
     transition: all 1s ease;
-  transform: translateX(0%); 
+  transform: translateX(0%);
 }
 
 
 .image:hover ~ .image:not(:hover) {
     transition: all 1s ease;
-  transform: translateX(20%); 
+  transform: translateX(20%);
 }
 
 .image:not(:hover) {
     transition: all 1s ease;
-  transform: translateX(0%); 
+  transform: translateX(0%);
 }
 
 
@@ -1841,87 +1839,87 @@ flex-grow: 0;
 
 .textSlideHeader1 {
   /* ¿Creés que un banco puede mejorarle la vida a las personas? */
-  
-  
+
+
   position: absolute;
   width: 667px;
   height: 96px;
   left: 82px;
   top: 250px;
-  
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   letter-spacing: -0.01em;
-  
+
   /* White */
-  
+
   color: #FFFFFF;
-  
+
   }
-  
+
   .textSlideHeader2 {
       /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
-  
+
       position: absolute;
       left: 101px;
   top: 116px;
   width: 575px;
   height: 160px;
-  
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 33px;
   line-height: 40px;
   /* or 121% */
-  
+
   letter-spacing: -0.01em;
-  
+
   /* Gray Dark */
-  
+
   color: #383838;
-  
-  
-  
+
+
+
   }
-  
+
   .textSlideHeader3 {
-  
+
       /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
       position: absolute;
       left: 101px;
   top: 116px;
   width: 575px;
   height: 160px;
-  
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
   font-size: 33px;
   line-height: 40px;
   /* or 121% */
-  
+
   letter-spacing: -0.01em;
-  
+
   /* Gray Dark */
-  
+
   color: #383838;
-  
-  
-  
+
+
+
   }
-  
-  
+
+
       .carouselHeader {
     position: relative;
     width: 100%;
     height: 554px;
     overflow: hidden;
   }
-  
+
   .slideHeader {
     position: absolute;
     top: 0;
@@ -1931,17 +1929,17 @@ flex-grow: 0;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
-  
+
   .slideHeader.active {
     opacity: 1;
   }
-  
+
   .slideHeader img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
+
   .slideHeader .text {
     position: absolute;
     bottom: 0;
@@ -1956,26 +1954,26 @@ flex-grow: 0;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .indicator {
     display: inline-block;
     width: 24px;
     height: 8px;
-  
+
     background: #F2F2F2;
   border-radius: 20px;
     cursor: pointer;
     margin-right: 10px; /* Agregamos este margen a la derecha */
-  
+
   }
-  
+
   .indicator.active {
     width: 48px;
     background: #FA6400;
   border-radius: 20px;
   }
-  
-  
+
+
 
 /* inicio carousel del header */
 
