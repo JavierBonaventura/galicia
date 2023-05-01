@@ -7,48 +7,248 @@
     <title>Document</title>
 </head>
 <body>
-<div class="circle-container">
-  <div class="line"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="line"></div>
-</div>
-
+    <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <img src="imagen1.jpg">
+          </div>
+          <div class="carousel-slide">
+            <img src="imagen2.jpg">
+          </div>
+          <div class="carousel-slide">
+            <img src="imagen3.jpg">
+          </div>
+          <div class="carousel-slide">
+            <img src="imagen4.jpg">
+          </div>
+        </div>
+        <div class="carousel-indicators">
+            <span class="carousel-indicator">
+              <span class="carousel-indicator-inner"></span>
+              <span class="carousel-indicator-outer"></span>
+            </span>
+            <span class="carousel-indicator">
+              <span class="carousel-indicator-inner"></span>
+              <span class="carousel-indicator-outer"></span>
+            </span>
+            <span class="carousel-indicator">
+              <span class="carousel-indicator-inner"></span>
+              <span class="carousel-indicator-outer"></span>
+            </span>
+            <span class="carousel-indicator">
+              <span class="carousel-indicator-inner"></span>
+              <span class="carousel-indicator-outer"></span>
+            </span>
+          </div>
+          
+          
+          
+      </div>
+      
       
       
       
       
 </body>
 <style>
-.circle-container {
+.carousel {
+  width: 100%;
+  height: 400px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  width: 374px;
+  overflow: hidden;
 }
 
-.circle {
+.carousel-container {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.carousel-slide {
+  width: 25%;
+  flex-shrink: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #333;
+}
+
+.carousel-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  z-index: -1;
+}
+
+.carousel-line:before,
+.carousel-line:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background-color: #ccc;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-line:before {
+  left: 0;
+}
+
+.carousel-line:after {
+  right: 0;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: #333;
+}
+
+.carousel-indicator:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+.carousel-indicator-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+.carousel-indicator.active .carousel-indicator-inner {
+  background-color: #333;
+}
+
+.carousel-indicator.active .carousel-indicator-outer {
+  border-color: #333;
+}
+
+.carousel-indicator {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.carousel-indicator-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-indicator-outer {
+  position: absolute;
+  top: -3px;
+  left: -3px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 2px solid black;
-  margin: 0 10px;
+  border: 2px solid #ccc;
+  opacity: 0;
+  transition: border-color 0.2s ease-in-out;
 }
 
-.line {
-margin-left: 100px;
-  top: 50%;
-  height: 2px;
-  background-color: black;
+.carousel-indicator-outer.active {
+  border-color: #f00; /* Agregar este estilo para verificar que se está aplicando */
 }
-
-
 
 
 
 
 
 </style>
+<script>
+    const carousel = document.querySelector('.carousel');
+const carouselContainer = carousel.querySelector('.carousel-container');
+const carouselSlides = carousel.querySelectorAll('.carousel-slide');
+const carouselIndicators = carousel.querySelectorAll('.carousel-indicator');
+
+let currentSlide = 0;
+
+carouselIndicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    currentSlide = index;
+    updateCarousel();
+  });
+});
+
+
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % carouselSlides.length;
+  updateCarousel();
+}, 1000);
+
+function updateCarousel() {
+  carouselContainer.style.transform = `translateX(-${currentSlide * 25}%)`;
+  carouselIndicators.forEach((indicator, index) => {
+    indicator.classList.toggle('active', index === currentSlide);
+  });
+  carouselIndicatorInners.forEach((indicatorInner, index) => {
+    indicatorInner.classList.toggle('active', index === currentSlide);
+  });
+  carouselIndicatorOuters.forEach((indicatorOuter, index) => {
+    indicatorOuter.classList.toggle('active', index === currentSlide);
+    indicatorOuter.style.opacity = index === currentSlide ? 1 : 0; // Asegúrate de que esta línea esté presente
+  });
+}
+
+
+
+
+
+
+</script>
 </html>
