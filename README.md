@@ -1,2 +1,0 @@
-# galicia
-# galicia
