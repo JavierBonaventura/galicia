@@ -519,8 +519,8 @@ header {
 .boxSearch {
   /* box-search */
   position: relative;
-  margin-left: 80px;
-  margin-top: 64px;
+
+
   box-sizing: border-box;
 
   /* Auto layout */
@@ -1739,13 +1739,13 @@ flex-grow: 0;
   margin-left: 500px; */
   position: absolute;
   margin-top: 200px;
-  margin-left: 500px;
+  margin-left: 340px;
   /* top: 50%;
   left: 50%; */
   transform: translate(-50%, -0%);
   width: 250px;
   height: 250px;
-  scale: 200%;
+  scale: 160%;
 
   overflow: hidden;
   transition: all 300ms ease-in-out;
@@ -1975,9 +1975,113 @@ flex-grow: 0;
 
 
 
-/* inicio carousel del header */
+/* fin carousel del header */
 
 
+/* inicio zomm de personas */
+
+
+.contenedorPersonas {
+margin-top: 100px;
+  display: flex;
+justify-content: center;
+}
+
+.imagenPerson1:hover {
+opacity: 0;
+}
+
+.imagenPerson2:hover {
+opacity: 0;
+}
+
+.imagenPerson3:hover {
+opacity: 0;
+}
+
+.imagenPerson1{
+  margin-right: -50px;
+  transition: 0.5s ease-in-out;
+}
+
+.imagenPerson2{
+
+  transition: 0.5s ease-in-out;
+}
+
+.imagenPerson3{
+margin-left: -50px;
+transition: 0.5s ease-in-out;
+}
+
+
+.imagenGrande1{
+  position: absolute;
+  margin-left: -600px;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+}
+
+.imagenGrande2{
+  position: absolute;
+  margin-left: 00px;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+}
+
+.imagenGrande3{
+  position: absolute;
+  margin-left: 600px;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+}
+
+.imagenGrande1:hover{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.imagenGrande1:hover + .imagenPerson1{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.imagenPerson1:hover + .imagenGrande1 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.imagenGrande2:hover{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.imagenGrande2:hover + .imagenPerson2{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.imagenPerson2:hover + .imagenGrande2 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.imagenGrande3:hover{
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.imagenGrande3:hover + .imagenPerson3{
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.imagenPerson3:hover + .imagenGrande3 {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+
+/* fin zoom personas */
 
 
 

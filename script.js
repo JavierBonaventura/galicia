@@ -92,6 +92,53 @@ contenedorImagen5.addEventListener('click', () => {
 
     // fin cambio de imagenes de colores //
 
+// inicio zoom personas //
+const imagenPerson1 = document.querySelector('.imagenPerson1');
+const imagenGrande1 = document.querySelector('.imagenGrande1');
+const imagenPerson2 = document.querySelector('.imagenPerson2');
+const imagenGrande2 = document.querySelector('.imagenGrande2');
+const imagenPerson3 = document.querySelector('.imagenPerson3');
+const imagenGrande3 = document.querySelector('.imagenGrande3');
+
+
+
+
+
+imagenGrande1.addEventListener('mouseover', () => {
+  imagenPerson2.style.transform = 'translateX(100px)';
+  imagenPerson3.style.transform = 'translateX(100px)';
+
+});
+
+imagenGrande1.addEventListener('mouseout', () => {
+  imagenPerson2.style.transform = 'translateX(0)';
+  imagenPerson3.style.transform = 'translateX(0)';
+
+});
+
+imagenGrande2.addEventListener('mouseover', () => {
+  imagenPerson1.style.transform = 'translateX(-100px)';
+  imagenPerson3.style.transform = 'translateX(100px)';
+
+});
+
+imagenGrande2.addEventListener('mouseout', () => {
+  imagenPerson1.style.transform = 'translateX(0)';
+  imagenPerson3.style.transform = 'translateX(0)';
+});
+
+imagenGrande3.addEventListener('mouseover', () => {
+  imagenPerson1.style.transform = 'translateX(-100px)';
+  imagenPerson2.style.transform = 'translateX(-100px)';
+});
+
+imagenGrande3.addEventListener('mouseout', () => {
+  imagenPerson1.style.transform = 'translateX(0)';
+  imagenPerson2.style.transform = 'translateX(0)';
+});
+
+// fin zoom personas //
+
 
 
 
