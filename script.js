@@ -137,15 +137,13 @@ imagenGrande3.addEventListener('mouseout', () => {
   imagenPerson2.style.transform = 'translateX(0)';
 });
 
-// fin zoom personas //
-
 
 
 
 	const slides = document.querySelectorAll(".item");
 		let current = 0;
 		let prev = 3;
-		let next = 2;
+		let next = 1;
     let contador = 1;
 
       const gotoNum = number => {
@@ -178,7 +176,6 @@ imagenGrande3.addEventListener('mouseout', () => {
 		}
     function contar() {
     contador = contador % 4; 
-    console.log(contador);
     gotoNum(contador)
     contador++;
     }
@@ -214,8 +211,45 @@ setInterval(nextSlideHeader, 3600);
 
 // fin carousel del header
 
-  
+  // inicio indicadores circulares
+  const sliderindicatorCircular = document.querySelector('.sliderindicatorCircular');
+const sliderindicatorCircularWrapper = document.querySelector('.sliderindicatorCircular-wrapper');
+const indicatorCirculars = document.querySelectorAll('.indicatorCircular');
 
+let slideIndex = 0;
+
+function showSlide(n) {
+  const slidePosition = -(n * 25);
+  sliderindicatorCircularWrapper.style.left = slidePosition + '%';
+  indicatorCirculars.forEach((indicatorCircular, index) => {
+    if (index === n) {
+      indicatorCircular.classList.add('active');
+    } else {
+      indicatorCircular.classList.remove('active');
+    }
+  });
+}
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= 4) {
+    slideIndex = 0;
+  }
+  showSlide(slideIndex);
+}
+
+setInterval(nextSlide, 2000);
+
+indicatorCirculars.forEach((indicatorCircular, index) => {
+  indicatorCircular.addEventListener('click', () => {
+    slideIndex = index;
+    showSlide(slideIndex);
+  });
+});
+
+showSlide(slideIndex);
+
+// fin indicadores circulares
 
 
 

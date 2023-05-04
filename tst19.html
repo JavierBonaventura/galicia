@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+          <img src="images/total.png" id="my-image">
+          <div class="bar"></div>
+        </div>
+      </div>
+</body>
+<style>
+.container {
+  width: 80%;
+  margin: auto;
+  overflow-x: scroll;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 0;
+  background-color: green;
+}
+
+</style>
+<script>
+var image = document.getElementById("my-image");
+var bar = document.querySelector(".bar");
+
+function updateBar() {
+  var percentage = (image.scrollLeft / (image.scrollWidth - image.clientWidth)) * 100;
+  bar.style.width = percentage + "%";
+}
+
+image.addEventListener("load", function() {
+  updateBar();
+});
+
+image.addEventListener("scroll", function() {
+  updateBar();
+});
+
+
+</script>
+</html>

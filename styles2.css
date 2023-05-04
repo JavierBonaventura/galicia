@@ -2083,8 +2083,80 @@ transition: 0.5s ease-in-out;
 
 /* fin zoom personas */
 
+/* inicio indicadores circulares */
 
 
+.sliderindicatorCircular-container {
+  text-align: center;
+position: relative;
+margin-left: -50px;
+margin-top: 20px;
+}
+
+.lineIndicator {
+width: 310px;
+height: 25px;
+border-bottom: 2px solid #67B2A6;;
+position: relative;
+top: -19px;
+margin-left: -210px;
+transform: translateX(-50%);
+}
+
+
+.sliderindicatorCircular {
+position: relative;
+width: 100%;
+height: 600px;
+overflow: hidden;
+}
+
+.sliderindicatorCircular-wrapper {
+display: flex;
+
+height: 100%;
+transition: left 0.5s ease-in-out;
+}
+
+
+.progress-indicatorCirculars {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+}
+
+.indicatorCircular {
+  display: inline-block;
+width: 14px;
+height: 14px;
+border-radius: 50%;
+background-color: #67B2A6;
+margin: 0 45px;
+cursor: pointer;
+transition: background-color 0.5s ease-in-out;
+position: relative;
+}
+
+.indicatorCircular.active {
+background-color: #67B2A6;
+}
+
+.indicatorCircular.active::before {
+content: "";
+display: block;
+position: absolute;
+top: -11px;
+left: -11px;
+width: 36px;
+height: 36px;
+border: 2px solid #67B2A6;
+border-radius: 50%;
+box-sizing: border-box;
+}
+
+/* fin indicadores circulares */
 
 
 
