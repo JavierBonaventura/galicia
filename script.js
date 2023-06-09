@@ -13,84 +13,155 @@ if (slider) {
 
 // cambio de imagenes de colores
 
-const contenidoOculto0 = document.querySelector('#contenido-oculto0');
-const contenedorImagen1 = document.querySelector('.Imagen1');
-const contenidoOculto1 = document.querySelector('#contenido-oculto1');
+// const contenidoOculto0 = document.querySelector('#contenido-oculto0');
+// const contenedorImagen1 = document.querySelector('.Imagen1');
+// const contenidoOculto1 = document.querySelector('#contenido-oculto1');
 
-contenedorImagen1.addEventListener('click', () => {
-    contenidoOculto1.style.display = 'flex';
-    contenidoOculto2.style.display = 'none';
-    contenidoOculto3.style.display = 'none';
-    contenidoOculto4.style.display = 'none';
-    contenidoOculto5.style.display = 'none';
-    contenidoOculto0.style.display = 'none';
-    contenidoOculto1.style.animation = "fade-in 1s";
+// contenedorImagen1.addEventListener('click', () => {
+//     contenidoOculto1.style.display = 'flex';
+//     contenidoOculto2.style.display = 'none';
+//     contenidoOculto3.style.display = 'none';
+//     contenidoOculto4.style.display = 'none';
+//     contenidoOculto5.style.display = 'none';
+//     contenidoOculto0.style.display = 'none';
+//     contenidoOculto1.style.animation = "fade-in 1s";
 
-});
+// });
 
-const contenedorImagen2 = document.querySelector('.Imagen2');
-const contenidoOculto2 = document.querySelector('#contenido-oculto2');
+// const contenedorImagen2 = document.querySelector('.Imagen2');
+// const contenidoOculto2 = document.querySelector('#contenido-oculto2');
 
-contenedorImagen2.addEventListener('click', () => {
-    contenidoOculto1.style.display = 'none';
-    contenidoOculto2.style.display = 'flex';
-    contenidoOculto3.style.display = 'none';
-    contenidoOculto4.style.display = 'none';
-    contenidoOculto5.style.display = 'none';
-    contenidoOculto0.style.display = 'none';
+// contenedorImagen2.addEventListener('click', () => {
+//     contenidoOculto1.style.display = 'none';
+//     contenidoOculto2.style.display = 'flex';
+//     contenidoOculto3.style.display = 'none';
+//     contenidoOculto4.style.display = 'none';
+//     contenidoOculto5.style.display = 'none';
+//     contenidoOculto0.style.display = 'none';
 
-    contenidoOculto2.style.animation = "fade-in 1s";
+//     contenidoOculto2.style.animation = "fade-in 1s";
 
-});
+// });
 
-const contenedorImagen3 = document.querySelector('.Imagen3');
-const contenidoOculto3 = document.querySelector('#contenido-oculto3');
+// const contenedorImagen3 = document.querySelector('.Imagen3');
+// const contenidoOculto3 = document.querySelector('#contenido-oculto3');
 
-contenedorImagen3.addEventListener('click', () => {
-    contenidoOculto1.style.display = 'none';
-    contenidoOculto2.style.display = 'none';
-    contenidoOculto3.style.display = 'flex';
-    contenidoOculto4.style.display = 'none';
-    contenidoOculto5.style.display = 'none';
-    contenidoOculto0.style.display = 'none';
+// contenedorImagen3.addEventListener('click', () => {
+//     contenidoOculto1.style.display = 'none';
+//     contenidoOculto2.style.display = 'none';
+//     contenidoOculto3.style.display = 'flex';
+//     contenidoOculto4.style.display = 'none';
+//     contenidoOculto5.style.display = 'none';
+//     contenidoOculto0.style.display = 'none';
 
-    contenidoOculto3.style.animation = "fade-in 1s";
+//     contenidoOculto3.style.animation = "fade-in 1s";
 
-});
+// });
 
-const contenedorImagen4 = document.querySelector('.Imagen4');
-const contenidoOculto4 = document.querySelector('#contenido-oculto4');
+// const contenedorImagen4 = document.querySelector('.Imagen4');
+// const contenidoOculto4 = document.querySelector('#contenido-oculto4');
 
-contenedorImagen4.addEventListener('click', () => {
-    contenidoOculto1.style.display = 'none';
-    contenidoOculto2.style.display = 'none';
-    contenidoOculto3.style.display = 'none';
-    contenidoOculto4.style.display = 'flex';
-    contenidoOculto5.style.display = 'none';
-    contenidoOculto0.style.display = 'none';
+// contenedorImagen4.addEventListener('click', () => {
+//     contenidoOculto1.style.display = 'none';
+//     contenidoOculto2.style.display = 'none';
+//     contenidoOculto3.style.display = 'none';
+//     contenidoOculto4.style.display = 'flex';
+//     contenidoOculto5.style.display = 'none';
+//     contenidoOculto0.style.display = 'none';
 
-    contenidoOculto4.style.animation = "fade-in 1s";
+//     contenidoOculto4.style.animation = "fade-in 1s";
 
-});
+// });
 
-const contenedorImagen5 = document.querySelector('.Imagen5');
-const contenidoOculto5 = document.querySelector('#contenido-oculto5');
+// const contenedorImagen5 = document.querySelector('.Imagen5');
+// const contenidoOculto5 = document.querySelector('#contenido-oculto5');
 
-contenedorImagen5.addEventListener('click', () => {
-    contenidoOculto1.style.display = 'none';
-    contenidoOculto2.style.display = 'none';
-    contenidoOculto3.style.display = 'none';
-    contenidoOculto4.style.display = 'none';
-    contenidoOculto5.style.display = 'flex';
-    contenidoOculto0.style.display = 'none';
+// contenedorImagen5.addEventListener('click', () => {
+//     contenidoOculto1.style.display = 'none';
+//     contenidoOculto2.style.display = 'none';
+//     contenidoOculto3.style.display = 'none';
+//     contenidoOculto4.style.display = 'none';
+//     contenidoOculto5.style.display = 'flex';
+//     contenidoOculto0.style.display = 'none';
 
-    contenidoOculto5.style.animation = "fade-in 1s";
+//     contenidoOculto5.style.animation = "fade-in 1s";
 
-});
+// });
 
 
 
     // fin cambio de imagenes de colores //
+
+
+    // inicio de animacion de iconos
+var section3 = document.getElementById("section3");
+var section3Title = document.getElementById("section3Title");
+var section3Title2 = document.getElementById("section3Title2");
+var boxCartas = document.getElementById("boxCartas");
+var scrollDisabled = false;
+
+window.addEventListener("scroll", function () {
+  if (scrollDisabled) {
+    return;
+  }
+
+  var scrollPosition = window.scrollY || window.pageYOffset;
+
+  if (
+    scrollPosition >= section3.offsetTop &&
+    scrollPosition < section3.offsetTop + section3.offsetHeight
+  ) {
+    document.body.classList.add("no-scroll");
+    section3.style.opacity = 1;
+    scrollDisabled = true;
+    section3Title.classList.remove("mensajeInical");
+    section3Title.classList.add("mensaje");
+
+    setTimeout(function () {
+      section3Title2.classList.remove("mejorarInicial");
+      section3Title2.classList.add("mejorarInicialVisible");
+
+      setTimeout(function () {
+        section3Title2.classList.add("desapareceGradual");
+
+        setTimeout(function () {
+          section3Title.classList.remove("mensaje");
+          section3Title.classList.add("teEsperamoslVisible");
+
+          setTimeout(function () {
+            section3Title.classList.remove("teEsperamoslVisible");
+            section3Title.classList.add("teEsperamoslVisible2");
+            setTimeout(function () {
+              boxCartas.classList.remove("boxCartas");
+              boxCartas.classList.add("boxCartas1");
+            }, 1000);
+          }, 1000);
+        }, 200);
+      }, 1000);
+    }, 1000);
+
+    setTimeout(function () {
+      document.body.classList.remove("no-scroll");
+    }, 4500);
+  }
+});
+
+const cards = document.querySelectorAll(".card");
+cards.forEach((card) => {
+  const image = card.querySelector(".card-image");
+  const hoverImage = card.querySelector(".card-image-hover");
+
+  card.addEventListener("mouseover", () => {
+    image.style.display = "none";
+    hoverImage.style.display = "block";
+  });
+
+  card.addEventListener("mouseout", () => {
+    image.style.display = "block";
+    hoverImage.style.display = "none";
+  });
+});
+    // fin de animacion de iconos
 
 // inicio zoom personas //
 const imagenPerson1 = document.querySelector('.imagenPerson1');
