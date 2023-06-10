@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ 
+    <title>Document</title>
+</head>
+<body>
+  <section class="oficinasNuevo">
+    <div class="carouselOficinas">
+        <div class="slideOficinas active">
+          <img src="images/oficinas1.png">
+          <!-- <div class="textslideOficinas1">
+            <p>¿Creés que un banco puede mejorarle la vida a las personas?</p>
+            <p style="font-size: 32px; font-weight: 600; margin-top: -25px;">Este equipo cree que sí.</p> 
+        </div> -->
+        </div>
+        <div class="slideOficinas">
+          <img src="images/oficinas2.png">
+          <!-- <div class="textslideOficinas2">
+            <p>Contamos con una reserva en fondos Fima, pero nuestra reserva es la inversión que hacemos en materiales de producción.</p>
+            <p style="font-style: normal; font-weight: 700; font-size: 22px; line-height: 27px; margin-top: 20px;">Testimonio Susana Maio</p>
+            <p style="font-style: normal; font-weight: 700; font-size: 16px; line-height: 19px; margin-top: -15px;">Presidenta de empresa industrial “Mas-tin”</p>
+            <p style="font-weight: 500; font-size: 16px; line-height: 19px; letter-spacing: 0.01em; text-decoration-line: underline; margin-left: 25px;">www.mas-tin.com/</p>
+        </div> -->
+        </div>
+        <div class="slideOficinas">
+          <img src="images/oficinas3.png">
+          <!-- <div class="textslideOficinas3">
+            <p>Pagamos con cheques electrónicos o con transferencias. Nos dieron mucha comodidad, no perdemos más tiempo en ir a depositar.</p>
+            <p style="font-style: normal; font-weight: 700; font-size: 22px; line-height: 27px; margin-top: 20px;">Testimonio Nicolás Motzo</p>
+            <p style="font-style: normal; font-weight: 700; font-size: 16px; line-height: 19px; margin-top: -15px;">Empleado PyME “Alpac”</p>
+            <p style="font-weight: 500; font-size: 16px; line-height: 19px; letter-spacing: 0.01em; text-decoration-line: underline; margin-left: 25px;">www.alpac.com.ar</p>
+        </div> -->
+        </div>
+        <div class="indicatorsOficinas">
+          <div class="indicatorOficinas active"></div>
+          <div class="indicatorOficinas"></div>
+          <div class="indicatorOficinas"></div>
+        </div>
+      </div>
+
+  </section>
+</body>
+<style>
+
+
+/* */
+
+
+
+/* inicio carousel del header */
+
+
+
+.oficinasNuevo {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* Header-principal */
+
+
+  width: 1280px;
+height: 770px;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(banner.jpg), #C5C5C5;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+
+.carouselOficinas {
+    position: relative;
+    width: 100%;
+    height: 770px;
+    overflow: hidden;
+  }
+
+
+
+
+
+
+
+
+
+
+
+.textslideOficinas1 {
+  /* ¿Creés que un banco puede mejorarle la vida a las personas? */
+
+
+  position: absolute;
+  width: 667px;
+  height: 96px;
+  left: 82px;
+  top: 250px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.01em;
+
+  /* White */
+
+  color: #FFFFFF;
+
+  }
+
+  .textslideOficinas2 {
+      /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
+
+      position: absolute;
+      left: 101px;
+  top: 116px;
+  width: 575px;
+  height: 160px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 40px;
+  /* or 121% */
+
+  letter-spacing: -0.01em;
+
+  /* Gray Dark */
+
+  color: #383838;
+
+
+
+  }
+
+  .textslideOficinas3 {
+
+      /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
+      position: absolute;
+      left: 101px;
+  top: 116px;
+  width: 575px;
+  height: 160px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 40px;
+  /* or 121% */
+
+  letter-spacing: -0.01em;
+
+  /* Gray Dark */
+
+  color: #383838;
+
+
+
+  }
+
+
+
+  .slideOficinas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .slideOficinas.active {
+    opacity: 1;
+  }
+
+  .slideOficinas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slideOficinas .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+  }
+  .indicatorsOficinas {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .indicatorOficinas {
+    display: inline-block;
+    width: 24px;
+    height: 8px;
+
+    background: #F2F2F2;
+  border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px; /* Agregamos este margen a la derecha */
+
+  }
+
+  .indicatorOficinas.active {
+    width: 48px;
+    background: #FA6400;
+  border-radius: 20px;
+  }
+
+
+
+/* fin carousel del header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<script>
+  
+
+// inicio carousel del header
+
+
+const slidesHeader = document.querySelectorAll('.slideOficinas');
+const indicatorsOficinas = document.querySelectorAll('.indicatorOficinas');
+let currentslideOficinas = 0;
+
+function showslideOficinas(n) {
+  slidesHeader[currentslideOficinas].classList.remove('active');
+  indicatorsOficinas[currentslideOficinas].classList.remove('active');
+  currentslideOficinas = (n + slidesHeader.length) % slidesHeader.length;
+  slidesHeader[currentslideOficinas].classList.add('active');
+  indicatorsOficinas[currentslideOficinas].classList.add('active');
+}
+
+function nextslideOficinas() {
+  showslideOficinas(currentslideOficinas + 1);
+}
+
+setInterval(nextslideOficinas, 3600);
+
+
+// fin carousel del header
+</script>
+</html>

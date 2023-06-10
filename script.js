@@ -170,7 +170,10 @@ const imagenPerson2 = document.querySelector('.imagenPerson2');
 const imagenGrande2 = document.querySelector('.imagenGrande2');
 const imagenPerson3 = document.querySelector('.imagenPerson3');
 const imagenGrande3 = document.querySelector('.imagenGrande3');
-
+const imagenPerson4 = document.querySelector('.imagenPerson4');
+const imagenGrande4 = document.querySelector('.imagenGrande4');
+const imagenPerson5 = document.querySelector('.imagenPerson5');
+const imagenGrande5 = document.querySelector('.imagenGrande5');
 
 
 
@@ -208,7 +211,33 @@ imagenGrande3.addEventListener('mouseout', () => {
   imagenPerson2.style.transform = 'translateX(0)';
 });
 
+imagenGrande4.addEventListener('mouseover', () => {
+  imagenPerson1.style.transform = 'translateX(-100px)';
+  imagenPerson3.style.transform = 'translateX(100px)';
 
+});
+
+imagenGrande4.addEventListener('mouseout', () => {
+  imagenPerson1.style.transform = 'translateX(0)';
+  imagenPerson3.style.transform = 'translateX(0)';
+});
+
+imagenGrande5.addEventListener('mouseover', () => {
+  imagenPerson1.style.transform = 'translateX(-100px)';
+  imagenPerson2.style.transform = 'translateX(-100px)';
+});
+
+imagenGrande5.addEventListener('mouseout', () => {
+  imagenPerson1.style.transform = 'translateX(0)';
+  imagenPerson2.style.transform = 'translateX(0)';
+});
+
+
+// fin zoom personas //
+
+
+
+// Inicio script de tarjetas
 
 
 	const slides = document.querySelectorAll(".item");
@@ -254,7 +283,7 @@ imagenGrande3.addEventListener('mouseout', () => {
     setInterval(contar, 2000); 
 
 
-
+// Fin script de tarjetas
 
 
 
@@ -281,6 +310,32 @@ setInterval(nextSlideHeader, 3600);
 
 
 // fin carousel del header
+
+
+
+// inicio carousel de Oficinas
+
+
+const slidesOficinas = document.querySelectorAll('.slideOficinas');
+const indicatorsOficinas = document.querySelectorAll('.indicatorOficinas');
+let currentslideOficinas = 0;
+
+function showslideOficinas(n) {
+  slidesOficinas[currentslideOficinas].classList.remove('active');
+  indicatorsOficinas[currentslideOficinas].classList.remove('active');
+  currentslideOficinas = (n + slidesOficinas.length) % slidesOficinas.length;
+  slidesOficinas[currentslideOficinas].classList.add('active');
+  indicatorsOficinas[currentslideOficinas].classList.add('active');
+}
+
+function nextslideOficinas() {
+  showslideOficinas(currentslideOficinas + 1);
+}
+
+setInterval(nextslideOficinas, 3600);
+
+
+// fin carousel de Oficinas
 
   // inicio indicadores circulares
   const sliderindicatorCircular = document.querySelector('.sliderindicatorCircular');
@@ -323,17 +378,6 @@ showSlide(slideIndex);
 // fin indicadores circulares
 
 
-
-
-
-
-
-
-
-
-
-  
- 
 
 
  
