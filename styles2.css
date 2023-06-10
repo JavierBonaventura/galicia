@@ -1604,10 +1604,11 @@ border-radius: 8px;
 .seguinosEnNuestrasRedes {
 /* Seguínos en nuestras redes: */
 padding-top: 20px;
-margin-left: 1180px;
+margin-left: 1060px;
 margin-bottom: -50px;
 width: 194px;
 height: 17px;
+max-width: 1280px;
 
 font-family: 'Inter';
 font-style: normal;
@@ -1747,6 +1748,30 @@ border: 1px solid #FFFFFF;
   margin: 0 auto;
   width: 1280px;
   height: 140px;
+
+  /* Gray Light */
+
+  background: #F2F2F2;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 8;
+  align-self: stretch;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.footer2 {
+  /* Footer */
+
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 1280px;
+
 
   /* Gray Light */
 
