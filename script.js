@@ -142,7 +142,7 @@ window.addEventListener("scroll", function () {
 
     setTimeout(function () {
       document.body.classList.remove("no-scroll");
-    }, 4500);
+    }, 2000);
   }
 });
 
