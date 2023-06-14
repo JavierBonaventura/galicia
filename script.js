@@ -93,6 +93,35 @@ if (slider) {
     // fin cambio de imagenes de colores //
 
 
+// inicio personas talento 
+
+const imagesPersonas = document.querySelectorAll('.imagePersonas');
+
+imagesPersonas.forEach((imagePersonas, index) => {
+  imagePersonas.addEventListener('mouseover', () => {
+    imagesPersonas.forEach((otherImage, otherIndex) => {
+      if (otherIndex < index) {
+        otherImage.style.transform = 'translateX(-10%) scale(1)'
+      } else if (otherIndex > index) {
+        otherImage.style.transform = 'translateX(10%) scale(1)';
+      } else if (otherIndex == index) {
+        otherImage.style.transform = 'scale(1.3)';
+      } 
+    });
+  });
+
+  imagePersonas.addEventListener('mouseout', () => {
+    imagesPersonas.forEach((otherImage) => {
+      otherImage.style.transform = 'scale(1)';
+    });
+  });
+});
+
+
+// fin personas talento 
+
+
+
     // inicio de animacion de iconos
 var section3 = document.getElementById("section3");
 var section3Title = document.getElementById("section3Title");
@@ -164,73 +193,73 @@ cards.forEach((card) => {
     // fin de animacion de iconos
 
 // inicio zoom personas //
-const imagenPerson1 = document.querySelector('.imagenPerson1');
-const imagenGrande1 = document.querySelector('.imagenGrande1');
-const imagenPerson2 = document.querySelector('.imagenPerson2');
-const imagenGrande2 = document.querySelector('.imagenGrande2');
-const imagenPerson3 = document.querySelector('.imagenPerson3');
-const imagenGrande3 = document.querySelector('.imagenGrande3');
-const imagenPerson4 = document.querySelector('.imagenPerson4');
-const imagenGrande4 = document.querySelector('.imagenGrande4');
-const imagenPerson5 = document.querySelector('.imagenPerson5');
-const imagenGrande5 = document.querySelector('.imagenGrande5');
+// const imagenPerson1 = document.querySelector('.imagenPerson1');
+// const imagenGrande1 = document.querySelector('.imagenGrande1');
+// const imagenPerson2 = document.querySelector('.imagenPerson2');
+// const imagenGrande2 = document.querySelector('.imagenGrande2');
+// const imagenPerson3 = document.querySelector('.imagenPerson3');
+// const imagenGrande3 = document.querySelector('.imagenGrande3');
+// const imagenPerson4 = document.querySelector('.imagenPerson4');
+// const imagenGrande4 = document.querySelector('.imagenGrande4');
+// const imagenPerson5 = document.querySelector('.imagenPerson5');
+// const imagenGrande5 = document.querySelector('.imagenGrande5');
 
 
 
 
-imagenGrande1.addEventListener('mouseover', () => {
-  imagenPerson2.style.transform = 'translateX(100px)';
-  imagenPerson3.style.transform = 'translateX(100px)';
+// imagenGrande1.addEventListener('mouseover', () => {
+//   imagenPerson2.style.transform = 'translateX(100px)';
+//   imagenPerson3.style.transform = 'translateX(100px)';
 
-});
+// });
 
-imagenGrande1.addEventListener('mouseout', () => {
-  imagenPerson2.style.transform = 'translateX(0)';
-  imagenPerson3.style.transform = 'translateX(0)';
+// imagenGrande1.addEventListener('mouseout', () => {
+//   imagenPerson2.style.transform = 'translateX(0)';
+//   imagenPerson3.style.transform = 'translateX(0)';
 
-});
+// });
 
-imagenGrande2.addEventListener('mouseover', () => {
-  imagenPerson1.style.transform = 'translateX(-100px)';
-  imagenPerson3.style.transform = 'translateX(100px)';
+// imagenGrande2.addEventListener('mouseover', () => {
+//   imagenPerson1.style.transform = 'translateX(-100px)';
+//   imagenPerson3.style.transform = 'translateX(100px)';
 
-});
+// });
 
-imagenGrande2.addEventListener('mouseout', () => {
-  imagenPerson1.style.transform = 'translateX(0)';
-  imagenPerson3.style.transform = 'translateX(0)';
-});
+// imagenGrande2.addEventListener('mouseout', () => {
+//   imagenPerson1.style.transform = 'translateX(0)';
+//   imagenPerson3.style.transform = 'translateX(0)';
+// });
 
-imagenGrande3.addEventListener('mouseover', () => {
-  imagenPerson1.style.transform = 'translateX(-100px)';
-  imagenPerson2.style.transform = 'translateX(-100px)';
-});
+// imagenGrande3.addEventListener('mouseover', () => {
+//   imagenPerson1.style.transform = 'translateX(-100px)';
+//   imagenPerson2.style.transform = 'translateX(-100px)';
+// });
 
-imagenGrande3.addEventListener('mouseout', () => {
-  imagenPerson1.style.transform = 'translateX(0)';
-  imagenPerson2.style.transform = 'translateX(0)';
-});
+// imagenGrande3.addEventListener('mouseout', () => {
+//   imagenPerson1.style.transform = 'translateX(0)';
+//   imagenPerson2.style.transform = 'translateX(0)';
+// });
 
-imagenGrande4.addEventListener('mouseover', () => {
-  imagenPerson1.style.transform = 'translateX(-100px)';
-  imagenPerson3.style.transform = 'translateX(100px)';
+// imagenGrande4.addEventListener('mouseover', () => {
+//   imagenPerson1.style.transform = 'translateX(-100px)';
+//   imagenPerson3.style.transform = 'translateX(100px)';
 
-});
+// });
 
-imagenGrande4.addEventListener('mouseout', () => {
-  imagenPerson1.style.transform = 'translateX(0)';
-  imagenPerson3.style.transform = 'translateX(0)';
-});
+// imagenGrande4.addEventListener('mouseout', () => {
+//   imagenPerson1.style.transform = 'translateX(0)';
+//   imagenPerson3.style.transform = 'translateX(0)';
+// });
 
-imagenGrande5.addEventListener('mouseover', () => {
-  imagenPerson1.style.transform = 'translateX(-100px)';
-  imagenPerson2.style.transform = 'translateX(-100px)';
-});
+// imagenGrande5.addEventListener('mouseover', () => {
+//   imagenPerson1.style.transform = 'translateX(-100px)';
+//   imagenPerson2.style.transform = 'translateX(-100px)';
+// });
 
-imagenGrande5.addEventListener('mouseout', () => {
-  imagenPerson1.style.transform = 'translateX(0)';
-  imagenPerson2.style.transform = 'translateX(0)';
-});
+// imagenGrande5.addEventListener('mouseout', () => {
+//   imagenPerson1.style.transform = 'translateX(0)';
+//   imagenPerson2.style.transform = 'translateX(0)';
+// });
 
 
 // fin zoom personas //
