@@ -2,7 +2,7 @@
 window.addEventListener("DOMContentLoaded", (event) => {
     const el = document.getElementById('test');
   
-    const slider = document.querySelector('.galleryy');
+    const slider = document.querySelector('.nav-bar');
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -302,6 +302,13 @@ function showSlideHeader(n) {
   indicators[currentSlideHeader].classList.add('active');
 }
 
+// Agrega el evento de clic a cada indicador
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    showSlideHeader(index);
+  });
+});
+
 function nextSlideHeader() {
   showSlideHeader(currentSlideHeader + 1);
 }
@@ -327,6 +334,16 @@ function showslideOficinas(n) {
   slidesOficinas[currentslideOficinas].classList.add('active');
   indicatorsOficinas[currentslideOficinas].classList.add('active');
 }
+
+
+
+
+// Itera sobre cada indicador y agrega un evento de click
+indicatorsOficinas.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    showslideOficinas(index);
+  });
+});
 
 function nextslideOficinas() {
   showslideOficinas(currentslideOficinas + 1);
@@ -377,8 +394,48 @@ showSlide(slideIndex);
 
 // fin indicadores circulares
 
+// inicio scroll horizontal
+var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
+var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
+var btnIzquierda = document.getElementById("btn-izquierda");
+var btnDerecha = document.getElementById("btn-derecha");
 
+btnIzquierda.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: -250,
+    behavior: "smooth"
+  });
+});
 
+btnDerecha.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: 250,
+    behavior: "smooth"
+  });
+});
+
+contenedorImagenScroll.addEventListener("wheel", function(event) {
+  event.preventDefault();
+  contenedorImagenScroll.scrollLeft += event.deltaY;
+});
+
+var barraAvance = document.getElementById("barra-avanceScroll");
+
+contenedorImagenScroll.addEventListener("scroll", function() {
+  var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
+  var scrollPosition = contenedorImagenScroll.scrollLeft;
+  var progress = (scrollPosition / scrollWidth) * 100;
+
+  barraAvance.style.width = progress + "%";
+
+  if (progress >= 100) {
+    barraAvance.style.backgroundColor = "orange";
+  } else {
+    barraAvance.style.backgroundColor = "orange";
+  }
+});
+
+// fin scroll horizontal
 
  
 

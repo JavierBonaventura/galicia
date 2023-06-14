@@ -2799,7 +2799,7 @@ height: 770px;
   width: 667px;
   height: 96px;
   left: 82px;
-  top: 250px;
+  top: 050px;
 
   font-family: 'Inter';
   font-style: normal;
@@ -2812,6 +2812,146 @@ height: 770px;
 
   color: #FFFFFF;
 
+  }
+
+  .sustentables {
+    /* Sustentables */
+
+/* 
+position: absolute; */
+width: 394px;
+height: 77px;
+left: 80px;
+top: 195px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+letter-spacing: -0.03em;
+
+/* White */
+
+color: #FFFFFF;
+  }
+
+  .ambosEdificios {
+    /* Ambos edificios corporativos son sustentables. */
+
+
+/* position: absolute; */
+width: 772px;
+height: 36px;
+left: 80px;
+top: 280px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 36px;
+/* identical to box height, or 120% */
+
+
+/* White */
+
+color: #FFFFFF;
+  }
+
+  .linesOficinas1 {
+    /* Line */
+
+/* 
+position: absolute; */
+width: 96px;
+height: 0px;
+left: 80px;
+top: 364px;
+
+border: 3px solid #FFFFFF;
+
+  }
+
+  .plazaGalicia {
+    /* Plaza Galicia cuenta desde hace 5 años con el nivel “Gold” de la certificación Leed a la construcción ambiental y somos 100% carbono neutrales. */
+
+
+/* position: absolute; */
+width: 736px;
+height: 114px;
+left: 80px;
+top: 412px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 38px;
+/* or 173% */
+
+letter-spacing: 0.01em;
+
+/* White */
+
+color: #FFFFFF;
+
+  }
+
+  .conoceMas {
+    
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 24px;
+gap: 10px;
+
+position: absolute;
+width: 185px;
+height: 40px;
+left: 80px;
+top: 558px;
+
+/* Orange */
+
+background: #FA6400;
+border-radius: 10px;
+
+  }
+
+  .conoceMasTexto {
+    /* Conocé más */
+
+margin-top: 10px;
+width: 137px;
+height: 16px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 27px;
+/* leading-trim and text-edge are draft CSS properties.
+
+Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+*/
+leading-trim: both;
+text-edge: cap;
+letter-spacing: 0.02em;
+
+/* White */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
   }
 
   .textslideOficinas2 {
@@ -2840,6 +2980,92 @@ height: 770px;
 
   }
 
+  .espaciosMedida {
+    /* Espacios a tu medida */
+
+
+/* position: absolute; */
+width: 626px;
+height: 77px;
+left: 80px;
+top: 195px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+letter-spacing: -0.03em;
+
+/* White */
+
+color: #FFFFFF;
+  }
+
+  .contamosEspacios {
+
+  /* Contamos con espacios abiertos que fomentan el trabajo en equipo y la co-creación. */
+
+/* 
+position: absolute; */
+width: 682px;
+height: 84px;
+left: 80px;
+top: 280px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 42px;
+/* or 140% */
+
+letter-spacing: -0.01em;
+
+/* White */
+
+color: #FFFFFF;
+  }
+
+
+  .linesOficinas2 {
+    /* Line */
+  
+  
+  /* position: absolute; */
+  width: 96px;
+  height: 0px;
+  left: 80px;
+  top: 412px;
+  
+  border: 3px solid #FFFFFF;
+  
+  }
+
+  .enLasOficinas {
+    /* En las oficinas vas a encontrar espacios que se acomoden a tus necesidades: gimnasios, comedores, consultorios médicos, lactarios. */
+
+
+/* position: absolute; */
+width: 736px;
+height: 114px;
+left: 80px;
+top: 460px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 38px;
+/* or 173% */
+
+letter-spacing: 0.01em;
+
+/* White */
+
+color: #FFFFFF;
+  }
+
   .textslideOficinas3 {
 
       /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
@@ -2866,6 +3092,51 @@ height: 770px;
 
   }
 
+  .nuestrasOficinas {
+    /* Titulo para sucursales */
+
+
+/* position: absolute; */
+width: 655px;
+height: 77px;
+left: 80px;
+top: 195px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 64px;
+line-height: 77px;
+letter-spacing: -0.03em;
+
+/* White */
+
+color: #FFFFFF;
+  }
+
+  .conoceMas2 {
+    
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    gap: 10px;
+    
+    position: absolute;
+    width: 185px;
+    height: 40px;
+    left: 60px;
+    top: 488px;
+    
+    /* Orange */
+    
+    background: #FA6400;
+    border-radius: 10px;
+    
+      }
 
 
   .slideOficinas {
@@ -2926,3 +3197,65 @@ height: 770px;
 /* fin carousel de Oficinas */
 
 
+/* inicio scroll :horizontal */
+
+#scrollHorizontal {
+  position: relative;
+  overflow-x: hidden;
+  width: 1280px;
+  height: 750px;
+  margin: 0 auto;
+}
+
+#scrollHorizontal-imagen {
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+#imagenScroll {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#barra-avanceScroll {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0;
+  height: 10px;
+  background-color: gray;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+#barra-botonesScroll {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#barra-botonesScroll button {
+  margin: 0 5px;
+  font-size: 44px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#barra-botonesScroll button span {
+  display: inline-block;
+}
+
+#barra-botonesScroll button:hover {
+  color: orange;
+}
+
+
+/* fin scroll :horizontal */

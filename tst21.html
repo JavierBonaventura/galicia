@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="contenedor-imagen">
+    <img src="images/total_gris.png" alt="Imagen" />
+ </div>
+ 
+</body>
+<style>
+#contenedor-imagen {
+   width: 100%;
+   overflow-x: scroll;
+   white-space: nowrap;
+}
+
+#imagen {
+   width: 120%;
+}
+
+
+</style>
+<script>
+  var contenedorImagen = document.getElementById("contenedor-imagen");
+
+contenedorImagen.addEventListener("wheel", function(event) {
+   event.preventDefault();
+   contenedorImagen.scrollLeft += event.deltaY;
+});
+
+</script>
+</html>
