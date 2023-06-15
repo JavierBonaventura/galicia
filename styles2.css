@@ -3268,7 +3268,7 @@ color: #FFFFFF;
   /* puestoPersonas */
 
   position: absolute;
-bottom: 220px;
+bottom: 160px;
 left: 20px;
 width: 443px;
 height: 15px;
@@ -3297,7 +3297,7 @@ flex-grow: 0;
 .nombrePersonas {
   /* nombrePersonas */
   position: absolute;
-bottom: 180px;
+bottom: 120px;
 left: 20px;
 
 width: 443px;
@@ -3327,19 +3327,19 @@ flex-grow: 0;
   /* “Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi voz cuenta” */
 
   position: absolute;
-bottom: 60px;
+bottom: 10px;
 left: 20px;
-width: 443px;
+width: 230px;
 height: 93px;
 
 font-family: 'Inter';
 font-style: normal;
-font-weight: 600;
-font-size: 26px;
-line-height: 31px;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
 /* or 119% */
 
-letter-spacing: -0.02em;
+letter-spacing: -0.05em;
 
 color: #FFFFFF;
 
@@ -3378,7 +3378,7 @@ top: 85%;
 
 width: 182px;
 height: 19px;
-
+margin-left: 10px;
 font-family: 'Inter';
 font-style: normal;
 font-weight: 600;

@@ -92,21 +92,24 @@ if (slider) {
 
     // fin cambio de imagenes de colores //
 
-
 // inicio personas talento 
 
 const imagesPersonas = document.querySelectorAll('.imagePersonas');
+const textHoverElements = document.querySelectorAll('.text-hover');
 
 imagesPersonas.forEach((imagePersonas, index) => {
   imagePersonas.addEventListener('mouseover', () => {
     imagesPersonas.forEach((otherImage, otherIndex) => {
       if (otherIndex < index) {
-        otherImage.style.transform = 'translateX(-10%) scale(1)'
+        otherImage.style.transform = 'translateX(-10%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(-10%)';
       } else if (otherIndex > index) {
         otherImage.style.transform = 'translateX(10%) scale(1)';
-      } else if (otherIndex == index) {
+        textHoverElements[otherIndex].style.transform = 'translateX(10%)';
+      } else if (otherIndex === index) {
         otherImage.style.transform = 'scale(1.3)';
-      } 
+        textHoverElements[otherIndex].style.transform = 'scale(1.0)';
+      }
     });
   });
 
@@ -114,11 +117,44 @@ imagesPersonas.forEach((imagePersonas, index) => {
     imagesPersonas.forEach((otherImage) => {
       otherImage.style.transform = 'scale(1)';
     });
+    textHoverElements.forEach((textElement) => {
+      textElement.style.transform = 'translateX(0)';
+    });
   });
 });
 
+textHoverElements.forEach((textElement, index) => {
+  textElement.addEventListener('mouseover', () => {
+    imagesPersonas.forEach((otherImage, otherIndex) => {
+      if (otherIndex < index) {
+        otherImage.style.transform = 'translateX(-10%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(-10%)';
+      } else if (otherIndex > index) {
+        otherImage.style.transform = 'translateX(10%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(10%)';
+      } else if (otherIndex === index) {
+        otherImage.style.transform = 'scale(1.3)';
+        textHoverElements[otherIndex].style.transform = 'scale(1.0)';
+      }
+    });
+  });
+
+  textElement.addEventListener('mouseout', () => {
+    imagesPersonas.forEach((otherImage) => {
+      otherImage.style.transform = 'scale(1)';
+    });
+    textHoverElements.forEach((textElement) => {
+      textElement.style.transform = 'translateX(0)';
+    });
+  });
+
+  textElement.style.transition = 'transform 0.3s'; // Agregamos la transición suave al texto
+});
+
+
 
 // fin personas talento 
+
 
 
 
