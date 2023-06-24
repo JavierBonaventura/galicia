@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor-imagen">
+        <img  class="formaDeImagen" src="images/persona1.jpg" alt="Imagen">
+      </div>
+      <div class="imagePersonas-containerPersonas">
+      <div class="imagePersonas-wrapper">
+        <img
+          src="images/persona1.jpg"
+          alt="Imagen 1"
+          class="imagePersonas"
+          id="image1"
+        />
+        <div class="text-hover">
+          <p class="puestoPersonas">Ciberseguridad</p>
+          <p class="nombrePersonas">Ailu</p>
+          <p class="historiaEmpleado">
+            "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+            voz cuenta"
+          </p>
+          <div class="containerLinkedin">
+            <img class="iconoLinkedin" src="images/IN.png" alt="" />
+            <p class="textoIconoLinkedin">Ver en linkedin</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+</body>
+<style>
+        .imagePersonas-containerPersonas {
+      justify-content: center;
+
+      margin-top: 130px;
+      display: flex;
+      overflow-x: visible;
+    }
+    .formaDeImagen {
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .imagePersonas {
+        height: 300px;
+        border-radius: 10px;
+
+
+
+        position: relative;
+      border-radius: 30px;
+      width: 220px;
+      transition: transform 0.3s;
+      padding: 8px;
+      height: 380px;
+    }
+
+    .imagePersonas-wrapper{
+  position: relative;
+
+
+}
+
+.imagePersonas-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 225px;
+  height: 50%; /* Ajusta la altura para controlar la cantidad de oscurecimiento */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  pointer-events: none; /* Permite que los elementos debajo del pseudo-elemento sean clicables */
+  border-radius: 10px;
+}
+    .contenedor-imagen {
+  position: relative;
+
+height: 300px;
+}
+
+.contenedor-imagen::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 225px;
+  height: 50%; /* Ajusta la altura para controlar la cantidad de oscurecimiento */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  pointer-events: none; /* Permite que los elementos debajo del pseudo-elemento sean clicables */
+  border-radius: 10px;
+}
+
+</style>
+</html>
