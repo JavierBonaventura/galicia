@@ -101,11 +101,11 @@ imagesPersonas.forEach((imagePersonas, index) => {
   imagePersonas.addEventListener('mouseover', () => {
     imagesPersonas.forEach((otherImage, otherIndex) => {
       if (otherIndex < index) {
-        otherImage.style.transform = 'translateX(-10%) scale(1)';
-        textHoverElements[otherIndex].style.transform = 'translateX(-10%)';
+        otherImage.style.transform = 'translateX(-30%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(-30%)';
       } else if (otherIndex > index) {
-        otherImage.style.transform = 'translateX(10%) scale(1)';
-        textHoverElements[otherIndex].style.transform = 'translateX(10%)';
+        otherImage.style.transform = 'translateX(30%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(30%)';
       } else if (otherIndex === index) {
         otherImage.style.transform = 'scale(1.3)';
         textHoverElements[otherIndex].style.transform = 'scale(1.0)';
@@ -127,11 +127,11 @@ textHoverElements.forEach((textElement, index) => {
   textElement.addEventListener('mouseover', () => {
     imagesPersonas.forEach((otherImage, otherIndex) => {
       if (otherIndex < index) {
-        otherImage.style.transform = 'translateX(-10%) scale(1)';
-        textHoverElements[otherIndex].style.transform = 'translateX(-10%)';
+        otherImage.style.transform = 'translateX(-30%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(-30%)';
       } else if (otherIndex > index) {
-        otherImage.style.transform = 'translateX(10%) scale(1)';
-        textHoverElements[otherIndex].style.transform = 'translateX(10%)';
+        otherImage.style.transform = 'translateX(30%) scale(1)';
+        textHoverElements[otherIndex].style.transform = 'translateX(30%)';
       } else if (otherIndex === index) {
         otherImage.style.transform = 'scale(1.3)';
         textHoverElements[otherIndex].style.transform = 'scale(1.0)';
