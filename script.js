@@ -489,7 +489,7 @@ var barraAvance = document.getElementById("barra-avanceScroll");
 contenedorImagenScroll.addEventListener("scroll", function() {
   var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
   var scrollPosition = contenedorImagenScroll.scrollLeft;
-  var progress = (scrollPosition / scrollWidth) * 100;
+  var progress = (scrollPosition / scrollWidth) * 80;
 
   barraAvance.style.width = progress + "%";
 
