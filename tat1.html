@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* inicio scroll :horizontal */
+    #scrollHorizontal {
+        background-color: #F2F2F2;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 750px;
+  margin: 0 auto;
+  padding-left: 50px; /* Ajusta este valor según la anchura de los círculos */
+}
+    
+#scrollHorizontal-imagen {
+    
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+    
+    #imagenScroll {
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    #barra-avanceScroll {
+      margin-left: 10%;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 10px;
+      background-color: rgb(128, 128, 128);
+      transition: width 0.3s ease, background-color 0.3s ease;
+      z-index: 2;
+      border-radius: 8px;
+    }
+
+    #barra-avanceScroll_gris {
+      left: 0;
+      width: 80%;
+      position: absolute;
+      margin-left: 10%;
+      z-index: 1;
+      border-radius: 8px;
+      height: 10px;
+      background-color: #9B9B9B ;
+    }
+    
+    #barra-botonesScroll {
+      position: absolute;
+      bottom: 0px;
+      margin-left: -12%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    
+    #barra-botonesScroll button {
+      margin: 0 5px;
+      font-size: 44px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+    
+    #barra-botonesScroll button span {
+      display: inline-block;
+    }
+    
+    #barra-botonesScroll button:hover {
+      color: orange;
+    }
+    
+    /* fin scroll :horizontal */
+
+    #circulos-scroll {
+       
+  position: absolute;
+  left: 20px; /* Ajusta este valor según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+    .circulo {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      background-color: #F2F2F2;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <section class="queBuscamos">
+    <div id="scrollHorizontal">
+      <div id="circulos-scroll">
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+        <div class="circulo"></div>
+      </div>
+      <div id="scrollHorizontal-imagen">
+        <img
+          id="imagenScroll"
+          src="images/total_fondo_ok_nuevo.png"
+          alt="imagenScroll"
+        />
+      </div>
+      <div style="margin-left: 100px; margin-top: -26px;">
+        <div id="barra-avanceScroll"></div>
+        <div id="barra-avanceScroll_gris"></div>
+        <div id="barra-botonesScroll">
+          <button id="btn-izquierda"><span>&#8249;</span></button>
+          <button id="btn-derecha"><span>&#8250;</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // inicio scroll horizontal
+    var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
+    var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
+    var btnIzquierda = document.getElementById("btn-izquierda");
+    var btnDerecha = document.getElementById("btn-derecha");
+
+    btnIzquierda.addEventListener("click", function() {
+      contenedorImagenScroll.scrollBy({
+        left: -250,
+        behavior: "smooth"
+      });
+    });
+
+    btnDerecha.addEventListener("click", function() {
+      contenedorImagenScroll.scrollBy({
+        left: 250,
+        behavior: "smooth"
+      });
+    });
+
+    contenedorImagenScroll.addEventListener("wheel", function(event) {
+      event.preventDefault();
+      contenedorImagenScroll.scrollLeft += event.deltaY;
+    });
+
+    var barraAvance = document.getElementById("barra-avanceScroll");
+
+    contenedorImagenScroll.addEventListener("scroll", function() {
+      var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
+      var scrollPosition = contenedorImagenScroll.scrollLeft;
+      var progress = (scrollPosition / scrollWidth) * 80;
+
+      barraAvance.style.width = progress + "%";
+
+      if (progress >= 100) {
+        barraAvance.style.background = "orange";
+      } else {
+        barraAvance.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
+      }
+
+      var circulos = document.getElementsByClassName("circulo");
+      var numCirculos = circulos.length;
+      var colorIndex = Math.floor((scrollPosition / scrollWidth) * numCirculos);
+
+      for (var i = 0; i < numCirculos; i++) {
+        if (i <= colorIndex) {
+          circulos[i].style.backgroundColor = "#FA6400"; // Cambia el color de los círculos a medida que se avanza en el scroll
+          circulos[i].style.border = "4px solid #f5c3a2"; // Agrega un borde sólido de 8 px al círculo activo
+        } else {
+          circulos[i].style.backgroundColor = "#9B9B9B"; // Restablece el color de los círculos anteriores
+          circulos[i].style.border = "4px solid #F2F2F2"; // Agrega un borde sólido de 8 px al círculo activo
+
+        }
+      }
+    });
+    // fin scroll horizontal
+  </script>
+</body>
+</html>

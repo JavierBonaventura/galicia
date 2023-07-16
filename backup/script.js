@@ -459,62 +459,48 @@ showSlide(slideIndex);
 
 // fin indicadores circulares
 
-  // inicio scroll horizontal
-  var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
-  var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
-  var btnIzquierda = document.getElementById("btn-izquierda");
-  var btnDerecha = document.getElementById("btn-derecha");
+// inicio scroll horizontal
+var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
+var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
+var btnIzquierda = document.getElementById("btn-izquierda");
+var btnDerecha = document.getElementById("btn-derecha");
 
-  btnIzquierda.addEventListener("click", function() {
-    contenedorImagenScroll.scrollBy({
-      left: -250,
-      behavior: "smooth"
-    });
+btnIzquierda.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: -250,
+    behavior: "smooth"
   });
+});
 
-  btnDerecha.addEventListener("click", function() {
-    contenedorImagenScroll.scrollBy({
-      left: 250,
-      behavior: "smooth"
-    });
+btnDerecha.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: 250,
+    behavior: "smooth"
   });
+});
 
-  contenedorImagenScroll.addEventListener("wheel", function(event) {
-    event.preventDefault();
-    contenedorImagenScroll.scrollLeft += event.deltaY;
-  });
+contenedorImagenScroll.addEventListener("wheel", function(event) {
+  event.preventDefault();
+  contenedorImagenScroll.scrollLeft += event.deltaY;
+});
 
-  var barraAvance = document.getElementById("barra-avanceScroll");
+var barraAvance = document.getElementById("barra-avanceScroll");
 
-  contenedorImagenScroll.addEventListener("scroll", function() {
-    var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
-    var scrollPosition = contenedorImagenScroll.scrollLeft;
-    var progress = (scrollPosition / scrollWidth) * 80;
+contenedorImagenScroll.addEventListener("scroll", function() {
+  var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
+  var scrollPosition = contenedorImagenScroll.scrollLeft;
+  var progress = (scrollPosition / scrollWidth) * 80;
 
-    barraAvance.style.width = progress + "%";
+  barraAvance.style.width = progress + "%";
 
-    if (progress >= 100) {
-      barraAvance.style.background = "orange";
-    } else {
-      barraAvance.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
-    }
+  if (progress >= 100) {
+    barraAvance.style.backgroundColor = "orange";
+  } else {
+    barraAvance.style.backgroundColor = "orange";
+  }
+});
 
-    var circulos = document.getElementsByClassName("circulo");
-    var numCirculos = circulos.length;
-    var colorIndex = Math.floor((scrollPosition / scrollWidth) * numCirculos);
-
-    for (var i = 0; i < numCirculos; i++) {
-      if (i <= colorIndex) {
-        circulos[i].style.backgroundColor = "#FA6400";
-        circulos[i].style.border = "4px solid #f5c3a2"; 
-      } else {
-        circulos[i].style.backgroundColor = "#9B9B9B";
-        circulos[i].style.border = "4px solid #F2F2F2"; 
-
-      }
-    }
-  });
-  // fin scroll horizontal
+// fin scroll horizontal
 
 // prueba inicio
 
