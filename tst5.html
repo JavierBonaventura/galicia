@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen Cambiante</title>
+  <style>
+    /* Estilo para el contenedor de la imagen */
+    .image-container {
+      position: relative;
+      display: inline-block;
+      height: 450px; /* Altura fija del contenedor */
+      overflow: hidden; /* Ocultar parte de la imagen más grande */
+      
+    }
+
+    /* Estilo para la imagen */
+    .image-container img {
+      width: 100%; /* Ancho al 100% del contenedor */
+      height: auto; /* Altura ajustada automáticamente */
+      transform: translateX(30%)
+      
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <!-- Imagen inicial -->
+    <img src="images/persona1_oscuro_chica.jpg" alt="Imagen Chica">
+  </div>
+
+  <script>
+    // Obtenemos la referencia a la imagen
+    const image = document.querySelector(".image-container img");
+
+    // Guardamos la ruta de la imagen grande
+    const largeImagePath = "images/persona1_oscuro_grande.jpg";
+
+    // Cargamos la imagen grande en caché para una transición más suave
+    const largeImage = new Image();
+    largeImage.src = largeImagePath;
+
+    // Añadimos el evento al pasar el mouse
+    image.addEventListener("mouseover", () => {
+      image.src = largeImagePath;
+      image.style.transform = "translateX(-2.35%) scale(1.2)"
+    });
+
+    // Añadimos el evento al quitar el mouse
+    image.addEventListener("mouseout", () => {
+      image.src = "images/persona1_oscuro_chica.jpg";
+      image.style.transform = "translateX(+30%) scale(1)";     
+    });
+
+  </script>
+</body>
+</html>

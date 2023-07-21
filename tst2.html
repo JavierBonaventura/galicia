@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio de Imagen al Pasar el Cursor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #imagenContenedor {
+    position: relative;
+    border-radius: 30px; /* Borde redondeado de 30px */
+    overflow: hidden;
+  }
+
+  #texto1,
+  #texto2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none; /* Para evitar interferencia con eventos de ratón */
+    transition: opacity 0.3s ease;
+  }
+
+  #texto1 {
+    z-index: 1; /* Colocar texto1 sobre la imagen */
+  }
+
+  #imagenPersona {
+    width: 200px;
+    height: 450px;
+    transition: all 1.3s ease;
+  }
+</style>
+</head>
+<body>
+
+<div id="imagenContenedor">
+  <img id="imagenPersona" src="images/persona1_oscuro_chica.jpg" alt="Persona Oscuro Chica">
+  <div id="texto1">Texto 1</div>
+  <div id="texto2" style="opacity: 0;">Texto 2</div>
+</div>
+
+<script>
+  const imagenContenedor = document.getElementById("imagenContenedor");
+  const imagenPersona = document.getElementById("imagenPersona");
+  const imagenGrandePath = "images/persona1_oscuro_grande.jpg";
+  const chicaPath = "images/persona1_oscuro_chica.jpg";
+  const texto1 = document.getElementById("texto1");
+  const texto2 = document.getElementById("texto2");
+  
+  imagenContenedor.addEventListener("mouseover", () => {
+    imagenPersona.src = imagenGrandePath;
+    imagenPersona.style.width = "483px";
+    imagenPersona.style.height = "450px";
+    imagenContenedor.style.width = "483px"; /* Actualizar el ancho del contenedor */
+    texto1.style.opacity = 0;
+    texto2.style.opacity = 1;
+  });
+
+  imagenContenedor.addEventListener("mouseout", () => {
+    imagenPersona.src = chicaPath;
+    imagenPersona.style.width = "200px";
+    imagenPersona.style.height = "450px";
+    imagenContenedor.style.width = "200px"; /* Revertir el ancho del contenedor */
+    texto1.style.opacity = 1;
+    texto2.style.opacity = 0;
+  });
+</script>
+
+</body>
+</html>

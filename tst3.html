@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio de Imagen al Pasar el Cursor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #imagenPersona {
+    border-radius: 30px; /* Borde redondeado de 30px */
+
+    width: 200px;
+    height: 450px;
+    transition: width .5s, height 0.3s;
+  }
+</style>
+</head>
+<body>
+
+<img id="imagenPersona" src="images/persona1_oscuro_chica.jpg" alt="Persona Oscuro Chica">
+
+<script>
+  const imagenPersona = document.getElementById("imagenPersona");
+  const imagenGrandePath = "images/persona1_oscuro_grande.jpg";
+  const chicaPath = "images/persona1_oscuro_chica.jpg";
+  
+  imagenPersona.addEventListener("mouseover", () => {
+    imagenPersona.src = imagenGrandePath;
+    imagenPersona.style.width = "483px";
+    imagenPersona.style.height = "450px";
+  });
+
+  imagenPersona.addEventListener("mouseout", () => {
+    imagenPersona.src = chicaPath;
+    imagenPersona.style.width = "200px";
+    imagenPersona.style.height = "450px";
+  });
+</script>
+
+</body>
+</html>

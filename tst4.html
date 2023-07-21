@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cambio de Imagen al Pasar el Cursor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  #imagenPersona {
+    border-radius: 30px; /* Borde redondeado de 30px */
+    position: relative; /* Permitir posicionar elementos dentro del contenedor */
+    width: 200px;
+    height: 450px;
+    transition: width .5s, height 0.3s;
+  }
+
+  .texto-superpuesto {
+    position: absolute; /* Posicionar el texto sobre la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el texto */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none; /* Ocultar el texto por defecto */
+  }
+
+  #textotextoSobreImagenGrande.active,
+  #textotextoSobreImagenChica.active {
+    display: block; /* Mostrar el texto cuando tiene la clase 'active' */
+  }
+</style>
+</head>
+<body>
+
+<div id="contenedorImagen">
+  <img id="imagenPersona" src="images/persona1_oscuro_chica.jpg" alt="Persona Oscuro Chica">
+  <div class="texto-superpuesto" id="textotextoSobreImagenGrande">Texto 1</div>
+  <div class="texto-superpuesto" id="textotextoSobreImagenChica">Texto 2</div>
+</div>
+
+<script>
+  const imagenPersona = document.getElementById("imagenPersona");
+  const imagenGrandePath = "images/persona1_oscuro_grande.jpg";
+  const chicaPath = "images/persona1_oscuro_chica.jpg";
+  const textotextoSobreImagenGrande = document.getElementById("textotextoSobreImagenGrande");
+  const textotextoSobreImagenChica = document.getElementById("textotextoSobreImagenChica");
+  
+  imagenPersona.addEventListener("mouseover", () => {
+    imagenPersona.src = imagenGrandePath;
+    imagenPersona.style.width = "338px";
+    imagenPersona.style.height = "450px";
+    textotextoSobreImagenGrande.classList.add("active"); // Mostrar texto 1
+    textotextoSobreImagenChica.classList.remove("active"); // Ocultar texto 2 
+  });
+
+  imagenPersona.addEventListener("mouseout", () => {
+    imagenPersona.src = chicaPath;
+    imagenPersona.style.width = "200px";
+    imagenPersona.style.height = "450px";
+    textotextoSobreImagenGrande.classList.remove("active"); // Ocultar texto 1
+    textotextoSobreImagenChica.classList.add("active"); // Mostrar texto 2
+  });
+</script>
+
+</body>
+</html>

@@ -129,6 +129,9 @@
         </div>
       </div>
     </div>
+    <div style="height: 800px; background: blue;">
+    sadads
+  </div>
   </section>
 
   <script>
@@ -138,6 +141,29 @@
     var btnIzquierda = document.getElementById("btn-izquierda");
     var btnDerecha = document.getElementById("btn-derecha");
 
+// agregado
+var scrollVerticalEnabled = false;
+ // Evento de rueda para detectar el scroll vertical en el contenedor principal
+ contenedorPrincipalScroll.addEventListener("wheel", function(event) {
+    event.preventDefault();
+
+    // Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
+    if (scrollVerticalEnabled) {
+      window.scrollBy({
+        top: event.deltaY,
+        behavior: "smooth"
+      });
+    } else {
+      // Si el scroll horizontal llegó al final, habilitar el scroll vertical
+      if (contenedorImagenScroll.scrollLeft === contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth) {
+        scrollVerticalEnabled = true;
+      }
+
+      // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
+      contenedorImagenScroll.scrollLeft += event.deltaY;
+    }
+  });
+// agegado
     btnIzquierda.addEventListener("click", function() {
       contenedorImagenScroll.scrollBy({
         left: -250,
@@ -165,7 +191,7 @@
       var progress = (scrollPosition / scrollWidth) * 80;
 
       barraAvance.style.width = progress + "%";
-
+      if (progress >= 80) {scrollVerticalEnabled = true} else {scrollVerticalEnabled = false}
       if (progress >= 100) {
         barraAvance.style.background = "orange";
       } else {

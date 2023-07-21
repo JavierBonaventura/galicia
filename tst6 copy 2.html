@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar imagen al pasar el mouse</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Contenedor para las imágenes */
+    .imagen-container {
+      display: flex;
+    }
+
+    /* Estilo básico para cada imagen */
+    .imagen-cambiante {
+      width: 200px;
+      height: 450px;
+      margin-right: 10px;
+      transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
+      border-radius: 20px;
+      position: relative; /* Añadir posición relativa para el contenedor */
+    }
+
+    /* Al pasar el mouse por encima, se aumenta la escala de la imagen */
+    .imagen-cambiante:hover {
+      width: 338px;
+    }
+
+    /* Estilo del cuadro emergente de texto */
+    .imagen-cambiante .texto-emergente {
+      margin-bottom: 30px;
+      position: absolute;
+      bottom: 10px; /* Ajustar la posición vertical del texto emergente */
+      left: 50%; /* Centrar horizontalmente */
+      transform: translateX(-50%); /* Centrar horizontalmente */
+      color: white;
+      padding: 5px 10px;
+      opacity: 0; /* Inicialmente invisible */
+      pointer-events: none; /* Evitar que el cuadro emergente capture eventos del mouse */
+      transition: opacity 0.3s ease-in-out;
+      width: 80%;
+    }
+
+    /* Mostrar el cuadro emergente al pasar el mouse por encima */
+    .imagen-cambiante:hover .texto-emergente {
+      opacity: 1;
+    }
+
+    .imagen-cambiante:hover .texto-fijo {
+      opacity: 0;
+    }
+
+    .texto-fijo{
+      position: absolute;
+      bottom: -30px; /* Ajustar la posición vertical del texto emergente */
+      left: 50%; /* Centrar horizontalmente */
+      transform: translateX(-50%); /* Centrar horizontalmente */
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      opacity: 1; /* Inicialmente invisible */
+      pointer-events: none; /* Evitar que el cuadro emergente capture eventos del mouse */
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .imagenGeneral {
+      border-radius: 20px;
+    }
+
+    
+
+  .puestoPersonas {
+margin-bottom: -20px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;  
+  letter-spacing: 0.05em;
+  text-transform: uppercase;  
+  color: #FFFFFF;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+
+  .nombrePersonas {
+    margin-bottom: 35px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+
+  
+  .puestoPersonas2 {
+
+
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  
+  color: #FFFFFF;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+  
+  .nombrePersonas2 {
+    margin-top: -10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  
+  letter-spacing: -0.03em;
+  
+  color: #FFFFFF;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  }
+  
+  .containerLinkedin {
+    left: 10px;
+    display: flex;
+    align-items: center;
+    bottom: -40px;
+    position: absolute;
+  }
+  
+  .textoIconoLinkedin {
+    /* Ver en Linkedin */
+  
+  
+  width: 182px;
+  height: 19px;
+  margin-left: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  
+  color: #FFFFFF;
+  
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  
+  }
+  .iconoLinkedin {
+    /* Vector */
+  
+  width: 20px;
+  /* position: absolute; */
+  left: 12.5%;
+  right: 12.5%;
+  top: 85%; 
+  /* bottom: 12.5%; */
+  
+  }
+
+  </style>
+</head>
+<body>
+  <div class="imagen-container">
+    <!-- Imagen 1 -->
+    <div class="imagen-cambiante imagen-cambiante1 ">
+      <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral" alt="Imagen Cambiante 1">
+      <div class="texto-fijo">
+        <p class="puestoPersonas">Ciberseguridad</p>
+        <p class="nombrePersonas">Ailu</p>
+      </div>
+      <div class="texto-emergente">
+
+            <p class="puestoPersonas2">Ciberseguridad</p>
+            <p class="nombrePersonas2">Ailu</p>
+            <p class="historiaEmpleado">
+              "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+              voz cuenta"
+            </p>
+            <div class="containerLinkedin">
+              <img class="iconoLinkedin" src="images/IN.png" alt="" />
+              <p class="textoIconoLinkedin">Ver en linkedin</p>
+            </div>
+      </div>
+
+    </div>
+    <!-- Imagen 2 -->
+    <div class="imagen-cambiante imagen-cambiante2">
+      <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral" alt="Imagen Cambiante 2">
+      <div class="texto-emergente">Texto sobre la imagen 2</div>
+      <div class="texto-fijo">
+        <p class="puestoPersonas">Ciberseguridad</p>
+        <p class="nombrePersonas">Ailu</p>
+      </div>
+      <div class="texto-emergente">
+            <p class="puestoPersonas">Ciberseguridad</p>
+            <p class="nombrePersonas">Ailu</p>
+            <p class="puestoPersonas2">Ciberseguridad</p>
+            <p class="nombrePersonas2">Ailu</p>
+            <p class="historiaEmpleado">
+              "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+              voz cuenta"
+            </p>
+            <div class="containerLinkedin">
+              <img class="iconoLinkedin" src="images/IN.png" alt="" />
+              <p class="textoIconoLinkedin">Ver en linkedin</p>
+            </div>
+      </div>
+    </div>
+    <!-- Imagen 3 -->
+    <div class="imagen-cambiante imagen-cambiante3">
+      <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral" alt="Imagen Cambiante 3">
+      <div class="texto-emergente">Texto sobre la imagen 3</div>
+      <div class="texto-fijo">
+        <p class="puestoPersonas">Ciberseguridad</p>
+        <p class="nombrePersonas">Ailu</p>
+      </div>
+      <div class="texto-emergente">
+
+            <p class="puestoPersonas2">Ciberseguridad</p>
+            <p class="nombrePersonas2">Ailu</p>
+            <p class="historiaEmpleado">
+              "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+              voz cuenta"
+            </p>
+            <div class="containerLinkedin">
+              <img class="iconoLinkedin" src="images/IN.png" alt="" />
+              <p class="textoIconoLinkedin">Ver en linkedin</p>
+            </div>
+      </div>
+    </div>
+    <!-- Imagen 4 -->
+    <div class="imagen-cambiante imagen-cambiante4">
+      <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral" alt="Imagen Cambiante 4">
+      <div class="texto-emergente">Texto sobre la imagen 4</div>
+      <div class="texto-fijo">
+        <p class="puestoPersonas">Ciberseguridad</p>
+        <p class="nombrePersonas">Ailu</p>
+      </div>
+      <div class="texto-emergente">
+
+            <p class="puestoPersonas2">Ciberseguridad</p>
+            <p class="nombrePersonas2">Ailu</p>
+            <p class="historiaEmpleado">
+              "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+              voz cuenta"
+            </p>
+            <div class="containerLinkedin">
+              <img class="iconoLinkedin" src="images/IN.png" alt="" />
+              <p class="textoIconoLinkedin">Ver en linkedin</p>
+            </div>
+      </div>
+    </div>
+    <!-- Imagen 5 -->
+    <div class="imagen-cambiante imagen-cambiante5">
+      <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral" alt="Imagen Cambiante 5">
+        <div class="texto-fijo">
+        <p class="puestoPersonas">Ciberseguridad</p>
+        <p class="nombrePersonas">Ailu</p>
+      </div>
+      <div class="texto-emergente">
+
+            <p class="puestoPersonas2">Ciberseguridad</p>
+            <p class="nombrePersonas2">Ailu</p>
+            <p class="historiaEmpleado">
+              "Estoy orgullosa de trabajar en un lugar diverso, donde sé que mi
+              voz cuenta"
+            </p>
+            <div class="containerLinkedin">
+              <img class="iconoLinkedin" src="images/IN.png" alt="" />
+              <p class="textoIconoLinkedin">Ver en linkedin</p>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Obtenemos una lista de todos los elementos con la clase "imagen-cambiante"
+    const imagenes = document.querySelectorAll('.imagen-cambiante');
+    const imagenes1 = document.querySelectorAll('.imagen-cambiante1');
+    const imagenes2 = document.querySelectorAll('.imagen-cambiante2');
+    const imagenes3 = document.querySelectorAll('.imagen-cambiante3');
+    const imagenes4 = document.querySelectorAll('.imagen-cambiante4');
+    const imagenes5 = document.querySelectorAll('.imagen-cambiante4');
+
+
+    // Guardamos la URL de la imagen grande en una variable
+    const imagenGrandeURL1 = 'images/persona1_oscuro_grande.jpg';
+    const imagenGrandeURL2 = 'images/persona2_oscuro_grande.jpg';
+    const imagenGrandeURL3 = 'images/persona2_oscuro_grande.jpg';
+    const imagenGrandeURL4 = 'images/persona2_oscuro_grande.jpg';
+    const imagenGrandeURL5 = 'images/persona2_oscuro_grande.jpg';
+
+
+    // imagenes.forEach(imagen => {
+    //   imagen.addEventListener('mouseenter', () => {
+    //     imagen.querySelector('img').src = imagenGrandeURL1;
+    //     imagen.style.width = '338px';
+    //   });
+
+    //   imagen.addEventListener('mouseleave', () => {
+    //     imagen.querySelector('img').src = 'images/persona1_oscuro_chica.jpg';
+    //     imagen.style.width = '200px';
+    //   });
+    // });
+
+
+      imagenes1.addEventListener('mouseenter', () => {
+      imagenes1.querySelector('img').src = imagenGrandeURL1;
+      imagenGrandeURL1.style.width = '338px';
+      });
+
+        imagenes1.addEventListener('mouseleave', () => {
+        imagenes1.querySelector('img').src = 'images/persona1_oscuro_chica.jpg';
+        imagenes1.style.width = '200px';
+      });
+  </script>
+</body>
+</html>
