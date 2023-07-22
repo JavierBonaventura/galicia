@@ -397,6 +397,39 @@ setInterval(nextSlideHeader, 3600);
 
 
 
+
+// inicio carousel del header Mobile
+
+
+const slidesHeaderMobile = document.querySelectorAll('.slideHeaderMobile');
+const indicatorsMobile = document.querySelectorAll('.indicatorMobile');
+let currentSlideHeaderMobile = 0;
+
+function showSlideHeaderMobile(n) {
+  slidesHeaderMobile[currentSlideHeaderMobile].classList.remove('active');
+  indicatorsMobile[currentSlideHeaderMobile].classList.remove('active');
+  currentSlideHeaderMobile = (n + slidesHeaderMobile.length) % slidesHeaderMobile.length;
+  slidesHeaderMobile[currentSlideHeaderMobile].classList.add('active');
+  indicatorsMobile[currentSlideHeaderMobile].classList.add('active');
+}
+
+// Agrega el evento de clic a cada indicador
+indicatorsMobile.forEach((indicatorMobile, index) => {
+  indicatorMobile.addEventListener('click', () => {
+    showSlideHeaderMobile(index);
+  });
+});
+
+function nextSlideHeaderMobile() {
+  showSlideHeaderMobile(currentSlideHeaderMobile + 1);
+}
+
+setInterval(nextSlideHeaderMobile, 3600);
+
+
+// fin carousel del header Mobile
+
+
 // inicio carousel de Oficinas
 
 

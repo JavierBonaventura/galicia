@@ -782,14 +782,19 @@
     
     position: relative;
     max-width: 100%; /* Define el ancho máximo del contenedor del video */
-    max-height: 360px; /* Define la altura máxima del contenedor del video */
+    max-height: 100%; /* Define la altura máxima del contenedor del video */
   }
   
   .video-message {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: absolute;
-    top: 50%;
-    left: 28%;
-    transform: translate(-50%, -50%);
+width: 100%;
+    transform: translate(0%, -110%);
     font-size: 24px;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -798,18 +803,17 @@
   .videoSource {
     display: inline;
     width: 100%;
+    height: 800px;
   }
   
   .encontraTuOportunidad {
     /* ¡Encontrá tu oportunidad hoy! */
   
-  margin-top: 400px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+
   /* position: absolute; */
-  margin-left: 720px;
   width: 361px;
   height: 29px;
-  left: 460px;
   top: 143px;
   
   font-family: 'Inter';
@@ -829,7 +833,7 @@
   .cajaLupa {
     /* ic:twotone-search */
   
-  margin-left: 855px;
+
   box-sizing: border-box;
   
   /* Auto layout */
@@ -844,9 +848,7 @@
   /* position: absolute; */
   width: 106px;
   height: 66px;
-  left: 217px;
-  top: 0px;
-  margin-bottom: -30px;
+  margin-bottom: 98px;
   border: 2px solid #FFFFFF;
   border-radius: 40px;
   }
@@ -854,7 +856,6 @@
   .iconoLupa{
     /* Vector */
   
-  margin-left: 600;
   width: 34px;
   height: 34px;
   
@@ -873,12 +874,10 @@
   
   .sumateEquipo {
     /* Sumate a ser parte del Equipo Galicia */
-  margin-left: 640px;
   margin-top: 20px;
   /* position: absolute; */
   width: 543px;
   height: 168px;
-  left: -1px;
   top: 58px;
   
   font-family: 'Inter';
@@ -896,7 +895,7 @@
   
   
   .miraNuestras {
-    margin-left: 730px;
+    margin-bottom: 50px;
     font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -921,8 +920,6 @@
   /* position: absolute; */
   width: 310px;
   height: 49px;
-  left: 485px;
-  top: 532px;
   
   /* Orange */
   
@@ -3369,7 +3366,7 @@ letter-spacing: -0.22px;
       overflow: hidden;
     }
   
-    .slideHeader {
+    .slideHeaderMobile {
       position: absolute;
       top: 0;
       left: 0;
@@ -3379,17 +3376,17 @@ letter-spacing: -0.22px;
       transition: opacity 0.5s ease-in-out;
     }
   
-    .slideHeader.active {
+    .slideHeaderMobile.active {
       opacity: 1;
     }
   
-    .slideHeader img {
+    .slideHeaderMobile img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   
-    .slideHeader .text {
+    .slideHeaderMobile .text {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -3404,7 +3401,7 @@ letter-spacing: -0.22px;
       transform: translateX(-50%);
     }
   
-    .indicator {
+    .indicatorMobile {
       display: inline-block;
       width: 24px;
       height: 8px;
@@ -3416,7 +3413,7 @@ letter-spacing: -0.22px;
   
     }
   
-    .indicator.active {
+    .indicatorMobile.active {
       width: 48px;
       background: #FA6400;
     border-radius: 20px;
