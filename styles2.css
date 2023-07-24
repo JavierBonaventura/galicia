@@ -51,9 +51,9 @@
   .frame18 {
     /* Frame 18 */
   
-  
+    margin-top: -10px;
     /* Auto layout */
-  margin-right: 10%;
+    margin-right: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -70,7 +70,7 @@
     margin-left: 121px;
     /* Logo Galicia */
   
-    margin-top: 0px;
+    margin-top: 24px;
     /*
   position: absolute; */
     width: 167px;
@@ -723,11 +723,17 @@
   
   /* Auto layout */
 
-
+.textoHistoria {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px
+}
   
   .historias {
     margin: 0 auto;
-    height: 730px;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -735,8 +741,8 @@
   
   .historiasDeTalento {
     /* Historias de talento */
-    margin-left: 37%;
-
+  
+    text-align: center;
    
     /* position: absolute; */
     width: 351px;
@@ -926,7 +932,6 @@ width: 100%;
   background: #FA6400;
   /* Shadow-photo */
   
-  box-shadow: 0px 11px 40px rgba(142, 142, 142, 0.7);
   border-radius: 8px;
   }
   
@@ -1141,9 +1146,21 @@ width: 100%;
  
   
   }
-  
+
+  .volver {
+    position: relative;
+    top: -5px; /* Puedes ajustar el valor negativo para subir el texto */
+  }
+
+  .volver svg {
+    padding-left: 20px;
+    position: relative;
+    top: 5px; /* Puedes ajustar el valor positivo para bajar el símbolo */
+   
+  }
+
   .frame23 {
-    margin-top: 51px;
+    margin-top: 40px;
     margin-left: 81px;
     /* Frame 23 */
   
@@ -1173,7 +1190,7 @@ width: 100%;
     /* Volver arriba */
   
   
-    width: 131px;
+    width: 200px;
     height: 24px;
     align-items: center;
     font-family: 'Inter';
@@ -1502,7 +1519,7 @@ width: 100%;
       width: 24px;
       height: 8px;
   
-      background: #F2F2F2;
+      background: #999999;
     border-radius: 20px;
       cursor: pointer;
       margin-right: 10px; /* Agregamos este margen a la derecha */
@@ -1712,7 +1729,7 @@ width: 100%;
   .lineIndicator {
   width: 310px;
   height: 25px;
-  border-bottom: 2px solid #67B2A6;;
+  border-bottom: 2px solid #9B9B9B;;
   position: relative;
   top: -19px;
   margin-left: -210px;
@@ -1748,7 +1765,7 @@ width: 100%;
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #67B2A6;
+  background-color: #9B9B9B;
   margin: 0 45px;
   cursor: pointer;
   transition: background-color 0.5s ease-in-out;
@@ -1933,10 +1950,11 @@ width: 100%;
     height: 152px;
   
     font-family: "Inter";
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     font-size: 72px;
     line-height: 76px;
+   
   }
   .mejorarInicialVisible {
     text-align: center;
@@ -1945,14 +1963,16 @@ width: 100%;
     opacity: 1;
     transform: translateX(-50%) translateY(-150px);
     transition: opacity 1.5s, transform 1.5s;
-    width: 800px;
+    width: 823px;
     height: 152px;
   
-    font-family: "Inter";
+    color: var(--gray-dark, #383838);
+    font-family: Inter;
+    font-size: 96px;
     font-style: normal;
     font-weight: 700;
-    font-size: 72px;
-    line-height: 76px;
+    line-height: 92px; /* 95.833% */
+    letter-spacing: -2.88px;
   }
   
   
@@ -2576,9 +2596,9 @@ width: 100%;
     }
     
     #barra-botonesScroll {
-      position: absolute;
+    
       bottom: 0px;
-      margin-left: -12%;
+      margin-top: 20px;
       width: 100%;
       display: flex;
       justify-content: flex-end;
