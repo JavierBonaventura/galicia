@@ -114,55 +114,54 @@ const imagenes5 = document.querySelector('.imagenGeneral5');
   const imagenChicaURL5 = 'images/persona5_oscuro_chica.jpg';
   
   imagenes1.addEventListener('mouseenter', () => {
-    console.log("dasdas")
   imagenes1.src = imagenGrandeURL1;
-  imagenes1.style.width = '338px';
+  // imagenes1.style.width = '338px';
 });
 
 imagenes1.addEventListener('mouseleave', () => {
   console.log("dasdas")
   imagenes1.src = imagenChicaURL1;
-  imagenes1.style.width = '200px';
+  // imagenes1.style.width = '200px';
 });
 
 imagenes2.addEventListener('mouseenter', () => {
   imagenes2.src = imagenGrandeURL2;
-  imagenes2.style.width = '338px';
+  // imagenes2.style.width = '338px';
 });
 
 imagenes2.addEventListener('mouseleave', () => {
   imagenes2.src = imagenChicaURL2;
-  imagenes2.style.width = '200px';
+  // imagenes2.style.width = '200px';
 });
 
 imagenes3.addEventListener('mouseenter', () => {
   imagenes3.src = imagenGrandeURL3;
-  imagenes3.style.width = '338px';
+  // imagenes3.style.width = '338px';
 });
 
 imagenes3.addEventListener('mouseleave', () => {
   imagenes3.src = imagenChicaURL3;
-  imagenes3.style.width = '200px';
+  // imagenes3.style.width = '200px';
 });
 
 imagenes4.addEventListener('mouseenter', () => {
   imagenes4.src = imagenGrandeURL4;
-  imagenes4.style.width = '338px';
+  // imagenes4.style.width = '338px';
 });
 
 imagenes4.addEventListener('mouseleave', () => {
   imagenes4.src = imagenChicaURL4;
-  imagenes4.style.width = '200px';
+  // imagenes4.style.width = '200px';
 });
 
 imagenes5.addEventListener('mouseenter', () => {
   imagenes5.src = imagenGrandeURL5
-  imagenes5.style.width = '338px';
+  // imagenes5.style.width = '338px';
 });
 
 imagenes5.addEventListener('mouseleave', () => {
   imagenes5.src = imagenChicaURL5;
-  imagenes5.style.width = '200px';
+  // imagenes5.style.width = '200px';
 });
 
 // fin personas talento 
