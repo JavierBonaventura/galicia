@@ -3669,8 +3669,8 @@ margin-left: 340px;
 /* top: 50%;
 left: 50%; */
 transform: translate(-50%, -0%);
-width: 250px;
-height: 250px;
+width: 197px;
+height: 197px;
 scale: 160%;
 
 overflow: hidden;
@@ -3694,13 +3694,13 @@ z-index: 99;
 .itemMobile.prev {
 z-index: 2;
 opacity: 0.25;
-transform: translate(-75%, 0%) rotate(-10deg);
+transform: translate(-60%, 0%) rotate(-10deg);
 }
 
 .itemMobile.next {
 z-index: 2;
 opacity: 0.25;
-transform: translate(-25%, 0%) rotate(10deg);
+transform: translate(-40%, 0%) rotate(10deg);
 }
 
 
@@ -3843,6 +3843,8 @@ position: relative;
   transition: width 0.3s ease, background-color 0.3s ease;
   z-index: 2;
   border-radius: 8px;
+  height: 10px;
+  background: linear-gradient(to right, #FA6400, #FFAB76);
 }
 
 #barra-avanceScroll_gris {
@@ -4428,15 +4430,18 @@ width: 428px;
  /* Contenedor para las imágenes */
  .imagen-container {
   display: flex;
+  max-width: 428px; /* Establecer el ancho máximo */
+  overflow-x: auto; /* Permitir el desplazamiento horizontal */
+  scroll-snap-type: x mandatory; /* Asegurar un desplazamiento fluido */
 }
-
 /* Estilo básico para cada imagen */
 .imagen-cambiante {
-  width: 200px;
-  height: 450px;
-  margin-right: 10px;
-  transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
-  position: relative; /* Añadir posición relativa para el contenedor */
+width: 200px;
+height: 450px;
+margin-right: 10px;
+transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
+position: relative; /* Añadir posición relativa para el contenedor */
+scroll-snap-align: start; /* Asegurar que las imágenes se detengan en el inicio del contenedor */
 }
 
 .imagenGeneral1Mobile {
@@ -4654,6 +4659,7 @@ width: 428px;
 height: 371px;
 
 }
+
 
 
 

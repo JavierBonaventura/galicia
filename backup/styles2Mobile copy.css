@@ -1414,19 +1414,16 @@ height: 730px;
    /* Contenedor para las imágenes */
    .imagen-container {
     display: flex;
-    max-width: 428px; /* Establecer el ancho máximo */
-    overflow-x: auto; /* Permitir el desplazamiento horizontal */
-    scroll-snap-type: x mandatory; /* Asegurar un desplazamiento fluido */
   }
-/* Estilo básico para cada imagen */
-.imagen-cambiante {
-  width: 200px;
-  height: 450px;
-  margin-right: 10px;
-  transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
-  position: relative; /* Añadir posición relativa para el contenedor */
-  scroll-snap-align: start; /* Asegurar que las imágenes se detengan en el inicio del contenedor */
-}
+
+  /* Estilo básico para cada imagen */
+  .imagen-cambiante {
+    width: 200px;
+    height: 450px;
+    margin-right: 10px;
+    transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
+    position: relative; /* Añadir posición relativa para el contenedor */
+  }
 
   .imagenGeneral1Mobile {
     border-radius: 20px;

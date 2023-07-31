@@ -600,9 +600,9 @@ indicatorsMobile[currentSlideHeaderMobile].classList.add('active');
 }
 
 // Agrega el evento de clic a cada indicador
-indicatorsMobile.forEach((indicatorMobile, index) => {
+indicatorsMobile.forEach((indicatorMobile, indexMobile) => {
 indicatorMobile.addEventListener('click', () => {
-  showSlideHeaderMobile(index);
+  showSlideHeaderMobile(indexMobile);
 });
 });
 
@@ -708,74 +708,73 @@ showSlideMobile(slideIndexMobile);
 // fin indicadores circulares
 
 
+
     // inicio scroll horizontal
-    var contenedorPrincipalScrollMobile = document.getElementById("scrollHorizontalMobile");
-    var contenedorImagenScrollMobile = document.getElementById("scrollHorizontal-imagenMobile");
-    var btnIzquierdaMobile = document.getElementById("btn-izquierdaMobile");
-    var btnDerechaMobile = document.getElementById("btn-derechaMobile");
 
-// agregado
-var scrollVerticalEnabledMobile = false;
- // Evento de rueda para detectar el scroll vertical en el contenedor principal
- contenedorPrincipalScrollMobile.addEventListener("wheel", function(event) {
-    event.preventDefault();
+ // JavaScript
+ var contenedorImagenScrollMobile = document.getElementById("scrollHorizontal-imagenMobile");
+ var btnIzquierdaMobile = document.getElementById("btn-izquierdaMobile");
+ var btnDerechaMobile = document.getElementById("btn-derechaMobile");
 
-    // Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
-    if (scrollVerticalEnabledMobile) {
-      window.scrollBy({
-        top: event.deltaY,
-        behavior: "smooth"
-      });
-    } else {
-      // Si el scroll horizontal llegó al final, habilitar el scroll vertical
-      if (contenedorImagenScrollMobile.scrollLeft === contenedorImagenScrollMobile.scrollWidth - contenedorPrincipalScrollMobile.clientWidth) {
-        scrollVerticalEnabledMobile = true;
-      }
+ var touchStartX = 0;
+ var touchMoveX = 0;
+ var scrollAmount = 250; // Ajusta el valor de desplazamiento según tus necesidades
 
-      // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
-      contenedorImagenScrollMobile.scrollLeft += event.deltaY;
-    }
-  });
-// agegado
-    btnIzquierdaMobile.addEventListener("click", function() {
-      contenedorImagenScrollMobile.scrollBy({
-        left: -250,
-        behavior: "smooth"
-      });
-    });
+ btnIzquierdaMobile.addEventListener("click", function() {
+     scrollToLeft();
+ });
 
-    btnDerechaMobile.addEventListener("click", function() {
-      contenedorImagenScrollMobile.scrollBy({
-        left: 250,
-        behavior: "smooth"
-      });
-    });
+ btnDerechaMobile.addEventListener("click", function() {
+     scrollToRight();
+ });
 
-    contenedorImagenScrollMobile.addEventListener("wheel", function(event) {
-      event.preventDefault();
-      contenedorImagenScrollMobile.scrollLeft += event.deltaY;
-    });
+ function scrollToLeft() {
+     updateProgressBar();
+     contenedorImagenScrollMobile.scrollBy({
+         left: -scrollAmount,
+         behavior: "smooth",
+     });
+ }
 
-    var barraAvanceMobile = document.getElementById("barra-avanceScrollMobile");
+ function scrollToRight() {
+     updateProgressBar();
+     contenedorImagenScrollMobile.scrollBy({
+         left: scrollAmount,
+         behavior: "smooth",
+     });
+ }
 
-    contenedorImagenScrollMobile.addEventListener("scroll", function() {
-      var scrollWidthMobile = contenedorImagenScrollMobile.scrollWidth - contenedorPrincipalScrollMobile.clientWidth;
-      var scrollPositionMobile = contenedorImagenScrollMobile.scrollLeft;
-      var progressMobile = (scrollPositionMobile / scrollWidthMobile) * 80;
+ contenedorImagenScrollMobile.addEventListener("touchstart", function (event) {
+     touchStartX = event.touches[0].clientX;
+ });
 
-      barraAvanceMobile.style.width = progressMobile + "%";
-      if (progressMobile >= 80) {scrollVerticalEnabledMobile = true} else {scrollVerticalEnabledMobile = false}
-      if (progressMobile >= 100) {
-        barraAvanceMobile.style.background = "orange";
-      } else {
-        barraAvanceMobile.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
-      }
+ contenedorImagenScrollMobile.addEventListener("touchmove", function (event) {
+     touchMoveX = event.touches[0].clientX;
+ });
 
+ contenedorImagenScrollMobile.addEventListener("touchend", function (event) {
+     var swipeThreshold = 100;
+     var deltaX = touchMoveX - touchStartX;
 
-    });
+     if (deltaX > swipeThreshold) {
+         // Deslizar hacia la izquierda
+         scrollToLeft();
+     } else if (deltaX < -swipeThreshold) {
+         // Deslizar hacia la derecha
+         scrollToRight();
+     }
+ });
+
+ function updateProgressBar() {
+     // Actualizar la barra de avance
+     var totalScrollWidth = contenedorImagenScrollMobile.scrollWidth - contenedorImagenScrollMobile.clientWidth;
+     var currentScrollLeft = contenedorImagenScrollMobile.scrollLeft;
+     var scrollPercentage = (currentScrollLeft / totalScrollWidth) * 100;
+     document.getElementById("barra-avanceScrollMobile").style.width = scrollPercentage + "%";
+ }
     // fin scroll horizontal
 
-    
+
     // inicio carousel de Oficinas
 
 
@@ -810,7 +809,6 @@ setInterval(nextslideOficinasMobile, 3600);
 
 
 // fin carousel de Oficinas
-
 
 
 // inicio personas talento 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        /* HOME - 3 */
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        position: relative;
+        background: #F2F2F2;
+    }
+
+    /* inicio historias de taliento */
+    .historiasSection{
+        height: 730px;
+    }
+
+    /* Auto layout */
+    .textoHistoria {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+    }
+
+    .historias {
+        width: 428px;
+        margin: 0 auto;
+        height: 550px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-type: x mandatory;
+    }
+
+    .historiasDeTalento {
+        text-align: center;
+        width: 351px;
+        height: 48px;
+        left: 465px;
+        top: 77px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 48px;
+        text-align: center;
+        letter-spacing: -0.03em;
+    }
+
+    /* Contenedor para las imágenes */
+    .imagen-container {
+        display: flex;
+        max-width: 428px; /* Establecer el ancho máximo */
+        overflow-x: auto; /* Permitir el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Asegurar un desplazamiento fluido */
+    }
+
+    /* Estilo básico para cada imagen */
+    .imagen-cambiante {
+        width: 200px;
+        height: 450px;
+        margin-right: 10px;
+        transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
+        position: relative; /* Añadir posición relativa para el contenedor */
+        scroll-snap-align: start; /* Asegurar que las imágenes se detengan en el inicio del contenedor */
+    }
+
+    .imagen-cambiante:last-child {
+        margin-right: 0; /* Eliminar el margen derecho para la última imagen */
+    }
+
+    .imagenGeneral1Mobile {
+        border-radius: 20px;
+    }
+
+    .imagenGeneral2Mobile {
+        border-radius: 20px;
+    }
+
+    .imagenGeneral3Mobile {
+        border-radius: 20px;
+    }
+
+    .imagenGeneral4Mobile {
+        border-radius: 20px;
+    }
+
+    .imagenGeneral5Mobile {
+        border-radius: 20px;
+    }
+
+    /* Al pasar el mouse por encima, se aumenta la escala de la imagen */
+    .imagen-cambiante:hover {
+        width: 338px;
+    }
+
+</style>
+<body>
+    <section class="historiasSection">
+        <div class="textoHistoria">
+            <p class="historiasDeTalento" style="color: #383838">
+                Historias <span style="color: #fa6400">de talento</span>
+            </p>
+        </div>
+        <div class="historias">
+            <div class="imagen-container">
+                <div class="imagen-cambiante">
+                    <img src="images/persona1_oscuro_chica.jpg" class="imagenGeneral1Mobile" alt="Imagen Cambiante 1">
+                </div>
+
+                <div class="imagen-cambiante">
+                    <img src="images/persona2_oscuro_chica.jpg" class="imagenGeneral2Mobile" alt="Imagen Cambiante 2">
+                </div>
+
+                <div class="imagen-cambiante">
+                    <img src="images/persona3_oscuro_chica.jpg" class="imagenGeneral3Mobile" alt="Imagen Cambiante 3">
+                </div>
+
+                <div class="imagen-cambiante">
+                    <img src="images/persona4_oscuro_chica.jpg" class="imagenGeneral4Mobile" alt="Imagen Cambiante 4">
+                </div>
+
+                <div class="imagen-cambiante">
+                    <img src="images/persona5_oscuro_chica.jpg" class="imagenGeneral5Mobile" alt="Imagen Cambiante 5">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    
+
+// inicio personas talento 
+
+const imagenes1Mobile = document.querySelector('.imagenGeneral1Mobile');
+const imagenes2Mobile = document.querySelector('.imagenGeneral2Mobile');
+const imagenes3Mobile = document.querySelector('.imagenGeneral3Mobile');
+const imagenes4Mobile = document.querySelector('.imagenGeneral4Mobile');
+const imagenes5Mobile = document.querySelector('.imagenGeneral5Mobile');
+
+
+  const imagenGrandeURL1Mobile = 'images/persona1_oscuro_grande.jpg';
+  const imagenGrandeURL2Mobile = 'images/persona2_oscuro_grande.jpg';
+  const imagenGrandeURL3Mobile = 'images/persona3_oscuro_grande.jpg';
+  const imagenGrandeURL4Mobile = 'images/persona4_oscuro_grande.jpg';
+  const imagenGrandeURL5Mobile = 'images/persona5_oscuro_grande.jpg';
+
+  const imagenChicaURL1Mobile = 'images/persona1_oscuro_chica.jpg';
+  const imagenChicaURL2Mobile = 'images/persona2_oscuro_chica.jpg';
+  const imagenChicaURL3Mobile = 'images/persona3_oscuro_chica.jpg';
+  const imagenChicaURL4Mobile = 'images/persona4_oscuro_chica.jpg';
+  const imagenChicaURL5Mobile = 'images/persona5_oscuro_chica.jpg';
+  
+  imagenes1Mobile.addEventListener('mouseenter', () => {
+  imagenes1Mobile.src = imagenGrandeURL1Mobile;
+  // imagenes1Mobile.style.width = '338px';
+});
+
+imagenes1Mobile.addEventListener('mouseleave', () => {
+  console.log("dasdas")
+  imagenes1Mobile.src = imagenChicaURL1Mobile;
+  // imagenes1Mobile.style.width = '200px';
+});
+
+imagenes2Mobile.addEventListener('mouseenter', () => {
+  imagenes2Mobile.src = imagenGrandeURL2Mobile;
+  // imagenes2Mobile.style.width = '338px';
+});
+
+imagenes2Mobile.addEventListener('mouseleave', () => {
+  imagenes2Mobile.src = imagenChicaURL2Mobile;
+  // imagenes2Mobile.style.width = '200px';
+});
+
+imagenes3Mobile.addEventListener('mouseenter', () => {
+  imagenes3Mobile.src = imagenGrandeURL3Mobile;
+  // imagenes3Mobile.style.width = '338px';
+});
+
+imagenes3Mobile.addEventListener('mouseleave', () => {
+  imagenes3Mobile.src = imagenChicaURL3Mobile;
+  // imagenes3Mobile.style.width = '200px';
+});
+
+imagenes4Mobile.addEventListener('mouseenter', () => {
+  imagenes4Mobile.src = imagenGrandeURL4Mobile;
+  // imagenes4Mobile.style.width = '338px';
+});
+
+imagenes4Mobile.addEventListener('mouseleave', () => {
+  imagenes4Mobile.src = imagenChicaURL4Mobile;
+  // imagenes4Mobile.style.width = '200px';
+});
+
+imagenes5Mobile.addEventListener('mouseenter', () => {
+  imagenes5Mobile.src = imagenGrandeURL5Mobile
+  // imagenes5Mobile.style.width = '338px';
+});
+
+imagenes5Mobile.addEventListener('mouseleave', () => {
+  imagenes5Mobile.src = imagenChicaURL5Mobile;
+  // imagenes5Mobile.style.width = '200px';
+});
+
+// fin personas talento 
+</script>
+</html>

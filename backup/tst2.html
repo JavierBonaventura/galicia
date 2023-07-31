@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con imagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor-barra">
+        <div class="barra-progreso"></div>
+        <div class="contenedor-imagen">
+            <img src="images/total_fondo_ok_nuevo.png" alt="Imagen de fondo">
+        </div>
+    </div>
+</body>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .contenedor-barra {
+        position: relative;
+    }
+
+    .barra-progreso {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 5px; /* Ajusta la altura de la barra aquí */
+        background-color: #007bff; /* Color de la barra de progreso */
+    }
+
+    .contenedor-imagen {
+        width: 428px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: auto;
+        height: auto;
+    }
+
+</style>
+</html>
