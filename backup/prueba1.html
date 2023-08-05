@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+  
+  /* bloque animacion con cartas */
+  .sectio3 {
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #7c7777;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+  .section {
+    width: 1280px;
+    height: 700px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #7c7777;
+    opacity: 1;
+    transition: opacity 2s;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 1280px;
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  
+  .no-scroll {
+    overflow: hidden;
+  }
+  
+  
+  
+  .cambio {
+    font-size: 72px;
+  }
+  
+  .mensajeInicial {
+    opacity: 0;
+  }
+  
+  .mensajeInicial2 {
+    display: none;
+  }
+  
+  .mensaje {
+    display: block;
+    margin-top: 300px;
+    margin-left: 400px;
+  
+    /* transform: translate(-50%, -50%); */
+    font-size: 36px;
+    opacity: 0;
+    animation: fade-in 2s ease-in-out forwards;
+  
+    width: 517px;
+    height: 77.75px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 92px;
+    /* or 230% */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .desapareceGradual {
+    opacity: 1;
+    animation: fade-out 1s ease-in-out forwards;
+  }
+  
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  .mensajeArriba {
+    position: fixed;
+  
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .mensajeArribaVisible {
+    opacity: 0;
+    transition: opacity 0.5s, transform 1.5s;
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+  
+  .mensajeMejorar {
+    /* Mejorar el día a día de más personas */
+  
+    position: absolute;
+    width: 617px;
+    height: 152px;
+    left: 332px;
+    top: 176px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 76px;
+    /* or 106% */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  
+    /* Gray Dark */
+  
+    color: #383838;
+  }
+  
+  .mejorarInicial {
+    position: fixed;
+  
+    margin-left: 200px;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 1.5s, transform 1.5s;
+    width: 617px;
+    height: 152px;
+  
+    font-family: "Inter";
+    font-style: bold;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 76px;
+   
+  }
+  .mejorarInicialVisible {
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 50%;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-150px);
+    transition: opacity 1.5s, transform 1.5s;
+    width: 823px;
+    height: 152px;
+  
+    color: var(--gray-dark, #383838);
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 92px; /* 95.833% */
+    letter-spacing: -2.88px;
+  }
+  
+  
+  .teEsperamoslVisible {
+    display: block;
+    text-align: center;
+    margin-top: 300px;
+    margin-left: 400px;
+    opacity: 1;
+    transform: translateX(0%) translateY(-280%);
+    transition: opacity 1.5s, transform 1.5s;
+    width: 617px;
+    height: 152px;
+  
+    display: block;
+  
+    width: 517px;
+    height: 77.75px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 92px;
+    /* or 230% */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  .teEsperamoslVisible2 {
+    display: block;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 300px;
+    opacity: 1;
+    transform: translateX(0%) translateY(-100px);
+    transition: width 1.5s, opacity 1.5s, transform 1.5s, font-size 1.5s,
+      margin 1.5s ease;
+    width: 617px;
+    height: 152px;
+  
+    display: block;
+  
+    width: 700px;
+    height: 77.75px;
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 92px;
+    /* or 230% */
+  
+    text-align: center;
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  .contenedor-cartas {
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  
+  
+  
+  .card {
+    position: relative;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    flex: 0 0 200px;
+  }
+  
+  .card-image {
+    width: 215px;
+    height: 186px;
+  }
+  
+  .card-image-hover {
+  display: none;
+  width: 320px;
+  height: 370px;
+  visibility: hidden; /* Agrega la propiedad visibility */
+  transition: visibility 0.3s ease; /* Agrega una transición de visibilidad */
+}
+
+  
+  .boxCartas {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+  
+    overflow-x: hidden;
+    /* Ejes-BoxColors */
+  
+    background: #f2f2f2;
+  
+    /* Inside auto layout */
+  
+    order: 4;
+    flex-grow: 0;
+  }
+  
+  .boxCartas1 {
+  margin-top: -300px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+  
+    overflow-x: hidden;
+    /* Ejes-BoxColors */
+  
+    background: #f2f2f2;
+  
+    /* Inside auto layout */
+  
+    order: 4;
+    flex-grow: 0;
+  }
+  
+
+  
+  
+</style>
+<body>
+    <section class="animacion">
+        <div class="section" id="section3">
+          <h1 id="section3Title" class="mensajeInicial">
+            Te espera un lugar para...
+          </h1>
+          <br />
+          <h1 id="section3Title2" class="mejorarInicial">
+            Mejorar el día a día de mas personas
+          </h1>
+          <div class="boxCartas" id="boxCartas">
+            <div class="contenedor-cartas">
+              <div class="card">
+                <img
+                  src="images/carta1_chica.png"
+                  alt="Imagen 1"
+                  class="card-image"
+                />
+                <img
+                  src="images/carta1_grande.png"
+                  alt="Imagen 1 Ampliada"
+                  class="card-image-hover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  src="images/carta2_chica.png"
+                  alt="Imagen 2"
+                  class="card-image"
+                />
+                <img
+                  src="images/carta2_grande.png"
+                  alt="Imagen 2 Ampliada"
+                  class="card-image-hover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  src="images/carta3_chica.png"
+                  alt="Imagen 3"
+                  class="card-image"
+                />
+                <img
+                  src="images/carta3_grande.png"
+                  alt="Imagen 3 Ampliada"
+                  class="card-image-hover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  src="images/carta4_chica.png"
+                  alt="Imagen 4"
+                  class="card-image"
+                />
+                <img
+                  src="images/carta4_grande.png"
+                  alt="Imagen 4 Ampliada"
+                  class="card-image-hover"
+                />
+              </div>
+              <div class="card">
+                <img
+                  src="images/carta5_chica.png"
+                  alt="Imagen 5"
+                  class="card-image"
+                />
+                <img
+                  src="images/carta5_grande.png"
+                  alt="Imagen 5 Ampliada"
+                  class="card-image-hover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+<script>
+    
+
+    // inicio de animacion de iconos
+var section3 = document.getElementById("section3");
+var section3Title = document.getElementById("section3Title");
+var section3Title2 = document.getElementById("section3Title2");
+var boxCartas = document.getElementById("boxCartas");
+var scrollDisabled = false;
+
+window.addEventListener("scroll", function () {
+  if (scrollDisabled) {
+    return;
+  }
+
+  var scrollPosition = window.scrollY || window.pageYOffset;
+
+  if (
+    scrollPosition >= section3.offsetTop &&
+    scrollPosition < section3.offsetTop + section3.offsetHeight
+  ) {
+    document.body.classList.add("no-scroll");
+    section3.style.opacity = 1;
+    scrollDisabled = true;
+    section3Title.classList.remove("mensajeInical");
+    section3Title.classList.add("mensaje");
+
+    setTimeout(function () {
+      section3Title2.classList.remove("mejorarInicial");
+      section3Title2.classList.add("mejorarInicialVisible");
+
+      setTimeout(function () {
+        section3Title2.classList.add("desapareceGradual");
+
+        setTimeout(function () {
+          section3Title.classList.remove("mensaje");
+          section3Title.classList.add("teEsperamoslVisible");
+
+          setTimeout(function () {
+            section3Title.classList.remove("teEsperamoslVisible");
+            section3Title.classList.add("teEsperamoslVisible2");
+            setTimeout(function () {
+              boxCartas.classList.remove("boxCartas");
+              boxCartas.classList.add("boxCartas1");
+            }, 1);
+          }, 1);
+        }, 1);
+      }, 1);
+    }, 1);
+
+    setTimeout(function () {
+      document.body.classList.remove("no-scroll");
+    }, 1000);
+  }
+});
+
+const cards = document.querySelectorAll(".card");
+cards.forEach((card) => {
+  const image = card.querySelector(".card-image");
+  const hoverImage = card.querySelector(".card-image-hover");
+
+  card.addEventListener("mouseover", () => {
+    image.style.visibility = "hidden"; // Cambiar a visibilidad oculta
+    hoverImage.style.visibility = "visible"; // Cambiar a visibilidad visible
+  });
+
+  card.addEventListener("mouseout", () => {
+    image.style.visibility = "visible"; // Cambiar a visibilidad visible
+    hoverImage.style.visibility = "hidden"; // Cambiar a visibilidad oculta
+  });
+});
+
+
+
+// Inicio script de tarjetas
+</script>
+</html>

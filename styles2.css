@@ -4,6 +4,17 @@
   section{
     border: solid rgba(0, 0, 0, 0) 1px;
   }
+  .nuestrasOficinasTitulo {
+    color: var(--gray-light, #F2F2F2);
+leading-trim: both;
+text-edge: cap;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 3.6px;
+  }
   
   .mobile {
     display: none;
@@ -2297,7 +2308,7 @@ width: 100%;
   
     .sustentables {
       /* Sustentables */
-  
+  margin-top: 100px;
   /* 
   position: absolute; */
   width: 394px;
@@ -2318,9 +2329,10 @@ width: 100%;
     }
   
     .ambosEdificios {
+      margin-top: -50px;
       /* Ambos edificios corporativos son sustentables. */
   
-  
+  margin-top: -50px;
   /* position: absolute; */
   width: 772px;
   height: 36px;
@@ -2462,7 +2474,7 @@ width: 100%;
   
     .espaciosMedida {
       /* Espacios a tu medida */
-  
+  margin-top: 100px;
   
   /* position: absolute; */
   width: 626px;
@@ -2483,7 +2495,7 @@ width: 100%;
     }
   
     .contamosEspacios {
-  
+  margin-top: -50px;
     /* Contamos con espacios abiertos que fomentan el trabajo en equipo y la co-creación. */
   
   /* 
@@ -2511,6 +2523,22 @@ width: 100%;
     .linesOficinas2 {
       /* Line */
     
+    
+    /* position: absolute; */
+    width: 96px;
+    height: 0px;
+    left: 80px;
+    top: 412px;
+    
+    border: 3px solid #FFFFFF;
+    
+    }
+
+    
+  
+    .linesOficinas3 {
+      /* Line */
+    margin-top: 70px;
     
     /* position: absolute; */
     width: 96px;
@@ -2573,6 +2601,7 @@ width: 100%;
     }
   
     .nuestrasOficinas {
+      margin-top: 100px;
       /* Titulo para sucursales */
   
   
@@ -2592,6 +2621,7 @@ width: 100%;
   /* White */
   
   color: #FFFFFF;
+
     }
   
     .conoceMas2 {
