@@ -24,8 +24,17 @@
     <script src="./script.js"></script>
     <title>Document</title>
   </head>
-  <section class="desktop">
+  <div class="desktop">
   <body>
+    <div class="circleScrollHotizontals-container">
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+      <div class="circleScrollHotizontal"></div>
+    </div>
     <nav class="nav-bar">
       <div class="logoGalicia">
         <div class="group">
@@ -101,6 +110,7 @@
         </div>
       </div>
     </nav>
+    <section class="headerPrincipal">
     <header>
       <div class="carouselHeader">
         <div class="slideHeader active">
@@ -149,9 +159,10 @@
                 letter-spacing: 0.01em;
                 text-decoration-line: underline;
                 margin-left: 25px;
+                vertical-align: middle;
               "
             >
-            <span style="display: inline-block; vertical-align: middle; margin-right: 10px">
+            <span style="display: inline-block; vertical-align: middle; margin-right: 5px; margin-top: -2px; ">
               <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" viewBox="0 0 22 22" fill="none">
                 <path d="M14.206 13.2C14.274 12.639 14.325 12.078 14.325 11.5C14.325 10.922 14.274 10.361 14.206 9.8H17.079C17.215 10.344 17.3 10.9135 17.3 11.5C17.3 12.0865 17.215 12.656 17.079 13.2M12.7015 17.926C13.2115 16.9825 13.6025 15.9625 13.8745 14.9H16.382C15.5585 16.318 14.252 17.3922 12.7015 17.926ZM12.489 13.2H8.511C8.426 12.639 8.375 12.078 8.375 11.5C8.375 10.922 8.426 10.3525 8.511 9.8H12.489C12.5655 10.3525 12.625 10.922 12.625 11.5C12.625 12.078 12.5655 12.639 12.489 13.2ZM10.5 18.266C9.7945 17.246 9.225 16.1155 8.8765 14.9H12.1235C11.775 16.1155 11.2055 17.246 10.5 18.266ZM7.1 8.1H4.618C5.43303 6.67813 6.73858 5.60226 8.29 5.074C7.78 6.0175 7.3975 7.0375 7.1 8.1ZM4.618 14.9H7.1C7.3975 15.9625 7.78 16.9825 8.29 17.926C6.74183 17.3919 5.43812 16.3176 4.618 14.9ZM3.921 13.2C3.785 12.656 3.7 12.0865 3.7 11.5C3.7 10.9135 3.785 10.344 3.921 9.8H6.794C6.726 10.361 6.675 10.922 6.675 11.5C6.675 12.078 6.726 12.639 6.794 13.2M10.5 4.7255C11.2055 5.7455 11.775 6.8845 12.1235 8.1H8.8765C9.225 6.8845 9.7945 5.7455 10.5 4.7255ZM16.382 8.1H13.8745C13.6085 7.04724 13.2145 6.03101 12.7015 5.074C14.2655 5.6095 15.566 6.689 16.382 8.1ZM10.5 3C5.7995 3 2 6.825 2 11.5C2 13.7543 2.89553 15.9163 4.48959 17.5104C5.27889 18.2997 6.21592 18.9258 7.24719 19.353C8.27846 19.7801 9.38376 20 10.5 20C12.7543 20 14.9163 19.1045 16.5104 17.5104C18.1045 15.9163 19 13.7543 19 11.5C19 10.3838 18.7801 9.27846 18.353 8.24719C17.9258 7.21592 17.2997 6.27889 16.5104 5.48959C15.7211 4.70029 14.7841 4.07419 13.7528 3.64702C12.7215 3.21986 11.6162 3 10.5 3Z" fill="#696969"/>
               </svg>
@@ -199,7 +210,7 @@
               text-decoration-line: underline;
             "
           >
-          <span style="display: inline-block; vertical-align: middle ;margin-right: 10px">
+          <span style="display: inline-block; vertical-align: middle ;margin-right: 5px; margin-top: -2px;">
             <svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" viewBox="0 0 22 22" fill="none">
               <path d="M14.206 13.2C14.274 12.639 14.325 12.078 14.325 11.5C14.325 10.922 14.274 10.361 14.206 9.8H17.079C17.215 10.344 17.3 10.9135 17.3 11.5C17.3 12.0865 17.215 12.656 17.079 13.2M12.7015 17.926C13.2115 16.9825 13.6025 15.9625 13.8745 14.9H16.382C15.5585 16.318 14.252 17.3922 12.7015 17.926ZM12.489 13.2H8.511C8.426 12.639 8.375 12.078 8.375 11.5C8.375 10.922 8.426 10.3525 8.511 9.8H12.489C12.5655 10.3525 12.625 10.922 12.625 11.5C12.625 12.078 12.5655 12.639 12.489 13.2ZM10.5 18.266C9.7945 17.246 9.225 16.1155 8.8765 14.9H12.1235C11.775 16.1155 11.2055 17.246 10.5 18.266ZM7.1 8.1H4.618C5.43303 6.67813 6.73858 5.60226 8.29 5.074C7.78 6.0175 7.3975 7.0375 7.1 8.1ZM4.618 14.9H7.1C7.3975 15.9625 7.78 16.9825 8.29 17.926C6.74183 17.3919 5.43812 16.3176 4.618 14.9ZM3.921 13.2C3.785 12.656 3.7 12.0865 3.7 11.5C3.7 10.9135 3.785 10.344 3.921 9.8H6.794C6.726 10.361 6.675 10.922 6.675 11.5C6.675 12.078 6.726 12.639 6.794 13.2M10.5 4.7255C11.2055 5.7455 11.775 6.8845 12.1235 8.1H8.8765C9.225 6.8845 9.7945 5.7455 10.5 4.7255ZM16.382 8.1H13.8745C13.6085 7.04724 13.2145 6.03101 12.7015 5.074C14.2655 5.6095 15.566 6.689 16.382 8.1ZM10.5 3C5.7995 3 2 6.825 2 11.5C2 13.7543 2.89553 15.9163 4.48959 17.5104C5.27889 18.2997 6.21592 18.9258 7.24719 19.353C8.27846 19.7801 9.38376 20 10.5 20C12.7543 20 14.9163 19.1045 16.5104 17.5104C18.1045 15.9163 19 13.7543 19 11.5C19 10.3838 18.7801 9.27846 18.353 8.24719C17.9258 7.21592 17.2997 6.27889 16.5104 5.48959C15.7211 4.70029 14.7841 4.07419 13.7528 3.64702C12.7215 3.21986 11.6162 3 10.5 3Z" fill="#696969"/>
             </svg>
@@ -215,6 +226,7 @@
         </div>
       </div>
     </header>
+    </section>
     <section class="quienesSomos">
       <div class="secuencia">
         <div class="bloqNumeros">
@@ -267,7 +279,7 @@
                 <div class="sliderindicatorCircular-wrapper"></div>
                 <div class="sliderindicatorCircular-container">
                   <div class="progress-indicatorCirculars">
-                    <div class="indicatorCircular active"></div>
+                    <div class="indicatorCircular"></div>
                     <div class="indicatorCircular"></div>
                     <div class="indicatorCircular"></div>
                     <div class="indicatorCircular"></div>
@@ -282,15 +294,7 @@
     </section>
     <section class="queBuscamos">
       <div id="scrollHorizontal">
-        <div id="circulos-scroll">
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-          <div class="circulo"></div>
-        </div>
+
         <div id="scrollHorizontal-imagen">
           <img
             id="imagenScroll"
@@ -316,9 +320,9 @@
         </h1>
         <br />
         <h1 id="section3Title2" class="mejorarInicial">
-          Mejorar el dia a dia de mas personas
+          Mejorar el día a día de mas personas
         </h1>
-        <section class="boxCartas" id="boxCartas">
+        <div class="boxCartas" id="boxCartas">
           <div class="contenedor-cartas">
             <div class="card">
               <img
@@ -381,10 +385,9 @@
               />
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
-
     <section class="oficinasNuevo">
       <div class="carouselOficinas">
         <div class="slideOficinas active">
@@ -442,7 +445,6 @@
         </div>
       </div>
     </section>
-
     <section class="historiasSection">
       <div class="textoHistoria">
       <p class="historiasDeTalento" style="color: #383838">
@@ -558,41 +560,39 @@
         </div>
       </div>
     </div>
-  </div>  
+   
   </section>
-
-    <section class="haceBusqueda">
-      <div class="video-container">
-        <video
-          class="videoSource"
-          autoplay
-          loop
-          muted
-          style="filter: blur(2px)"
-        >
-          <source src="images/C9118.mp4" type="video/mp4" />
-          Tu navegador no admite la etiqueta de video.
-        </video>
-        <div class="video-message">
-          <p class="encontraTuOportunidad">¡Encontrá tu oportunidad hoy!</p>
-          <div class="cajaLupa"></div>
-          <img
-            src="images/lupa.png"
-            style=" margin-top: -150px; width: 40px"
-            alt=""
-          />
-          <p class="sumateEquipo">
-            Sumate a ser parte del
-            <span style="font-size: 80px; font-weight: 700"
-              >Equipo Galicia
-            </span>
-          </p>
-          <div class="miraNuestras">Mirá nuestras búsquedas</div>
-        </div>
+  <section class="haceBusqueda">
+    <div class="video-container">
+      <video
+        class="videoSource"
+        autoplay
+        loop
+        muted
+        style="filter: blur(2px)"
+      >
+        <source src="images/C9118.mp4" type="video/mp4" />
+        Tu navegador no admite la etiqueta de video.
+      </video>
+      <div class="video-message">
+        <p class="encontraTuOportunidad">¡Encontrá tu oportunidad hoy!</p>
+        <div class="cajaLupa"></div>
+        <img
+          src="images/lupa.png"
+          style=" margin-top: -150px; width: 40px"
+          alt=""
+        />
+        <p class="sumateEquipo">
+          Sumate a ser parte del
+          <span style="font-size: 80px; font-weight: 700"
+            >Equipo Galicia
+          </span>
+        </p>
+        <div class="miraNuestras">Mirá nuestras búsquedas</div>
       </div>
-    </section>
-
-
+    </div>
+  </section>
+  
     <footer style="height: 0px;" class="footer">
       <div style="opacity: 0;" class="frame23">
         <p class="volver">Volver arriba</p>
@@ -621,7 +621,7 @@
       <div class="frame24">
         <div></div>
         <div style="width: 40%;"></div>
-        <div class="comoSumarte">Como sumarte</div>
+        <div class="comoSumarte">Cómo sumarte</div>
    
         <div class="line15"></div>
         <div class="seguinos">
@@ -635,7 +635,7 @@
       </div>
     </footer>
   </body>
-</section>
+</div>
 <section class="mobile">
   <body>
     <nav class="nav-bar">
@@ -1094,10 +1094,6 @@ de Banco Galicia
     
 </section>
   </body>
-
-
-
-
 </section>
   </html>
 

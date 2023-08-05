@@ -1,101 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="./styles2Mobile.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        /* Estilo para la barra de avance */
-        #barra-avanceScrollMobile {
-            height: 10px;
-            background: linear-gradient(to right, #FA6400, #FFAB76);
-        }
-    </style>
 </head>
+<style>
+  /* Colores para los indicadores circulares */
+.indicatorCircular.active-1 {
+  background-color: red;
+  z-index: 1;
+}
+
+.indicatorCircular.active-2 {
+  background-color: blue;
+  z-index: 1;
+
+}
+
+.indicatorCircular.active-3 {
+  background-color: green;
+  z-index: 1;
+
+}
+
+.indicatorCircular.active-4 {
+  background-color: yellow;
+  z-index: 1;
+
+}
+
+    
+  .quienesSomos {
+    /* Quienes somos (en numeros) */
+  
+    max-width: 100%;
+    margin: 0 auto;
+    width: 1280px;
+    height: 892px;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+  }
+  
+  .secuencia {
+    /* Secuencia-slider */
+  
+  
+    /* position: absolute; */
+    height: 892px;
+    left: 0px;
+    top: 0px;
+  
+  }
+  
+  .bloqNumeros {
+    /* bloq-numeros-slide */
+  
+  
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+  
+  }
+  
+  .boxSearch {
+    /* box-search */
+    position: relative;
+  
+  
+    box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 18px;
+    gap: 16px;
+  
+  
+    width: 1120px;
+    height: 102px;
+    left: calc(50% - 1120px/2);
+    top: 40px;
+  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+  }
+  .input-icon {
+    color: #FA6400;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 45px;
+    transform: translateY(-30%);
+    scale: 1.5;
+  }
+  input::placeholder {
+  padding-left: 40px;
+  }
+  .inputSearch {
+  
+    /* input-Search */
+  
+  
+    /* Auto layout */
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 16px;
+  
+    width: 838px;
+    height: 54px;
+  
+    background: #FFFFFF;
+    border-radius: 6px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 1;
+  
+  
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  
+  }
+  
+  .button4 {
+    /* button */
+  
+  
+    /* Auto layout */
+    border-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    gap: 10px;
+  
+    width: 230px;
+    height: 54px;
+  
+    /* Naranja Primario */
+  
+    background: #FA6400;
+    border-radius: 5px;
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+  
+    /* Blanco */
+  
+    color: #FFFFFF;
+  }
+  
+  .sliderSolapas {
+    width: 50%;
+  
+  
+  }
+  
+  
+  .row1 {
+    width: 50%;
+  
+  }
+  
+  .somos {
+    /* Somos Galicia */
+    margin-top: 120px;
+    width: 297px;
+    height: 160px;
+    margin-left: 80px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 89px;
+    /* or 193% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  
+  
+    /* Inside auto layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  .containerNumeros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .h2 {
+    /* h2 */
+  
+  
+    /* Auto layout */
+  
+  
+    /* position: absolute; */
+    width: 306px;
+    left: calc(50% - 306px/2 - 407px);
+    top: 32.17%;
+    bottom: 29.37%;
+  }
+  .line10 {
+    /* Line 10 */
+  
+  margin-top: -40px;
+  margin-left: 80px;
+  width: 90px;
+  height: 0px;
+  left: 0px;
+  top: 0px;
+  
+  /* Gray Medium light */
+  
+  border: 2px solid #9B9B9B;
+  }
+  
+  .galicia {
+    margin-left: 80px;
+    margin-top: -150px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 89px;
+    /* or 193% */
+  
+    letter-spacing: -0.03em;
+  
+    /* Gray Medium */
+  
+    color: #696969;
+  }
+  
+  .mientras {
+   /* Mientras estás acá... */
+  
+  margin-left: 83px;
+  /* position: absolute; */
+  width: 306px;
+  height: 44px;
+  left: 3px;
+  top: 36px;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  /* identical to box height, or 138% */
+  
+  letter-spacing: -0.01em;
+  
+  /* Gray Medium */
+  
+  color: #696969;
+  
+  
+  }
+  
+  .line15 {
+    /* Line 15 */
+  
+/* margin-right: 10%; */
+  width: 30px;
+  height: 0px;
+  margin-right: 4%;
+  border: 1px solid #FA6400;
+  transform: rotate(90deg);
+  
+  /* Inside auto layout */
+  
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  }
+  
+  
+  .slideCard {
+    position: absolute;
+    top: 0;
+    /* left: 0;
+    width: 100%;
+    height: 100%; */
+    padding-top: 800px;
+    padding-left: 150px;
+    margin: 0;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .slideCard img {
+    width: 100%;
+  }
+  
+  
+  
+  
+  .items {
+    user-select: none;
+  }
+  
+  /* slider tarjetas */
+  
+  .items .item {
+    /* margin-top: -1800px;
+    margin-left: 500px; */
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 340px;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -0%);
+    width: 250px;
+    height: 250px;
+    scale: 160%;
+  
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: -1;
+    opacity: 0;
+  }
+  
+  .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item.active2 {
+    opacity: 1;
+    z-index: 99;
+  
+  }
+  
+  .item.prev {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-75%, 0%) rotate(-10deg);
+  }
+  
+  .item.next {
+    z-index: 2;
+    opacity: 0.25;
+    transform: translate(-25%, 0%) rotate(10deg);
+  }
+  
+  
+  /* inicio indicadores circulares */
+  
+  
+  .sliderindicatorCircular-container {
+    text-align: center;
+  position: relative;
+  margin-left: -50px;
+  margin-top: 20px;
+  }
+  
+  .lineIndicator {
+  width: 310px;
+  height: 25px;
+  border-bottom: 2px solid #9B9B9B;;
+  position: relative;
+  top: -19px;
+  margin-left: -210px;
+  transform: translateX(-50%);
+  }
+  
+  
+  .sliderindicatorCircular {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  }
+  
+  .sliderindicatorCircular-wrapper {
+  display: flex;
+  
+  height: 100%;
+  transition: left 0.5s ease-in-out;
+  }
+  
+  
+  .progress-indicatorCirculars {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  }
+  
+  .indicatorCircular {
+    display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #9B9B9B;
+  margin: 0 45px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  position: relative;
+  }
+  
+
+  
+  .indicatorCircular.active-1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid red;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+  }
+
+  .indicatorCircular.active-2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+
+  }
+
+  .indicatorCircular.active-3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid green;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+
+  }
+
+  .indicatorCircular.active-4::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: -11px;
+  width: 36px;
+  height: 36px;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 1;
+
+  }
+  
+  /* fin indicadores circulares */
+  
+  
+</style>
 <body>
-<section class="queBuscamos">
-    <div id="scrollHorizontalMobile">
-        <div id="scrollHorizontal-imagenMobile">
-            <img id="imagenScroll" src="images/total_fondo_ok_nuevo.png" alt="imagenScroll" />
+    <section class="quienesSomos">
+        <div class="secuencia">
+          <div class="bloqNumeros">
+            <div class="boxSearch">
+              <input
+                class="inputSearch"
+                placeholder="Buscá la oportunidad de empleo para vos"
+                type="text"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="input-icon"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <button class="button4">Buscar</button>
+            </div>
+            <div class="containerNumeros">
+              <div class="row1">
+                <div class="h2">
+                  <p class="somos">Somos</p>
+                  <br />
+                  <p class="galicia">Galicia</p>
+                  <div class="line10"></div>
+                  <p class="mientras">Mientras estás acá...</p>
+                </div>
+              </div>
+              <div class="sliderSolapas">
+                <div class="items">
+                  <div class="item active2">
+                    <img src="images/transacciones.png" />
+                  </div>
+                  <div class="item next">
+                    <img src="images/invierten.png" />
+                  </div>
+                  <div class="item">
+                    <img src="images/descargas.png" />
+                  </div>
+                  <div class="item prev">
+                    <img src="images/prestamos.png" />
+                  </div>
+                </div>
+                <div class="sliderindicatorCircular">
+                  <div class="sliderindicatorCircular-wrapper"></div>
+                  <div class="sliderindicatorCircular-container">
+                    <div class="progress-indicatorCirculars">
+                      <div class="indicatorCircular"></div>
+                      <div class="indicatorCircular"></div>
+                      <div class="indicatorCircular"></div>
+                      <div class="indicatorCircular"></div>
+                      <div class="lineIndicator"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    <div style="margin-left: 100px; margin-top: 50px; text-align: center;">
-        <div id="barra-avanceScrollMobile" style="width: 0;"></div>
-        <div id="barra-avanceScroll_gris"></div>
-        <div id="barra-botonesScroll">
-            <button style="margin-top: 10px;" id="btn-izquierdaMobile"><span>&#8249;</span></button>
-            <button style="margin-top: 10px;" id="btn-derechaMobile"><span>&#8250;</span></button>
-        </div>
-    </div>
-</section>
+      </section>
 </body>
 <script>
-    // JavaScript
-    var contenedorImagenScrollMobile = document.getElementById("scrollHorizontal-imagenMobile");
-    var btnIzquierdaMobile = document.getElementById("btn-izquierdaMobile");
-    var btnDerechaMobile = document.getElementById("btn-derechaMobile");
+    
 
-    var touchStartX = 0;
-    var touchMoveX = 0;
-    var scrollAmount = 250; // Ajusta el valor de desplazamiento según tus necesidades
+// Inicio script de tarjetas
 
-    btnIzquierdaMobile.addEventListener("click", function() {
-        scrollToLeft();
-    });
 
-    btnDerechaMobile.addEventListener("click", function() {
-        scrollToRight();
-    });
+	const slides = document.querySelectorAll(".item");
+		let current = 0;
+		let prev = 3;
+		let next = 1;
+    let contador = 1;
 
-    function scrollToLeft() {
-        updateProgressBar();
-        contenedorImagenScrollMobile.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth",
-        });
+      const gotoNum = number => {
+			current = number;
+			prev = current - 1;
+			next = current + 1;
+      
+
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].classList.remove("active2");
+				slides[i].classList.remove("prev");
+				slides[i].classList.remove("next");
+        
+			}
+
+			if (next == 4) {
+				next = 0;
+			}
+
+			if (prev == -1) {
+				prev = 3;
+			}
+
+			slides[current].classList.add("active2");
+			slides[next].classList.add("prev");
+			slides[prev].classList.add("next");
+      
+
+
+		}
+    function contar() {
+    contador = contador % 4; 
+    gotoNum(contador)
+    contador++;
     }
 
-    function scrollToRight() {
-        updateProgressBar();
-        contenedorImagenScrollMobile.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth",
-        });
+    setInterval(contar, 2000); 
+
+
+// Fin script de tarjetas
+  // inicio indicadores circulares
+  const sliderindicatorCircular = document.querySelector('.sliderindicatorCircular');
+const sliderindicatorCircularWrapper = document.querySelector('.sliderindicatorCircular-wrapper');
+const indicatorCirculars = document.querySelectorAll('.indicatorCircular');
+
+let slideIndex = 0;
+
+// function showSlide(n) {
+//   const slidePosition = -(n * 25);
+//   sliderindicatorCircularWrapper.style.left = slidePosition + '%';
+//   indicatorCirculars.forEach((indicatorCircular, index) => {
+//     if (index === n) {
+//       indicatorCircular.classList.add('active');
+//     } else {
+//       indicatorCircular.classList.remove('active');
+//     }
+//   });
+// }
+
+function showSlide(n) {
+  const slidePosition = -(n * 25);
+  sliderindicatorCircularWrapper.style.left = slidePosition + '%';
+  indicatorCirculars.forEach((indicatorCircular, index) => {
+    if (index === n) {
+      indicatorCircular.classList.add('active-' + (index + 1));
+    } else {
+      indicatorCircular.classList.remove('active-' + (index + 1));
     }
+  });
+}
 
-    contenedorImagenScrollMobile.addEventListener("touchstart", function (event) {
-        touchStartX = event.touches[0].clientX;
-    });
+indicatorCirculars.forEach((indicatorCircular, index) => {
+  indicatorCircular.addEventListener('click', () => {
+    slideIndex = index;
+    showSlide(slideIndex);
+  });
+});
 
-    contenedorImagenScrollMobile.addEventListener("touchmove", function (event) {
-        touchMoveX = event.touches[0].clientX;
-    });
 
-    contenedorImagenScrollMobile.addEventListener("touchend", function (event) {
-        var swipeThreshold = 100;
-        var deltaX = touchMoveX - touchStartX;
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= 4) {
+    slideIndex = 0;
+  }
+  showSlide(slideIndex);
+}
 
-        if (deltaX > swipeThreshold) {
-            // Deslizar hacia la izquierda
-            scrollToLeft();
-        } else if (deltaX < -swipeThreshold) {
-            // Deslizar hacia la derecha
-            scrollToRight();
-        }
-    });
+setInterval(nextSlide, 2000);
 
-    function updateProgressBar() {
-        // Actualizar la barra de avance
-        var totalScrollWidth = contenedorImagenScrollMobile.scrollWidth - contenedorImagenScrollMobile.clientWidth;
-        var currentScrollLeft = contenedorImagenScrollMobile.scrollLeft;
-        var scrollPercentage = (currentScrollLeft / totalScrollWidth) * 100;
-        document.getElementById("barra-avanceScrollMobile").style.width = scrollPercentage + "%";
-    }
+indicatorCirculars.forEach((indicatorCircular, index) => {
+  indicatorCircular.addEventListener('click', () => {
+    slideIndex = index;
+    showSlide(slideIndex);
+  });
+});
+
+showSlide(slideIndex);
+
+// fin indicadores circulares
+
 </script>
 </html>

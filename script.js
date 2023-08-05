@@ -11,86 +11,6 @@ if (slider) {
 
 
 
-// cambio de imagenes de colores
-
-// const contenidoOculto0 = document.querySelector('#contenido-oculto0');
-// const contenedorImagen1 = document.querySelector('.Imagen1');
-// const contenidoOculto1 = document.querySelector('#contenido-oculto1');
-
-// contenedorImagen1.addEventListener('click', () => {
-//     contenidoOculto1.style.display = 'flex';
-//     contenidoOculto2.style.display = 'none';
-//     contenidoOculto3.style.display = 'none';
-//     contenidoOculto4.style.display = 'none';
-//     contenidoOculto5.style.display = 'none';
-//     contenidoOculto0.style.display = 'none';
-//     contenidoOculto1.style.animation = "fade-in 1s";
-
-// });
-
-// const contenedorImagen2 = document.querySelector('.Imagen2');
-// const contenidoOculto2 = document.querySelector('#contenido-oculto2');
-
-// contenedorImagen2.addEventListener('click', () => {
-//     contenidoOculto1.style.display = 'none';
-//     contenidoOculto2.style.display = 'flex';
-//     contenidoOculto3.style.display = 'none';
-//     contenidoOculto4.style.display = 'none';
-//     contenidoOculto5.style.display = 'none';
-//     contenidoOculto0.style.display = 'none';
-
-//     contenidoOculto2.style.animation = "fade-in 1s";
-
-// });
-
-// const contenedorImagen3 = document.querySelector('.Imagen3');
-// const contenidoOculto3 = document.querySelector('#contenido-oculto3');
-
-// contenedorImagen3.addEventListener('click', () => {
-//     contenidoOculto1.style.display = 'none';
-//     contenidoOculto2.style.display = 'none';
-//     contenidoOculto3.style.display = 'flex';
-//     contenidoOculto4.style.display = 'none';
-//     contenidoOculto5.style.display = 'none';
-//     contenidoOculto0.style.display = 'none';
-
-//     contenidoOculto3.style.animation = "fade-in 1s";
-
-// });
-
-// const contenedorImagen4 = document.querySelector('.Imagen4');
-// const contenidoOculto4 = document.querySelector('#contenido-oculto4');
-
-// contenedorImagen4.addEventListener('click', () => {
-//     contenidoOculto1.style.display = 'none';
-//     contenidoOculto2.style.display = 'none';
-//     contenidoOculto3.style.display = 'none';
-//     contenidoOculto4.style.display = 'flex';
-//     contenidoOculto5.style.display = 'none';
-//     contenidoOculto0.style.display = 'none';
-
-//     contenidoOculto4.style.animation = "fade-in 1s";
-
-// });
-
-// const contenedorImagen5 = document.querySelector('.Imagen5');
-// const contenidoOculto5 = document.querySelector('#contenido-oculto5');
-
-// contenedorImagen5.addEventListener('click', () => {
-//     contenidoOculto1.style.display = 'none';
-//     contenidoOculto2.style.display = 'none';
-//     contenidoOculto3.style.display = 'none';
-//     contenidoOculto4.style.display = 'none';
-//     contenidoOculto5.style.display = 'flex';
-//     contenidoOculto0.style.display = 'none';
-
-//     contenidoOculto5.style.animation = "fade-in 1s";
-
-// });
-
-
-
-    // fin cambio de imagenes de colores //
 
 // inicio personas talento 
 
@@ -237,79 +157,6 @@ cards.forEach((card) => {
     hoverImage.style.display = "none";
   });
 });
-    // fin de animacion de iconos
-
-// inicio zoom personas //
-// const imagenPerson1 = document.querySelector('.imagenPerson1');
-// const imagenGrande1 = document.querySelector('.imagenGrande1');
-// const imagenPerson2 = document.querySelector('.imagenPerson2');
-// const imagenGrande2 = document.querySelector('.imagenGrande2');
-// const imagenPerson3 = document.querySelector('.imagenPerson3');
-// const imagenGrande3 = document.querySelector('.imagenGrande3');
-// const imagenPerson4 = document.querySelector('.imagenPerson4');
-// const imagenGrande4 = document.querySelector('.imagenGrande4');
-// const imagenPerson5 = document.querySelector('.imagenPerson5');
-// const imagenGrande5 = document.querySelector('.imagenGrande5');
-
-
-
-
-// imagenGrande1.addEventListener('mouseover', () => {
-//   imagenPerson2.style.transform = 'translateX(100px)';
-//   imagenPerson3.style.transform = 'translateX(100px)';
-
-// });
-
-// imagenGrande1.addEventListener('mouseout', () => {
-//   imagenPerson2.style.transform = 'translateX(0)';
-//   imagenPerson3.style.transform = 'translateX(0)';
-
-// });
-
-// imagenGrande2.addEventListener('mouseover', () => {
-//   imagenPerson1.style.transform = 'translateX(-100px)';
-//   imagenPerson3.style.transform = 'translateX(100px)';
-
-// });
-
-// imagenGrande2.addEventListener('mouseout', () => {
-//   imagenPerson1.style.transform = 'translateX(0)';
-//   imagenPerson3.style.transform = 'translateX(0)';
-// });
-
-// imagenGrande3.addEventListener('mouseover', () => {
-//   imagenPerson1.style.transform = 'translateX(-100px)';
-//   imagenPerson2.style.transform = 'translateX(-100px)';
-// });
-
-// imagenGrande3.addEventListener('mouseout', () => {
-//   imagenPerson1.style.transform = 'translateX(0)';
-//   imagenPerson2.style.transform = 'translateX(0)';
-// });
-
-// imagenGrande4.addEventListener('mouseover', () => {
-//   imagenPerson1.style.transform = 'translateX(-100px)';
-//   imagenPerson3.style.transform = 'translateX(100px)';
-
-// });
-
-// imagenGrande4.addEventListener('mouseout', () => {
-//   imagenPerson1.style.transform = 'translateX(0)';
-//   imagenPerson3.style.transform = 'translateX(0)';
-// });
-
-// imagenGrande5.addEventListener('mouseover', () => {
-//   imagenPerson1.style.transform = 'translateX(-100px)';
-//   imagenPerson2.style.transform = 'translateX(-100px)';
-// });
-
-// imagenGrande5.addEventListener('mouseout', () => {
-//   imagenPerson1.style.transform = 'translateX(0)';
-//   imagenPerson2.style.transform = 'translateX(0)';
-// });
-
-
-// fin zoom personas //
 
 
 
@@ -444,12 +291,19 @@ function showSlide(n) {
   sliderindicatorCircularWrapper.style.left = slidePosition + '%';
   indicatorCirculars.forEach((indicatorCircular, index) => {
     if (index === n) {
-      indicatorCircular.classList.add('active');
+      indicatorCircular.classList.add('active-' + (index + 1));
     } else {
-      indicatorCircular.classList.remove('active');
+      indicatorCircular.classList.remove('active-' + (index + 1));
     }
   });
 }
+
+indicatorCirculars.forEach((indicatorCircular, index) => {
+  indicatorCircular.addEventListener('click', () => {
+    slideIndex = index;
+    showSlide(slideIndex);
+  });
+});
 
 function nextSlide() {
   slideIndex++;
@@ -471,85 +325,82 @@ indicatorCirculars.forEach((indicatorCircular, index) => {
 showSlide(slideIndex);
 
 // fin indicadores circulares
-    // inicio scroll horizontal
-    var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
-    var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
-    var btnIzquierda = document.getElementById("btn-izquierda");
-    var btnDerecha = document.getElementById("btn-derecha");
+   // inicio scroll horizontal
+var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
+var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
+var btnIzquierda = document.getElementById("btn-izquierda");
+var btnDerecha = document.getElementById("btn-derecha");
 
 // agregado
 var scrollVerticalEnabled = false;
- // Evento de rueda para detectar el scroll vertical en el contenedor principal
- contenedorPrincipalScroll.addEventListener("wheel", function(event) {
-    event.preventDefault();
 
-    // Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
-    if (scrollVerticalEnabled) {
-      window.scrollBy({
-        top: event.deltaY,
-        behavior: "smooth"
-      });
-    } else {
-      // Si el scroll horizontal llegó al final, habilitar el scroll vertical
-      if (contenedorImagenScroll.scrollLeft === contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth) {
-        scrollVerticalEnabled = true;
-      }
+// Evento de rueda para detectar el scroll vertical en el contenedor principal
+contenedorPrincipalScroll.addEventListener("wheel", function(event) {
+  event.preventDefault();
 
-      // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
-      contenedorImagenScroll.scrollLeft += event.deltaY;
+  // Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
+  if (scrollVerticalEnabled) {
+    window.scrollBy({
+      top: event.deltaY,
+    });
+  } else {
+    // Si el scroll horizontal llegó al final, habilitar el scroll vertical
+    if (contenedorImagenScroll.scrollLeft === contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth) {
+      scrollVerticalEnabled = true;
     }
-  });
+
+    // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
+    contenedorImagenScroll.scrollLeft += event.deltaY;
+
+    // Si se regresó a la posición inicial del scroll horizontal, deshabilitar el scroll vertical
+    if (contenedorImagenScroll.scrollLeft === 0) {
+      scrollVerticalEnabled = true;
+    }
+  }
+});
+
 // agegado
-    btnIzquierda.addEventListener("click", function() {
-      contenedorImagenScroll.scrollBy({
-        left: -250,
-        behavior: "smooth"
-      });
-    });
+btnIzquierda.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: -250,
+    behavior: "smooth"
+  });
+});
 
-    btnDerecha.addEventListener("click", function() {
-      contenedorImagenScroll.scrollBy({
-        left: 250,
-        behavior: "smooth"
-      });
-    });
+btnDerecha.addEventListener("click", function() {
+  contenedorImagenScroll.scrollBy({
+    left: 250,
+    behavior: "smooth"
+  });
+});
 
-    contenedorImagenScroll.addEventListener("wheel", function(event) {
-      event.preventDefault();
-      contenedorImagenScroll.scrollLeft += event.deltaY;
-    });
+contenedorImagenScroll.addEventListener("wheel", function(event) {
+  event.preventDefault();
+  contenedorImagenScroll.scrollLeft += event.deltaY;
+});
 
-    var barraAvance = document.getElementById("barra-avanceScroll");
+// codgido para barra de barraAvance
 
-    contenedorImagenScroll.addEventListener("scroll", function() {
-      var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
-      var scrollPosition = contenedorImagenScroll.scrollLeft;
-      var progress = (scrollPosition / scrollWidth) * 80;
+var barraAvance = document.getElementById("barra-avanceScroll");
 
-      barraAvance.style.width = progress + "%";
-      if (progress >= 80) {scrollVerticalEnabled = true} else {scrollVerticalEnabled = false}
-      if (progress >= 100) {
-        barraAvance.style.background = "orange";
-      } else {
-        barraAvance.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
-      }
+contenedorImagenScroll.addEventListener("scroll", function() {
+  var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
+  var scrollPosition = contenedorImagenScroll.scrollLeft;
+  var progress = (scrollPosition / scrollWidth) * 80;
 
-      var circulos = document.getElementsByClassName("circulo");
-      var numCirculos = circulos.length;
-      var colorIndex = Math.floor((scrollPosition / scrollWidth) * numCirculos);
-
-      for (var i = 0; i < numCirculos; i++) {
-        if (i <= colorIndex) {
-          circulos[i].style.backgroundColor = "#FA6400"; // Cambia el color de los círculos a medida que se avanza en el scroll
-          circulos[i].style.border = "4px solid #f5c3a2"; // Agrega un borde sólido de 8 px al círculo activo
-        } else {
-          circulos[i].style.backgroundColor = "#9B9B9B"; // Restablece el color de los círculos anteriores
-          circulos[i].style.border = "4px solid #F2F2F2"; // Agrega un borde sólido de 8 px al círculo activo
-
-        }
-      }
-    });
-    // fin scroll horizontal
+  barraAvance.style.width = progress + "%";
+  if (progress >= 80) {
+    scrollVerticalEnabled = true;
+  } else {
+    scrollVerticalEnabled = false;
+  }
+  if (progress >= 100) {
+    barraAvance.style.background = "orange";
+  } else {
+    barraAvance.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
+  }
+});
+// fin scroll horizontal
 // prueba inicio
 
 
@@ -579,6 +430,44 @@ slider.addEventListener('mousemove', e => {
   slider.scrollLeft = scrollLeft - walk;
   
 });
+
+
+
+//circulos de indicacion de scroll
+const circleScrollHotizontals = document.querySelectorAll(".circleScrollHotizontal");
+const sections = document.querySelectorAll("section");
+const outerCircle = document.querySelector(".circleScrollHotizontal-outer"); // Nuevo círculo exterior
+
+document.addEventListener("scroll", () => {
+  const scrollPositionVertical = window.scrollY;
+
+  sections.forEach((section, index) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (scrollPositionVertical >= sectionTop && scrollPositionVertical < sectionTop + sectionHeight) {
+  circleScrollHotizontals[index].classList.add("active");
+} else {
+  circleScrollHotizontals[index].classList.remove("active");
+}
+  });
+
+  // Actualizar el estado del círculo exterior según el círculo activo
+const activeCircleIndex = Array.from(circleScrollHotizontals).findIndex(circle => circle.classList.contains("active"));
+if (activeCircleIndex >= 0) {
+  outerCircle.style.top = `${activeCircleIndex * 24}px`;
+  outerCircle.style.display = "block";
+} else {
+  outerCircle.style.display = "none";
+}
+});
+
+
+
+
+
+// Fin circulos de indicacion de scroll
+
 
 
 // inicio scripts mobile

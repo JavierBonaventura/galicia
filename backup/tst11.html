@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./styles2Mobile.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Document</title>
+    <style>
+        /* Estilo para la barra de avance */
+        #barra-avanceScrollMobile {
+            height: 10px;
+            background: linear-gradient(to right, #FA6400, #FFAB76);
+        }
+    </style>
+</head>
+<body>
+<section class="queBuscamos">
+    <div id="scrollHorizontalMobile">
+        <div id="scrollHorizontal-imagenMobile">
+            <img id="imagenScroll" src="images/total_fondo_ok_nuevo.png" alt="imagenScroll" />
+        </div>
+    </div>
+    <div style="margin-left: 100px; margin-top: 50px; text-align: center;">
+        <div id="barra-avanceScrollMobile" style="width: 0;"></div>
+        <div id="barra-avanceScroll_gris"></div>
+        <div id="barra-botonesScroll">
+            <button style="margin-top: 10px;" id="btn-izquierdaMobile"><span>&#8249;</span></button>
+            <button style="margin-top: 10px;" id="btn-derechaMobile"><span>&#8250;</span></button>
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    // JavaScript
+    var contenedorImagenScrollMobile = document.getElementById("scrollHorizontal-imagenMobile");
+    var btnIzquierdaMobile = document.getElementById("btn-izquierdaMobile");
+    var btnDerechaMobile = document.getElementById("btn-derechaMobile");
+
+    var touchStartX = 0;
+    var touchMoveX = 0;
+    var scrollAmount = 250; // Ajusta el valor de desplazamiento según tus necesidades
+
+    btnIzquierdaMobile.addEventListener("click", function() {
+        scrollToLeft();
+    });
+
+    btnDerechaMobile.addEventListener("click", function() {
+        scrollToRight();
+    });
+
+    function scrollToLeft() {
+        updateProgressBar();
+        contenedorImagenScrollMobile.scrollBy({
+            left: -scrollAmount,
+            behavior: "smooth",
+        });
+    }
+
+    function scrollToRight() {
+        updateProgressBar();
+        contenedorImagenScrollMobile.scrollBy({
+            left: scrollAmount,
+            behavior: "smooth",
+        });
+    }
+
+    contenedorImagenScrollMobile.addEventListener("touchstart", function (event) {
+        touchStartX = event.touches[0].clientX;
+    });
+
+    contenedorImagenScrollMobile.addEventListener("touchmove", function (event) {
+        touchMoveX = event.touches[0].clientX;
+    });
+
+    contenedorImagenScrollMobile.addEventListener("touchend", function (event) {
+        var swipeThreshold = 100;
+        var deltaX = touchMoveX - touchStartX;
+
+        if (deltaX > swipeThreshold) {
+            // Deslizar hacia la izquierda
+            scrollToLeft();
+        } else if (deltaX < -swipeThreshold) {
+            // Deslizar hacia la derecha
+            scrollToRight();
+        }
+    });
+
+    function updateProgressBar() {
+        // Actualizar la barra de avance
+        var totalScrollWidth = contenedorImagenScrollMobile.scrollWidth - contenedorImagenScrollMobile.clientWidth;
+        var currentScrollLeft = contenedorImagenScrollMobile.scrollLeft;
+        var scrollPercentage = (currentScrollLeft / totalScrollWidth) * 100;
+        document.getElementById("barra-avanceScrollMobile").style.width = scrollPercentage + "%";
+    }
+</script>
+</html>
