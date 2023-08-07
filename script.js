@@ -234,6 +234,7 @@ indicators.forEach((indicator, index) => {
 
 function nextSlideHeader() {
   showSlideHeader(currentSlideHeader + 1);
+  
 }
 
 setInterval(nextSlideHeader, 3600);
