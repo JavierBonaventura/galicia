@@ -4595,6 +4595,9 @@ width: 428px;
   max-width: 428px; /* Establecer el ancho máximo */
   overflow-x: auto; /* Permitir el desplazamiento horizontal */
   scroll-snap-type: x mandatory; /* Asegurar un desplazamiento fluido */
+  height: 480px;
+
+  
 }
 /* Estilo básico para cada imagen */
 .imagen-cambiante {
@@ -4801,11 +4804,101 @@ opacity: 0;
 
 /* inicio seccion de video  */
 
-.encontraTuOportunidad{
-width: 428px;
-height: 736px;
-flex-shrink: 0;
+
+.encontraTuOportunidadSection {
+  border: solid transparent;
+  width: 428px;
+  height: 736px;
+  flex-shrink: 0;
+  position: relative;
+  background-image: url('./images/video.png'); /* Ruta a la imagen de fondo */
+background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+background-repeat: no-repeat; /* Evitar que la imagen se repita */
+background-position: center; /* Centrar la imagen en el div */
 }
+
+.encontraTuOportunidad {
+  position: absolute;
+  top: 91px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Nuevo estilo para el contenedor del SVG */
+.svg-container {
+  position: absolute;
+  top: 270px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  padding: 16px 36px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 40px;
+  border: 2px solid #FFF;
+}
+
+/* Estilo para el texto centrado debajo del contenedor SVG */
+.sumateEquipo {
+  text-align: center;
+
+
+  margin-top: 380px;
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 108.92%; /* 34.855px */
+letter-spacing: -0.64px;
+}
+
+.equipoGalicia{
+  color: #FFF;
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: 108.92%;
+letter-spacing: -1.8px;
+}
+
+
+.miraNuestras {
+margin-bottom: 50px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 25px;
+color: #FFFFFF;
+display: flex;
+justify-content: center; /* Centrar horizontalmente */
+align-items: center; /* Centrar verticalmente */
+padding: 12px 28px;
+gap: 16px;
+width: 274px;
+height: 28px;
+background: #FA6400;
+border-radius: 8px;
+text-shadow: none;
+/* Nuevo estilo para centrar */
+position: absolute;
+left: 50%;
+transform: translate(-50%, 100%);
+}
+
+
+
 
 
 /* fin seccion de video  */
@@ -4816,13 +4909,77 @@ flex-shrink: 0;
 
 
 .footer{
-display: flex;
+  display: flex;
 width: 428px;
+
 height: 371px;
 
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 50px;
+background: var(--gray-light, #F2F2F2);
+}
+.frame23{
+  display: flex;
+padding: 8px 24px;
+justify-content: center;
+align-items: center;
+gap: 16px;
+border-radius: 3px;
+border: 2px solid var(--orange, #FA6400);
+width: 221px;
+height: 24px;
+}
+.volver{
+  color: var(--orange, #FA6400);
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.4px;
+height: 24px;
+margin-bottom: 36px;
+}
+.line15{
+  width: 63px;
+height: 1px;
+background: #FA6400;
+}
+.comoSumarte{
+  display: flex;
+padding: 0px 10px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--naranja-primario, #FA6400);
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 129px;
 }
 
+.seguinosEnNuestrasRedes{
+  color: var(--naranja-primario, #FA6400);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.14px;
+}
 
+.iconos {
+width: 32px;
+margin-right: 7px;
+}
+
+.seguinos{
+  margin-top: -40px;
+}
 
 
 
