@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style=" height: 1000px; background-color: blue;">
+
+    </div>
+    <div class="frame23"  >
+        <p class="volver" id="volverBtn">
+          Volver arriba
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M5.6875 16.6562L13 9.34375L20.3125 16.6562" stroke="#FA6400" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round"/>
+          </svg>
+       
+        </p>
+      </div>
+</body><script>
+document.addEventListener("DOMContentLoaded", function() {
+    const volverBtn = document.getElementById("volverBtn");
+
+    volverBtn.addEventListener("click", function() {
+        console.log("sdffds")
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Hace que el desplazamiento sea suave
+        });
+    });
+});
+    </script>
+</html>

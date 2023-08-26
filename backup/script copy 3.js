@@ -10,20 +10,8 @@ let scrollLeft;
 if (slider) {
 
 
-// inicio funcion para voler arribar
-
-  const volverBtn = document.getElementById("volverBtn");
-
-  volverBtn.addEventListener("click", function() {
-
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth" // Hace que el desplazamiento sea suave
-      });
-  });
 
 
-// fin funcion volver arriba
 // inicio personas talento 
 
 const imagenes1 = document.querySelector('.imagenGeneral1');
@@ -249,7 +237,7 @@ function nextSlideHeader() {
   
 }
 
-setInterval(nextSlideHeader, 5000);
+setInterval(nextSlideHeader, 3600);
 
 
 // fin carousel del header
@@ -287,7 +275,7 @@ function nextslideOficinas() {
   showslideOficinas(currentslideOficinas + 1);
 }
 
-setInterval(nextslideOficinas, 5000);
+setInterval(nextslideOficinas, 3600);
 
 
 // fin carousel de Oficinas
@@ -512,7 +500,7 @@ function nextSlideHeaderMobile() {
 showSlideHeaderMobile(currentSlideHeaderMobile + 1);
 }
 
-setInterval(nextSlideHeaderMobile, 5000);
+setInterval(nextSlideHeaderMobile, 3600);
 
 
 // fin carousel del header Mobile
@@ -707,7 +695,7 @@ function nextslideOficinasMobile() {
 
 }
 
-setInterval(nextslideOficinasMobile, 5000);
+setInterval(nextslideOficinasMobile, 3600);
 
 
 // fin carousel de Oficinas
