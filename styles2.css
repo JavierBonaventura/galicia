@@ -6,8 +6,6 @@
   }
   .nuestrasOficinasTitulo {
     color: var(--gray-light, #F2F2F2);
-leading-trim: both;
-text-edge: cap;
 font-family: Inter;
 font-size: 18px;
 font-style: normal;
@@ -4125,6 +4123,8 @@ letter-spacing: -1.2px;
   height: 116px;
 }
 
+
+
 .imagen1 img,
 .imagen2 img,
 .imagen3 img,
@@ -4133,6 +4133,32 @@ letter-spacing: -1.2px;
   width: 100%;
 }
 
+.imagen1Grande,
+.imagen2Grande,
+.imagen3Grande,
+.imagen4Grande,
+.imagen5Grande
+
+{
+  width: 350px;
+  height: 320px;
+}
+
+.imagen1Grande img,
+.imagen2Grande img,
+.imagen3Grande img,
+.imagen4Grande img,
+.imagen5Grande img {
+  width: 100%;
+}
+
+.imagen1Grande,
+.imagen2Grande,
+.imagen3Grande,
+.imagen4Grande,
+.imagen5Grande {
+  display: none;
+}
 
 
 /* inicio slider oficinas */
@@ -4144,6 +4170,7 @@ flex-shrink: 0;
 
 .grupoTarjetas > div {
 margin: 16px;
+
 }
 
 
@@ -4283,8 +4310,6 @@ border-radius: 10px;
 
   .conoceMasTexto {
     color: var(--white, #FFF);
-    leading-trim: both;
-    text-edge: cap;
     font-family: Inter;
     font-size: 22px;
     font-style: normal;
@@ -4322,8 +4347,6 @@ border-radius: 10px;
 
 .nuestrasOficinasTitulo {
 color: var(--gray-light, #F2F2F2);
-leading-trim: both;
-text-edge: cap;
 font-family: Inter;
 font-size: 18px;
 font-style: normal;
@@ -4542,7 +4565,7 @@ color: #FFFFFF;
 
 .historiasSection{
   width: 428px;
-height: 730px;
+height: 640px;
 }
 
 
@@ -4558,9 +4581,9 @@ height: 50px
 }
 
 .historias {
- 
+ margin-top: 50px;
 width: 428px;
-  margin: 0 auto;
+  
   height: 550px;
   display: flex;
   justify-content: center;
@@ -4602,28 +4625,28 @@ width: 428px;
 }
 /* Estilo básico para cada imagen */
 .imagen-cambiante {
-width: 200px;
-height: 450px;
-margin-right: 10px;
+width: 350px;
+height: 397px;
+margin-right: -30px;
 transition: width 0.3s ease-in-out; /* Transición suavizada del ancho */
 position: relative; /* Añadir posición relativa para el contenedor */
 scroll-snap-align: start; /* Asegurar que las imágenes se detengan en el inicio del contenedor */
 }
 
 .imagenGeneral1Mobile {
-  border-radius: 20px;
+  width: 350px;
 }
 .imagenGeneral2Mobile {
-  border-radius: 20px;
+  width: 350px;
 }
 .imagenGeneral3Mobile {
-  border-radius: 20px;
+  width: 350px;
 }
 .imagenGeneral4Mobile {
-  border-radius: 20px;
+  width: 350px;
 }
 .imagenGeneral5Mobile {
-  border-radius: 20px;
+  width: 350px;
 }
 /* Al pasar el mouse por encima, se aumenta la escala de la imagen */
 .imagen-cambiante:hover {
@@ -4812,7 +4835,7 @@ opacity: 0;
   height: 736px;
   flex-shrink: 0;
   position: relative;
-  background-image: url('./images/video.png'); /* Ruta a la imagen de fondo */
+
 background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
 background-repeat: no-repeat; /* Evitar que la imagen se repita */
 background-position: center; /* Centrar la imagen en el div */
@@ -4832,6 +4855,15 @@ background-position: center; /* Centrar la imagen en el div */
   line-height: normal;
 }
 
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca el video detrás de los otros elementos */
+}
 /* Nuevo estilo para el contenedor del SVG */
 .svg-container {
   position: absolute;

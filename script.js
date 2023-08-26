@@ -713,79 +713,76 @@ setInterval(nextslideOficinasMobile, 5000);
 // fin carousel de Oficinas
 
 
-// inicio personas talento 
-
-const imagenes1Mobile = document.querySelector('.imagenGeneral1Mobile');
-const imagenes2Mobile = document.querySelector('.imagenGeneral2Mobile');
-const imagenes3Mobile = document.querySelector('.imagenGeneral3Mobile');
-const imagenes4Mobile = document.querySelector('.imagenGeneral4Mobile');
-const imagenes5Mobile = document.querySelector('.imagenGeneral5Mobile');
 
 
-  const imagenGrandeURL1Mobile = 'images/persona1_oscuro_grande.jpg';
-  const imagenGrandeURL2Mobile = 'images/persona2_oscuro_grande.jpg';
-  const imagenGrandeURL3Mobile = 'images/persona3_oscuro_grande.jpg';
-  const imagenGrandeURL4Mobile = 'images/persona4_oscuro_grande.jpg';
-  const imagenGrandeURL5Mobile = 'images/persona5_oscuro_grande.jpg';
+// inicio tarjetas de colores
+for (let i = 1; i <= 5; i++) {
+  const ejesBoxColors = document.querySelector(".Ejes-BoxColors");
+  const imageChica = document.querySelector(`.imagen${i}`);
+  const imageChicaGrande = document.querySelector(`.imagen${i}Grande`);
 
-  const imagenChicaURL1Mobile = 'images/persona1_oscuro_chica.jpg';
-  const imagenChicaURL2Mobile = 'images/persona2_oscuro_chica.jpg';
-  const imagenChicaURL3Mobile = 'images/persona3_oscuro_chica.jpg';
-  const imagenChicaURL4Mobile = 'images/persona4_oscuro_chica.jpg';
-  const imagenChicaURL5Mobile = 'images/persona5_oscuro_chica.jpg';
-  
-  imagenes1Mobile.addEventListener('mouseenter', () => {
-  imagenes1Mobile.src = imagenGrandeURL1Mobile;
-  // imagenes1Mobile.style.width = '338px';
-});
+  imageChica.addEventListener("click", () => {
+    // Oculta todas las imágenes grandes y chicas
+    for (let j = 1; j <= 5; j++) {
+      const otherImageChica = document.querySelector(`.imagen${j}`);
+      const otherImageChicaGrande = document.querySelector(`.imagen${j}Grande`);
+      
+      if (i !== j) {
+        otherImageChica.style.display = "block";
+        otherImageChicaGrande.style.display = "none";
+      }
+    }
 
-imagenes1Mobile.addEventListener('mouseleave', () => {
-  console.log("dasdas")
-  imagenes1Mobile.src = imagenChicaURL1Mobile;
-  // imagenes1Mobile.style.width = '200px';
-});
+    // Muestra solo la imagen grande correspondiente
+    imageChicaGrande.style.display = "block";
+    imageChica.style.display = "none";
+    ejesBoxColors.style.height = "1150px";
+  });
 
-imagenes2Mobile.addEventListener('mouseenter', () => {
-  imagenes2Mobile.src = imagenGrandeURL2Mobile;
-  // imagenes2Mobile.style.width = '338px';
-});
+  imageChicaGrande.addEventListener("click", () => {
+    // Oculta la imagen grande actual
+    imageChicaGrande.style.display = "none";
 
-imagenes2Mobile.addEventListener('mouseleave', () => {
-  imagenes2Mobile.src = imagenChicaURL2Mobile;
-  // imagenes2Mobile.style.width = '200px';
-});
+    // Restaura la visualización de la imagen chica correspondiente
+    imageChica.style.display = "block";
+    ejesBoxColors.style.height = "auto";
+  });
+}
 
-imagenes3Mobile.addEventListener('mouseenter', () => {
-  imagenes3Mobile.src = imagenGrandeURL3Mobile;
-  // imagenes3Mobile.style.width = '338px';
-});
+// fin tarjetas de colores
 
-imagenes3Mobile.addEventListener('mouseleave', () => {
-  imagenes3Mobile.src = imagenChicaURL3Mobile;
-  // imagenes3Mobile.style.width = '200px';
-});
 
-imagenes4Mobile.addEventListener('mouseenter', () => {
-  imagenes4Mobile.src = imagenGrandeURL4Mobile;
-  // imagenes4Mobile.style.width = '338px';
-});
+// Inicio personas de Talento
+function toggleImage(imageElement, originalSrc, alternateSrc) {
+  let isAlternateImage = false;
 
-imagenes4Mobile.addEventListener('mouseleave', () => {
-  imagenes4Mobile.src = imagenChicaURL4Mobile;
-  // imagenes4Mobile.style.width = '200px';
-});
+  imageElement.addEventListener("click", function () {
+    if (isAlternateImage) {
+      this.src = originalSrc;
+    } else {
+      this.src = alternateSrc;
+    }
 
-imagenes5Mobile.addEventListener('mouseenter', () => {
-  imagenes5Mobile.src = imagenGrandeURL5Mobile
-  // imagenes5Mobile.style.width = '338px';
-});
+    isAlternateImage = !isAlternateImage;
+  });
+}
 
-imagenes5Mobile.addEventListener('mouseleave', () => {
-  imagenes5Mobile.src = imagenChicaURL5Mobile;
-  // imagenes5Mobile.style.width = '200px';
-});
+const imagen1 = document.querySelector(".imagenGeneral1Mobile");
+toggleImage(imagen1, "images/persona1_mobile.png", "images/persona1_mobile_tarjeta.png");
 
-// fin personas talento 
+const imagen2 = document.querySelector(".imagenGeneral2Mobile");
+toggleImage(imagen2, "images/persona2_mobile.png", "images/persona2_mobile_tarjeta.png");
+
+const imagen3 = document.querySelector(".imagenGeneral3Mobile");
+toggleImage(imagen3, "images/persona3_mobile.png", "images/persona3_mobile_tarjeta.png");
+
+const imagen4 = document.querySelector(".imagenGeneral4Mobile");
+toggleImage(imagen4, "images/persona4_mobile.png", "images/persona4_mobile_tarjeta.png");
+
+const imagen5 = document.querySelector(".imagenGeneral5Mobile");
+toggleImage(imagen5, "images/persona5_mobile.png", "images/persona5_mobile_tarjeta.png");
+
+// Fin personas de talento
 
 
 }
