@@ -620,31 +620,34 @@ showSlideMobile(slideIndexMobile);
 
  var touchStartX = 0;
  var touchMoveX = 0;
- var scrollAmount = 250; // Ajusta el valor de desplazamiento según tus necesidades
+ var scrollAmount = 450; // Ajusta el valor de desplazamiento según tus necesidades
 
  btnIzquierdaMobile.addEventListener("click", function() {
-     scrollToLeft();
- });
-
- btnDerechaMobile.addEventListener("click", function() {
      scrollToRight();
  });
 
- function scrollToLeft() {
-     updateProgressBar();
-     contenedorImagenScrollMobile.scrollBy({
-         left: -scrollAmount,
-         behavior: "smooth",
-     });
- }
+ btnDerechaMobile.addEventListener("click", function() {
+     scrollToLeft();
+ });
 
  function scrollToRight() {
-     updateProgressBar();
-     contenedorImagenScrollMobile.scrollBy({
-         left: scrollAmount,
-         behavior: "smooth",
-     });
- }
+  contenedorImagenScrollMobile.scrollBy({
+      left: -scrollAmount,
+      behavior: "smooth",
+  });
+}
+
+function scrollToLeft() {
+  contenedorImagenScrollMobile.scrollBy({
+      left: scrollAmount,
+      behavior: "smooth",
+  });
+}
+
+contenedorImagenScrollMobile.addEventListener("scroll", function() {
+  updateProgressBar();
+});
+
 
  contenedorImagenScrollMobile.addEventListener("touchstart", function (event) {
      touchStartX = event.touches[0].clientX;
@@ -655,23 +658,24 @@ showSlideMobile(slideIndexMobile);
  });
 
  contenedorImagenScrollMobile.addEventListener("touchend", function (event) {
-     var swipeThreshold = 100;
-     var deltaX = touchMoveX - touchStartX;
+  var swipeThreshold = 100;
+  var deltaX = touchMoveX - touchStartX;
 
-     if (deltaX > swipeThreshold) {
-         // Deslizar hacia la izquierda
-         scrollToLeft();
-     } else if (deltaX < -swipeThreshold) {
-         // Deslizar hacia la derecha
-         scrollToRight();
-     }
- });
+  if (deltaX > swipeThreshold) {
+      // Deslizar hacia la derecha
+      scrollToRight();
+  } else if (deltaX < -swipeThreshold) {
+      // Deslizar hacia la izquierda
+      scrollToLeft();
+  }
+});
+
 
  function updateProgressBar() {
      // Actualizar la barra de avance
      var totalScrollWidth = contenedorImagenScrollMobile.scrollWidth - contenedorImagenScrollMobile.clientWidth;
      var currentScrollLeft = contenedorImagenScrollMobile.scrollLeft;
-     var scrollPercentage = (currentScrollLeft / totalScrollWidth) * 100;
+     var scrollPercentage = (currentScrollLeft / totalScrollWidth) * 80;
      document.getElementById("barra-avanceScrollMobile").style.width = scrollPercentage + "%";
  }
     // fin scroll horizontal
@@ -783,6 +787,22 @@ const imagen5 = document.querySelector(".imagenGeneral5Mobile");
 toggleImage(imagen5, "images/persona5_mobile.png", "images/persona5_mobile_tarjeta.png");
 
 // Fin personas de talento
+
+
+// inicio funcion para voler arribar
+
+const volverBtnMobile = document.getElementById("volverBtnMobile");
+
+volverBtnMobile.addEventListener("click", function() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Hace que el desplazamiento sea suave
+    });
+});
+
+
+// fin funcion volver arriba
 
 
 }

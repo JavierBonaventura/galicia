@@ -3211,7 +3211,7 @@ body {
 
 
 .button2 {
-  margin-left: 90px;
+margin-left: 70px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -3219,7 +3219,7 @@ body {
   align-items: center;
   padding: 6px 20px;
   gap: 7px;
-  width: 140px;
+  width: 152px;
   height: 34px;
   border: 2px solid #FA6400;
   border-radius: 5px;
@@ -3418,7 +3418,7 @@ body {
   /* Creá tu perfil */
 
 
-  width: 102px;
+  width: 115px;
   height: 19px;
 
   font-family: 'Inter';
@@ -4965,6 +4965,7 @@ width: 221px;
 height: 24px;
 }
 .volver{
+  padding-top: 12px;
   color: var(--orange, #FA6400);
 font-family: Inter;
 font-size: 20px;
@@ -4992,7 +4993,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
-width: 129px;
+width: 160px;
 }
 
 .seguinosEnNuestrasRedes{
