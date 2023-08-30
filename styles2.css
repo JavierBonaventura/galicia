@@ -3211,7 +3211,7 @@ body {
 
 
 .button2 {
-margin-left: 70px;
+margin-left: 45px;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -3454,7 +3454,7 @@ margin-left: 70px;
 /* Header */
 
 .imagenCarrouselHeader {
-  width: 428px;
+  width: 100%;
 }
 
 
@@ -3621,7 +3621,7 @@ align-self: stretch;
 .boxSearch {
 position: relative;
 display: flex;
-width: 388px;
+
 height: 60px;
 padding: 44px 10px;
 justify-content: space-between;
@@ -3641,7 +3641,7 @@ input::placeholder {
 padding-left: 40px;
 }
 .inputSearch {
-margin-left: -20px;
+
 
 padding-right: 30px;
 /* input-Search */
@@ -3661,7 +3661,7 @@ align-items: center;
 padding: 0px 20px;
 gap: 16px;
 
-width: 388px;
+width: 330px;
 height: 60px;
 
 background: #FFFFFF;
@@ -3677,7 +3677,7 @@ flex-grow: 1;
 
 color: var(--gray-medium, #696969);
 font-family: Inter;
-font-size: 14px;
+font-size: 12px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -3800,7 +3800,7 @@ background: #696969;
 /* inicio tarjetas */
 
 .slider-solapas-rotation-center {
-width: 432px;
+width: 100%;
 height: 525px;
 }
 
@@ -3826,13 +3826,13 @@ user-select: none;
 margin-left: 500px; */
 position: absolute;
 margin-top: 200px;
-margin-left: 340px;
+margin-left: 310px;
 /* top: 50%;
 left: 50%; */
 transform: translate(-50%, -0%);
 width: 197px;
 height: 197px;
-scale: 160%;
+scale: 140%;
 
 overflow: hidden;
 transition: all 300ms ease-in-out;
@@ -3862,6 +3862,8 @@ transform: translate(-60%, 0%) rotate(-10deg);
 z-index: 2;
 opacity: 0.25;
 transform: translate(-40%, 0%) rotate(10deg);
+
+
 }
 
 
@@ -3954,7 +3956,7 @@ box-sizing: border-box;
   max-width: 100%;
   margin: 0 auto;
 
-  width: 428px;
+  width: 100%;
   height: 600px;
 
   /* Gray Light */
@@ -4564,7 +4566,7 @@ color: #FFFFFF;
 /* inicio historias de taliento */
 
 .historiasSection{
-  width: 428px;
+  width: 100%;
 height: 640px;
 }
 
@@ -4582,7 +4584,7 @@ height: 50px
 
 .historias {
  margin-top: 50px;
-width: 428px;
+width: 100%;
   
   height: 550px;
   display: flex;
@@ -4616,7 +4618,7 @@ width: 428px;
  /* Contenedor para las imágenes */
  .imagen-container {
   display: flex;
-  max-width: 428px; /* Establecer el ancho máximo */
+  max-width: 100%; /* Establecer el ancho máximo */
   overflow-x: auto; /* Permitir el desplazamiento horizontal */
   scroll-snap-type: x mandatory; /* Asegurar un desplazamiento fluido */
   height: 480px;
@@ -4831,7 +4833,7 @@ opacity: 0;
 
 .encontraTuOportunidadSection {
   border: solid transparent;
-  width: 428px;
+  width: 98.5%;
   height: 736px;
   flex-shrink: 0;
   position: relative;
@@ -4943,7 +4945,7 @@ transform: translate(-50%, 100%);
 
 .footer{
   display: flex;
-width: 428px;
+width: 100%;
 
 height: 371px;
 

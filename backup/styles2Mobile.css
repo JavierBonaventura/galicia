@@ -1104,8 +1104,6 @@ flex-shrink: 0;
   
     .conoceMasTexto {
       color: var(--white, #FFF);
-      leading-trim: both;
-      text-edge: cap;
       font-family: Inter;
       font-size: 22px;
       font-style: normal;
@@ -1143,8 +1141,6 @@ flex-shrink: 0;
 
 .nuestrasOficinasTitulo {
   color: var(--gray-light, #F2F2F2);
-leading-trim: both;
-text-edge: cap;
 font-family: Inter;
 font-size: 18px;
 font-style: normal;

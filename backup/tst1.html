@@ -4,695 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
-  /* Colores para los indicadores circulares */
-.indicatorCircular.active-1 {
-  background-color: red;
-  z-index: 1;
-}
-
-.indicatorCircular.active-2 {
-  background-color: blue;
-  z-index: 1;
-
-}
-
-.indicatorCircular.active-3 {
-  background-color: green;
-  z-index: 1;
-
-}
-
-.indicatorCircular.active-4 {
-  background-color: yellow;
-  z-index: 1;
-
-}
-
-    
-  .quienesSomos {
-    /* Quienes somos (en numeros) */
-  
-    max-width: 100%;
-    margin: 0 auto;
-    width: 1280px;
-    height: 892px;
-  
-  
-    /* Inside auto layout */
-  
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-  }
-  
-  .secuencia {
-    /* Secuencia-slider */
-  
-  
-    /* position: absolute; */
-    height: 892px;
-    left: 0px;
-    top: 0px;
-  
-  }
-  
-  .bloqNumeros {
-    /* bloq-numeros-slide */
-  
-  
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-  
-  }
-  
-  .boxSearch {
-    /* box-search */
-    position: relative;
-  
-  
-    box-sizing: border-box;
-  
-    /* Auto layout */
-  
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 24px 18px;
-    gap: 16px;
-  
-  
-    width: 1120px;
-    height: 102px;
-    left: calc(50% - 1120px/2);
-    top: 40px;
-  
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 5px;
-  }
-  .input-icon {
-    color: #FA6400;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    left: 45px;
-    transform: translateY(-30%);
-    scale: 1.5;
-  }
-  input::placeholder {
-  padding-left: 40px;
-  }
-  .inputSearch {
-  
-    /* input-Search */
-  
-  
-    /* Auto layout */
-    border-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 20px;
-    gap: 16px;
-  
-    width: 838px;
-    height: 54px;
-  
-    background: #FFFFFF;
-    border-radius: 6px;
-  
-    /* Inside auto layout */
-  
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 1;
-  
-  
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 25px;
-    letter-spacing: 0.01em;
-  
-    /* Gray Medium */
-  
-    color: #696969;
-  
-  
-    /* Inside auto layout */
-  
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  
-  }
-  
-  .button4 {
-    /* button */
-  
-  
-    /* Auto layout */
-    border-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 25px;
-    gap: 10px;
-  
-    width: 230px;
-    height: 54px;
-  
-    /* Naranja Primario */
-  
-    background: #FA6400;
-    border-radius: 5px;
-  
-    /* Inside auto layout */
-  
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    line-height: 25px;
-  
-    /* Blanco */
-  
-    color: #FFFFFF;
-  }
-  
-  .sliderSolapas {
-    width: 50%;
-  
-  
-  }
-  
-  
-  .row1 {
-    width: 50%;
-  
-  }
-  
-  .somos {
-    /* Somos Galicia */
-    margin-top: 120px;
-    width: 297px;
-    height: 160px;
-    margin-left: 80px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 46px;
-    line-height: 89px;
-    /* or 193% */
-  
-    letter-spacing: -0.03em;
-  
-    /* Gray Medium */
-  
-    color: #696969;
-  
-  
-    /* Inside auto layout */
-  
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
-  
-  .containerNumeros {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .h2 {
-    /* h2 */
-  
-  
-    /* Auto layout */
-  
-  
-    /* position: absolute; */
-    width: 306px;
-    left: calc(50% - 306px/2 - 407px);
-    top: 32.17%;
-    bottom: 29.37%;
-  }
-  .line10 {
-    /* Line 10 */
-  
-  margin-top: -40px;
-  margin-left: 80px;
-  width: 90px;
-  height: 0px;
-  left: 0px;
-  top: 0px;
-  
-  /* Gray Medium light */
-  
-  border: 2px solid #9B9B9B;
-  }
-  
-  .galicia {
-    margin-left: 80px;
-    margin-top: -150px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 100px;
-    line-height: 89px;
-    /* or 193% */
-  
-    letter-spacing: -0.03em;
-  
-    /* Gray Medium */
-  
-    color: #696969;
-  }
-  
-  .mientras {
-   /* Mientras estás acá... */
-  
-  margin-left: 83px;
-  /* position: absolute; */
-  width: 306px;
-  height: 44px;
-  left: 3px;
-  top: 36px;
-  
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 44px;
-  /* identical to box height, or 138% */
-  
-  letter-spacing: -0.01em;
-  
-  /* Gray Medium */
-  
-  color: #696969;
-  
-  
-  }
-  
-  .line15 {
-    /* Line 15 */
-  
-/* margin-right: 10%; */
-  width: 30px;
-  height: 0px;
-  margin-right: 4%;
-  border: 1px solid #FA6400;
-  transform: rotate(90deg);
-  
-  /* Inside auto layout */
-  
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-  }
-  
-  
-  .slideCard {
-    position: absolute;
-    top: 0;
-    /* left: 0;
-    width: 100%;
-    height: 100%; */
-    padding-top: 800px;
-    padding-left: 150px;
-    margin: 0;
-    opacity: 0;
-    transition: 1s ease-in-out;
-    overflow: hidden;
-  }
-  
-  .slideCard img {
-    width: 100%;
-  }
-  
-  
-  
-  
-  .items {
-    user-select: none;
-  }
-  
-  /* slider tarjetas */
-  
-  .items .item {
-    /* margin-top: -1800px;
-    margin-left: 500px; */
-    position: absolute;
-    margin-top: 200px;
-    margin-left: 340px;
-    /* top: 50%;
-    left: 50%; */
-    transform: translate(-50%, -0%);
-    width: 250px;
-    height: 250px;
-    scale: 160%;
-  
-    overflow: hidden;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-    opacity: 0;
-  }
-  
-  .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .item.active2 {
-    opacity: 1;
-    z-index: 99;
-  
-  }
-  
-  .item.prev {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translate(-75%, 0%) rotate(-10deg);
-  }
-  
-  .item.next {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translate(-25%, 0%) rotate(10deg);
-  }
-  
-  
-  /* inicio indicadores circulares */
-  
-  
-  .sliderindicatorCircular-container {
-    text-align: center;
-  position: relative;
-  margin-left: -50px;
-  margin-top: 20px;
-  }
-  
-  .lineIndicator {
-  width: 310px;
-  height: 25px;
-  border-bottom: 2px solid #9B9B9B;;
-  position: relative;
-  top: -19px;
-  margin-left: -210px;
-  transform: translateX(-50%);
-  }
-  
-  
-  .sliderindicatorCircular {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
-  }
-  
-  .sliderindicatorCircular-wrapper {
-  display: flex;
-  
-  height: 100%;
-  transition: left 0.5s ease-in-out;
-  }
-  
-  
-  .progress-indicatorCirculars {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  }
-  
-  .indicatorCircular {
-    display: inline-block;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #9B9B9B;
-  margin: 0 45px;
-  cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
-  position: relative;
-  }
-  
-
-  
-  .indicatorCircular.active-1::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid red;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-  }
-
-  .indicatorCircular.active-2::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid blue;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-
-  .indicatorCircular.active-3::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid green;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-
-  .indicatorCircular.active-4::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid yellow;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-  
-  /* fin indicadores circulares */
-  
-  
-</style>
-<body>
-    <section class="quienesSomos">
-        <div class="secuencia">
-          <div class="bloqNumeros">
-            <div class="boxSearch">
-              <input
-                class="inputSearch"
-                placeholder="Buscá la oportunidad de empleo para vos"
-                type="text"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="input-icon"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <button class="button4">Buscar</button>
-            </div>
-            <div class="containerNumeros">
-              <div class="row1">
-                <div class="h2">
-                  <p class="somos">Somos</p>
-                  <br />
-                  <p class="galicia">Galicia</p>
-                  <div class="line10"></div>
-                  <p class="mientras">Mientras estás acá...</p>
-                </div>
-              </div>
-              <div class="sliderSolapas">
-                <div class="items">
-                  <div class="item active2">
-                    <img src="images/transacciones.png" />
-                  </div>
-                  <div class="item next">
-                    <img src="images/invierten.png" />
-                  </div>
-                  <div class="item">
-                    <img src="images/descargas.png" />
-                  </div>
-                  <div class="item prev">
-                    <img src="images/prestamos.png" />
-                  </div>
-                </div>
-                <div class="sliderindicatorCircular">
-                  <div class="sliderindicatorCircular-wrapper"></div>
-                  <div class="sliderindicatorCircular-container">
-                    <div class="progress-indicatorCirculars">
-                      <div class="indicatorCircular"></div>
-                      <div class="indicatorCircular"></div>
-                      <div class="indicatorCircular"></div>
-                      <div class="indicatorCircular"></div>
-                      <div class="lineIndicator"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-</body>
-<script>
-    
-
-// Inicio script de tarjetas
+    <style>
 
 
-	const slides = document.querySelectorAll(".item");
-		let current = 0;
-		let prev = 3;
-		let next = 1;
-    let contador = 1;
+        .encontraTuOportunidadSection {
+            border: solid orange;
+            width: 428px;
+            height: 736px;
+            flex-shrink: 0;
+            position: relative;
+            background-image: url('./images/video.png'); /* Ruta a la imagen de fondo */
+    background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evitar que la imagen se repita */
+    background-position: center; /* Centrar la imagen en el div */
+        }
 
-      const gotoNum = number => {
-			current = number;
-			prev = current - 1;
-			next = current + 1;
-      
+        .encontraTuOportunidad {
+            position: absolute;
+            top: 91px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #FFF;
+            text-align: center;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
 
-			for (let i = 0; i < slides.length; i++) {
-				slides[i].classList.remove("active2");
-				slides[i].classList.remove("prev");
-				slides[i].classList.remove("next");
+        /* Nuevo estilo para el contenedor del SVG */
+        .svg-container {
+            position: absolute;
+            top: 270px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: inline-flex;
+            padding: 16px 36px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 40px;
+            border: 2px solid #FFF;
+        }
+
+        /* Estilo para el texto centrado debajo del contenedor SVG */
+        .sumateEquipo {
+            text-align: center;
+
+       
+            margin-top: 420px;
+            color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 108.92%; /* 34.855px */
+letter-spacing: -0.64px;
+        }
+
+        .equipoGalicia{
+            color: #FFF;
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 600;
+line-height: 108.92%;
+letter-spacing: -1.8px;
+        }
         
-			}
-
-			if (next == 4) {
-				next = 0;
-			}
-
-			if (prev == -1) {
-				prev = 3;
-			}
-
-			slides[current].classList.add("active2");
-			slides[next].classList.add("prev");
-			slides[prev].classList.add("next");
-      
-
-
-		}
-    function contar() {
-    contador = contador % 4; 
-    gotoNum(contador)
-    contador++;
-    }
-
-    setInterval(contar, 2000); 
-
-
-// Fin script de tarjetas
-  // inicio indicadores circulares
-  const sliderindicatorCircular = document.querySelector('.sliderindicatorCircular');
-const sliderindicatorCircularWrapper = document.querySelector('.sliderindicatorCircular-wrapper');
-const indicatorCirculars = document.querySelectorAll('.indicatorCircular');
-
-let slideIndex = 0;
-
-// function showSlide(n) {
-//   const slidePosition = -(n * 25);
-//   sliderindicatorCircularWrapper.style.left = slidePosition + '%';
-//   indicatorCirculars.forEach((indicatorCircular, index) => {
-//     if (index === n) {
-//       indicatorCircular.classList.add('active');
-//     } else {
-//       indicatorCircular.classList.remove('active');
-//     }
-//   });
-// }
-
-function showSlide(n) {
-  const slidePosition = -(n * 25);
-  sliderindicatorCircularWrapper.style.left = slidePosition + '%';
-  indicatorCirculars.forEach((indicatorCircular, index) => {
-    if (index === n) {
-      indicatorCircular.classList.add('active-' + (index + 1));
-    } else {
-      indicatorCircular.classList.remove('active-' + (index + 1));
-    }
-  });
+  
+        .miraNuestras {
+    margin-bottom: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 12px 28px;
+    gap: 16px;
+    width: 310px;
+    height: 49px;
+    background: #FA6400;
+    border-radius: 8px;
+    text-shadow: none;
+    /* Nuevo estilo para centrar */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
-indicatorCirculars.forEach((indicatorCircular, index) => {
-  indicatorCircular.addEventListener('click', () => {
-    slideIndex = index;
-    showSlide(slideIndex);
-  });
-});
-
-
-function nextSlide() {
-  slideIndex++;
-  if (slideIndex >= 4) {
-    slideIndex = 0;
-  }
-  showSlide(slideIndex);
-}
-
-setInterval(nextSlide, 2000);
-
-indicatorCirculars.forEach((indicatorCircular, index) => {
-  indicatorCircular.addEventListener('click', () => {
-    slideIndex = index;
-    showSlide(slideIndex);
-  });
-});
-
-showSlide(slideIndex);
-
-// fin indicadores circulares
-
-</script>
+    </style>
+</head>
+<body>
+    <div class="encontraTuOportunidadSection">
+        <p class="encontraTuOportunidad">¡Encontrá tu oportunidad hoy!</p>
+        <!-- Contenedor para el SVG con bordes redondeados -->
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                <path d="M24.2996 21.3836H22.7639L22.2196 20.8588C24.1905 18.5727 25.2737 15.6542 25.2716 12.6358C25.2716 10.1367 24.5305 7.69367 23.1421 5.61573C21.7536 3.53778 19.7802 1.91822 17.4713 0.961848C15.1624 0.00547489 12.6218 -0.244756 10.1707 0.242799C7.71957 0.730354 5.46809 1.9338 3.70094 3.70094C1.9338 5.46809 0.730354 7.71957 0.242799 10.1707C-0.244756 12.6218 0.00547489 15.1624 0.961848 17.4713C1.91822 19.7802 3.53778 21.7536 5.61573 23.1421C7.69367 24.5305 10.1367 25.2716 12.6358 25.2716C15.7656 25.2716 18.6427 24.1246 20.8588 22.2196L21.3836 22.7639V24.2996L31.1035 34L34 31.1035L24.2996 21.3836ZM12.6358 21.3836C7.79532 21.3836 3.88794 17.4763 3.88794 12.6358C3.88794 7.79532 7.79532 3.88794 12.6358 3.88794C17.4763 3.88794 21.3836 7.79532 21.3836 12.6358C21.3836 17.4763 17.4763 21.3836 12.6358 21.3836Z" fill="white"/>
+            </svg>
+        </div>
+        <p class="sumateEquipo">Sumate a ser parte del <span class="equipoGalicia">Equipo Galicia</span></p>
+            <div class="miraNuestras">Mirá nuestras búsquedas</div>
+    </div>
+</body>
 </html>
