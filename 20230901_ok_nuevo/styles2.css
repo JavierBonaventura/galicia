@@ -3862,7 +3862,6 @@ margin-bottom: 10px;
   z-index: 2;
   opacity: 0.25;
   transform: translate(-40%, 0%) rotate(10deg);
-  scale: 100%;
   
   
   }
@@ -3870,64 +3869,70 @@ margin-bottom: 10px;
   
   
   
- /* inicio indicadores circulares */
+  /* inicio indicadores circulares */
   
   
- .sliderindicatorCircularMobile-container {
-  text-align: center;
-position: relative;
-margin-left: -50px;
-margin-top: 20px;
-}
-
-.lineIndicator {
-width: 310px;
-height: 25px;
-border-bottom: 2px solid #9B9B9B;;
-position: relative;
-top: -19px;
-margin-left: -210px;
-transform: translateX(-50%);
-}
-
-
-.sliderindicatorCircularMobile {
-position: relative;
-width: 100%;
-height: 600px;
-overflow: hidden;
-}
-
-.sliderindicatorCircularMobile-wrapper {
-display: flex;
-
-height: 100%;
-transition: left 0.5s ease-in-out;
-}
-
-
-.progress-indicatorCirculars {
-position: absolute;
-bottom: 20px;
-left: 66%;
-transform: translateX(-50%);
-display: flex;
-}
-
-.indicatorCircularMobile {
-  display: inline-block;
-width: 14px;
-height: 14px;
-border-radius: 50%;
-background-color: #9B9B9B;
-margin: 0 45px;
-cursor: pointer;
-transition: background-color0.2s ease-in-out;
-position: relative;
-}
-
-
-.indicatorCircularMobile.active-1::before {
+  .sliderindicatorCircularMobile-container {
+    text-align: center;
+  position: relative;
+  /* margin-left: -50px; */
+  margin-top: 20px;
+  width: 100%;
+  }
+  
+  .lineIndicator {
+  width: 310px;
+  height: 25px;
+  border-bottom: 2px solid #9B9B9B;;
+  position: relative;
+  top: -19px;
+  margin-left: -210px;
+  transform: translateX(-50%);
+  
+  }
+  
+  
+  .sliderindicatorCircularMobile {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  
+  }
+  
+  .sliderindicatorCircularMobile-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: left 0.5s ease-in-out;
+  }
+  
+  
+  .progress-indicatorCirculars {
+  position: absolute;
+  bottom: 20px;
+  /* left: 50%;
+  transform: translateX(-50%); */
+  display: flex;
+  }
+  
+  .indicatorCircularMobile {
+    display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #9B9B9B;
+  margin: 0 45px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+  position: relative;
+  }
+  
+  .indicatorCircularMobile.active {
+  background-color: #67B2A6;
+  }
+  
+  .indicatorCircularMobile.active::before {
   content: "";
   display: block;
   position: absolute;
@@ -3938,77 +3943,9 @@ position: relative;
   border: 2px solid #67B2A6;
   border-radius: 50%;
   box-sizing: border-box;
-  z-index: 1;
-  }
-
-  .indicatorCircularMobile.active-2::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid #F4BACC;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-  .indicatorCircularMobile.active-1 {
-    background-color: #67B2A6;
-    z-index: 1;
   }
   
-  .indicatorCircularMobile.active-2 {
-    background-color: #F4BACC;
-    z-index: 1;
-  
-  }
-  
-  .indicatorCircularMobile.active-3 {
-    background-color: #497FE7;
-    z-index: 1;
-  
-  }
-  
-  .indicatorCircularMobile.active-4 {
-    background-color: #574D89;
-    z-index: 1;
-  
-  }
-  
-  .indicatorCircularMobile.active-3::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid #497FE7;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-
-  .indicatorCircularMobile.active-4::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -11px;
-  left: -11px;
-  width: 36px;
-  height: 36px;
-  border: 2px solid #574D89;
-  border-radius: 50%;
-  box-sizing: border-box;
-  z-index: 1;
-
-  }
-
-/* fin indicadores circulares */
+  /* fin indicadores circulares */
   
   
   /* inicio scroll horizontal */
@@ -4630,7 +4567,7 @@ position: relative;
   
   .historiasSection{
     width: 100%;
-  height: 530px;
+  height: 640px;
   }
   
   

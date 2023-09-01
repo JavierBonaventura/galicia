@@ -569,31 +569,24 @@ setInterval(contarMobile, 2000);
 // Fin script de tarjetas
 
 
-// inicio indicadores circulares Mobile
-const sliderindicatorCircularMobile = document.querySelector('.sliderindicatorCircularMobile');
+// inicio indicadores circulares
 const sliderindicatorCircularWrapperMobile = document.querySelector('.sliderindicatorCircularMobile-wrapper');
 const indicatorCircularsMobile = document.querySelectorAll('.indicatorCircularMobile');
 
 let slideIndexMobile = 0;
 
 function showSlideMobile(n) {
-const slidePosition = -(n * 25);
-sliderindicatorCircularWrapperMobile.style.left = slidePosition + '%';
-indicatorCircularsMobile.forEach((indicatorCircular, index) => {
-  if (index === n) {
-    indicatorCircular.classList.add('active-' + (index + 1));
+const slidePositionMobile = -(n * 25);
+sliderindicatorCircularWrapperMobile.style.left = slidePositionMobile + '%';
+indicatorCircularsMobile.forEach((indicatorCircular, indexMobile) => {
+  if (indexMobile === n) {
+    indicatorCircular.classList.add('active');
   } else {
-    indicatorCircular.classList.remove('active-' + (index + 1));
+    indicatorCircular.classList.remove('active');
   }
 });
 }
 
-indicatorCircularsMobile.forEach((indicatorCircular, index) => {
-indicatorCircular.addEventListener('click', () => {
-  slideIndexMobile = index;
-  showSlideMobile(slideIndexMobile);
-});
-});
 
 function nextSlideMobile() {
 slideIndexMobile++;
@@ -605,9 +598,9 @@ showSlideMobile(slideIndexMobile);
 
 setInterval(nextSlideMobile, 2000);
 
-indicatorCircularsMobile.forEach((indicatorCircular, index) => {
+indicatorCircularsMobile.forEach((indicatorCircular, indexMobile) => {
 indicatorCircular.addEventListener('click', () => {
-  slideIndexMobile = index;
+  slideIndexMobile = indexMobile;
   showSlideMobile(slideIndexMobile);
 });
 });
