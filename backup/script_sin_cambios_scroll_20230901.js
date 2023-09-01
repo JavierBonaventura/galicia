@@ -338,79 +338,59 @@ indicatorCircular.addEventListener('click', () => {
 showSlide(slideIndex);
 
 // fin indicadores circulares
-// inicio scroll horizontal
+ // inicio scroll horizontal
 var contenedorPrincipalScroll = document.getElementById("scrollHorizontal");
 var contenedorImagenScroll = document.getElementById("scrollHorizontal-imagen");
 var btnIzquierda = document.getElementById("btn-izquierda");
 var btnDerecha = document.getElementById("btn-derecha");
-var divEnPantalla = document.getElementById("divEnPantalla");
 
 // agregado
 var scrollVerticalEnabled = false;
-var divVisible = false; // Variable para indicar si el div está visible
 
-// Función para verificar si el div está visible
-function checkDivVisibility(entries) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      divVisible = true;
-    } else {
-      divVisible = false;
-    }
-  });
-}
-
-// Configurar el Intersection Observer
-var observer = new IntersectionObserver(checkDivVisibility);
-observer.observe(divEnPantalla);
-
-// Resto de tu código
+// Evento de rueda para detectar el scroll vertical en el contenedor principal
 contenedorPrincipalScroll.addEventListener("wheel", function(event) {
-  event.preventDefault();
+event.preventDefault();
 
-  // Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
-  if (scrollVerticalEnabled) {
-    window.scrollBy({
-      top: event.deltaY,
-    });
-  } else {
-    // Si el scroll horizontal llegó al final, habilitar el scroll vertical
-    if (contenedorImagenScroll.scrollLeft === contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth) {
-      scrollVerticalEnabled = true;
-    }
-
-    // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
-    contenedorImagenScroll.scrollLeft += event.deltaY;
-
-    // Si se regresó a la posición inicial del scroll horizontal, deshabilitar el scroll vertical
-    if (contenedorImagenScroll.scrollLeft === 0) {
-      scrollVerticalEnabled = true;
-    }
+// Si el scroll vertical está habilitado, realizar el scroll vertical del sitio
+if (scrollVerticalEnabled) {
+  window.scrollBy({
+    top: event.deltaY,
+  });
+} else {
+  // Si el scroll horizontal llegó al final, habilitar el scroll vertical
+  if (contenedorImagenScroll.scrollLeft === contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth) {
+    scrollVerticalEnabled = true;
   }
+
+  // Realizar el scroll horizontal mientras el scroll vertical está deshabilitado
+  contenedorImagenScroll.scrollLeft += event.deltaY;
+
+  // Si se regresó a la posición inicial del scroll horizontal, deshabilitar el scroll vertical
+  if (contenedorImagenScroll.scrollLeft === 0) {
+    scrollVerticalEnabled = true;
+  }
+}
 });
 
+// agegado
 btnIzquierda.addEventListener("click", function() {
-  contenedorImagenScroll.scrollBy({
-    left: -250,
-    behavior: "smooth"
-  });
+contenedorImagenScroll.scrollBy({
+  left: -250,
+  behavior: "smooth"
+});
 });
 
 btnDerecha.addEventListener("click", function() {
-  contenedorImagenScroll.scrollBy({
-    left: 250,
-    behavior: "smooth"
-  });
+contenedorImagenScroll.scrollBy({
+  left: 250,
+  behavior: "smooth"
+});
 });
 
 contenedorImagenScroll.addEventListener("wheel", function(event) {
-  event.preventDefault();
-  if (divVisible) {
-    contenedorImagenScroll.scrollLeft += event.deltaY;
-    console.log(divVisible)
-  } else {console.log(divVisible)}
+event.preventDefault();
+contenedorImagenScroll.scrollLeft += event.deltaY;
 });
-
 
 // codgido para barra de barraAvance
 
@@ -419,7 +399,7 @@ var barraAvance = document.getElementById("barra-avanceScroll");
 contenedorImagenScroll.addEventListener("scroll", function() {
 var scrollWidth = contenedorImagenScroll.scrollWidth - contenedorPrincipalScroll.clientWidth;
 var scrollPosition = contenedorImagenScroll.scrollLeft;
-var progress = (scrollPosition / scrollWidth) * 79;
+var progress = (scrollPosition / scrollWidth) * 80;
 
 barraAvance.style.width = progress + "%";
 if (progress >= 80) {
@@ -433,8 +413,7 @@ if (progress >= 100) {
   barraAvance.style.background = "linear-gradient(to right, #FA6400, #FFAB76)";
 }
 });
-// fin scroll horizontal+
-
+// fin scroll horizontal
 // prueba inicio
 
 
