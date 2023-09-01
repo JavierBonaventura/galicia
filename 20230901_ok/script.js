@@ -756,7 +756,37 @@ imageChicaGrande.addEventListener("click", () => {
 // fin tarjetas de colores
 
 
+// Inicio personas de Talento
+function toggleImage(imageElement, originalSrc, alternateSrc) {
+let isAlternateImage = false;
 
+imageElement.addEventListener("click", function () {
+  if (isAlternateImage) {
+    this.src = originalSrc;
+  } else {
+    this.src = alternateSrc;
+  }
+
+  isAlternateImage = !isAlternateImage;
+});
+}
+
+const imagen1 = document.querySelector(".imagenGeneral1Mobile");
+toggleImage(imagen1, "images/persona1_mobile.png", "images/persona1_mobile_tarjeta.png");
+
+const imagen2 = document.querySelector(".imagenGeneral2Mobile");
+toggleImage(imagen2, "images/persona2_mobile.png", "images/persona2_mobile_tarjeta.png");
+
+const imagen3 = document.querySelector(".imagenGeneral3Mobile");
+toggleImage(imagen3, "images/persona3_mobile.png", "images/persona3_mobile_tarjeta.png");
+
+const imagen4 = document.querySelector(".imagenGeneral4Mobile");
+toggleImage(imagen4, "images/persona4_mobile.png", "images/persona4_mobile_tarjeta.png");
+
+const imagen5 = document.querySelector(".imagenGeneral5Mobile");
+toggleImage(imagen5, "images/persona5_mobile.png", "images/persona5_mobile_tarjeta.png");
+
+// Fin personas de talento
 
 
 // inicio funcion para voler arribar
