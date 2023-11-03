@@ -256,7 +256,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       showslideOficinas(currentslideOficinas + 1);
     }
 
-    setInterval(nextslideOficinas, 5000);
+    setInterval(nextslideOficinas, 8000);
 
     // fin carousel de Oficinas
 
@@ -489,7 +489,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       showSlideHeaderMobile(currentSlideHeaderMobile + 1);
     }
 
-    setInterval(nextSlideHeaderMobile, 5000);
+    setInterval(nextSlideHeaderMobile, 8000);
 
     // fin carousel del header Mobile
 
@@ -701,7 +701,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       showslideOficinasMobile(currentslideOficinasMobile + 1);
     }
 
-    setInterval(nextslideOficinasMobile, 5000);
+    setInterval(nextslideOficinasMobile, 8000);
 
     // fin carousel de Oficinas
 

@@ -4504,15 +4504,15 @@
   .historiaEmpleado {
     margin-left: 20px;
     width: 270px;
-    bottom: 45px;
+    bottom: 70px;
     left: 10px;
     position: absolute;
     color: #fff;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 29px; /* 120.833% */
+    line-height: 25px; /* 120.833% */
     letter-spacing: -0.48px;
   }
 
