@@ -1,5 +1,9 @@
 /* Styles for desktop */
 
+.hidden {
+  display: none !important;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     overflow-x: hidden;
@@ -2271,12 +2275,13 @@
     margin-top: 10px;
     width: 137px;
     height: 16px;
-
+    text-decoration: none;
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
     line-height: 27px;
+    z-index: 100;
     /* leading-trim and text-edge are draft CSS properties.
   
   Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
@@ -2597,6 +2602,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    color: gray;
   }
 
   #barra-botonesScroll button span {
@@ -2911,6 +2917,8 @@
     align-items: center;
     bottom: -40px;
     position: absolute;
+    text-decoration: underline;
+    text-decoration-color: white;
   }
 
   .textoIconoLinkedin {
@@ -2925,7 +2933,6 @@
     font-size: 10px;
     line-height: 19px;
     letter-spacing: 0.01em;
-
     color: #ffffff;
 
     /* Inside auto layout */
@@ -3798,6 +3805,7 @@
     border: none;
     outline: none;
     cursor: pointer;
+    color: gray;
   }
 
   #barra-botonesScroll button span {
@@ -4048,6 +4056,8 @@
     font-weight: 600;
     line-height: normal;
     letter-spacing: 0.44px;
+    text-decoration: none;
+    z-index: 100;
   }
 
   .textslideOficinas2 {
@@ -4523,6 +4533,8 @@
     align-items: center;
     bottom: 20px;
     position: absolute;
+    text-decoration: underline;
+    text-decoration-color: white;
   }
 
   .textoIconoLinkedin {
@@ -4537,7 +4549,6 @@
     font-size: 10px;
     line-height: 19px;
     letter-spacing: 0.01em;
-
     color: #ffffff;
 
     /* Inside auto layout */
