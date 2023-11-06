@@ -2921,7 +2921,8 @@
     text-decoration-color: white;
   }
 
-  .textoIconoLinkedin {
+  /* se crea un textoIcoloLinkedin para cada foto para resolver el click soble el link */
+  .textoIconoLinkedin1 {
     /* Ver en Linkedin */
 
     width: 182px;
@@ -2940,6 +2941,91 @@
     flex: none;
     order: 1;
     flex-grow: 0;
+    pointer-events: all
+  }
+  .textoIconoLinkedin2 {
+    /* Ver en Linkedin */
+
+    width: 182px;
+    height: 19px;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    pointer-events: all
+  }
+  .textoIconoLinkedin3 {
+    /* Ver en Linkedin */
+
+    width: 182px;
+    height: 19px;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    pointer-events: all
+  }
+  .textoIconoLinkedin4 {
+    /* Ver en Linkedin */
+
+    width: 182px;
+    height: 19px;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    pointer-events: all
+  }
+  .textoIconoLinkedin5 {
+    /* Ver en Linkedin */
+
+    width: 182px;
+    height: 19px;
+    margin-left: 10px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    pointer-events: all
   }
   .iconoLinkedin {
     /* Vector */

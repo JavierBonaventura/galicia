@@ -21,10 +21,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // inicio personas talento
 
     const imagenes1 = document.querySelector(".imagenGeneral1");
+    const textoImagenes1 = document.querySelector(".textoIconoLinkedin1");
     const imagenes2 = document.querySelector(".imagenGeneral2");
+    const textoImagenes2 = document.querySelector(".textoIconoLinkedin2");
     const imagenes3 = document.querySelector(".imagenGeneral3");
+    const textoImagenes3 = document.querySelector(".textoIconoLinkedin3");
     const imagenes4 = document.querySelector(".imagenGeneral4");
+    const textoImagenes4 = document.querySelector(".textoIconoLinkedin4");
     const imagenes5 = document.querySelector(".imagenGeneral5");
+    const textoImagenes5 = document.querySelector(".textoIconoLinkedin5");
+
 
     const imagenGrandeURL1 = "images/persona1_oscuro_grande.jpg";
     const imagenGrandeURL2 = "images/persona2_oscuro_grande.jpg";
@@ -40,7 +46,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     imagenes1.addEventListener("mouseenter", () => {
       imagenes1.src = imagenGrandeURL1;
-      // imagenes1.style.width = '338px';
+    });
+
+    textoImagenes1.addEventListener("mouseenter", () => {
+      imagenes1.src = imagenGrandeURL1;
     });
 
     imagenes1.addEventListener("mouseleave", () => {
@@ -53,6 +62,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
       imagenes2.src = imagenGrandeURL2;
       // imagenes2.style.width = '338px';
     });
+    textoImagenes2.addEventListener("mouseenter", () => {
+      imagenes2.src = imagenGrandeURL2;
+    });
 
     imagenes2.addEventListener("mouseleave", () => {
       imagenes2.src = imagenChicaURL2;
@@ -64,6 +76,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
       // imagenes3.style.width = '338px';
     });
 
+    textoImagenes3.addEventListener("mouseenter", () => {
+      imagenes3.src = imagenGrandeURL3;
+    });
+
     imagenes3.addEventListener("mouseleave", () => {
       imagenes3.src = imagenChicaURL3;
       // imagenes3.style.width = '200px';
@@ -72,6 +88,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     imagenes4.addEventListener("mouseenter", () => {
       imagenes4.src = imagenGrandeURL4;
       // imagenes4.style.width = '338px';
+    });
+    
+    textoImagenes4.addEventListener("mouseenter", () => {
+      imagenes4.src = imagenGrandeURL4;
     });
 
     imagenes4.addEventListener("mouseleave", () => {
@@ -82,6 +102,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     imagenes5.addEventListener("mouseenter", () => {
       imagenes5.src = imagenGrandeURL5;
       // imagenes5.style.width = '338px';
+    });
+
+    textoImagenes5.addEventListener("mouseenter", () => {
+      imagenes5.src = imagenGrandeURL5;
     });
 
     imagenes5.addEventListener("mouseleave", () => {
