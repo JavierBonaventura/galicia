@@ -4,6 +4,10 @@
   display: none !important;
 }
 
+.red {
+  background-color: red;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     overflow-x: hidden;
@@ -486,23 +490,19 @@
 
   .boxSearch {
     /* box-search */
+
     position: relative;
-
     box-sizing: border-box;
-
     /* Auto layout */
-
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 24px 18px;
     gap: 16px;
-
     width: 1120px;
     height: 102px;
     left: calc(50% - 1120px / 2);
     top: 40px;
-
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 5px;
   }
@@ -2941,7 +2941,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    pointer-events: all
+    pointer-events: all;
   }
   .textoIconoLinkedin2 {
     /* Ver en Linkedin */
@@ -2962,7 +2962,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    pointer-events: all
+    pointer-events: all;
   }
   .textoIconoLinkedin3 {
     /* Ver en Linkedin */
@@ -2983,7 +2983,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    pointer-events: all
+    pointer-events: all;
   }
   .textoIconoLinkedin4 {
     /* Ver en Linkedin */
@@ -3004,7 +3004,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    pointer-events: all
+    pointer-events: all;
   }
   .textoIconoLinkedin5 {
     /* Ver en Linkedin */
@@ -3025,7 +3025,7 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    pointer-events: all
+    pointer-events: all;
   }
   .iconoLinkedin {
     /* Vector */
@@ -3060,43 +3060,37 @@
   }
 
   .nav-bar {
-    max-width: 100%;
-    margin: 0 auto;
     width: 100%;
-    height: 130px;
-    background: #ffffff;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    order: 0;
-    flex-grow: 0;
-  }
-  .menuHamburguer {
-    margin-left: 20px;
-    width: 24px;
-    height: 24px;
+    justify-content: space-between;
+    padding: 10px 0;
   }
 
-  .logoGalicia {
-    margin-left: 13px;
+  .menuLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 50%;
+  }
+
+  .contenedor-button2 {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .button2 {
-    margin-left: 45px;
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    padding: 6px 20px;
-    gap: 7px;
-    width: 152px;
-    height: 34px;
+    justify-content: center;
+    width: 70%;
+    height: 10px;
+    padding: 10px;
     border: 2px solid #fa6400;
     border-radius: 5px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    gap: 7px;
   }
 
   .button1 {
@@ -3313,72 +3307,65 @@
   }
 
   /* inicio carousel del header */
-
   .textSlideHeader1 {
-    /* ¿Creés que un banco puede mejorarle la vida a las personas? */
-
     position: absolute;
-    width: 365px;
-    height: 108px;
-    left: 32px;
-    top: 338px;
-
+    width: 90%;
+    top: 65%; /* Coloca el borde superior en el 50% del contenedor */
+    left: 50%; /* Coloca el borde izquierdo en el 50% del contenedor */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Centra el elemento tanto horizontal como verticalmente */
     font-family: Inter;
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 36px; /* 112.5% */
+    line-height: 36px;
     letter-spacing: -0.32px;
-
-    /* White */
-
     color: #ffffff;
   }
 
   .textSlideHeader2 {
     /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
-
     position: absolute;
-    left: 32px;
-    top: 338px;
-    width: 365px;
-    height: 116px;
-
+    width: 90%;
+    top: 65%; /* Coloca el borde superior en el 50% del contenedor */
+    left: 50%; /* Coloca el borde izquierdo en el 50% del contenedor */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Centra el elemento tanto horizontal como verticalmente */
     font-family: Inter;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: 29px; /* 131.818% */
     letter-spacing: -0.22px;
-    /* or 121% */
-
-    /* Gray Dark */
-
     color: #383838;
   }
 
   .textSlideHeader3 {
     /* Organizo los pagos para labuena funcionalidad. Sueñocon expandirme y llevar mi proyecto a otros lugares. */
     position: absolute;
-    left: 32px;
-    top: 338px;
-    width: 365px;
-    height: 145px;
-
+    width: 90%;
+    top: 65%; /* Coloca el borde superior en el 50% del contenedor */
+    left: 50%; /* Coloca el borde izquierdo en el 50% del contenedor */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Centra el elemento tanto horizontal como verticalmente */
     font-family: Inter;
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
     line-height: 29px; /* 131.818% */
     letter-spacing: -0.22px;
-
-    /* Gray Dark */
-
     color: #383838;
   }
 
   .carouselHeader {
     position: relative;
+
     width: 100%;
     height: 670px;
     overflow: hidden;
@@ -3441,67 +3428,24 @@
   /* inicio barra buscar */
 
   .buscador {
-    height: 100px;
-    display: flex;
-    padding: 20px 0px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
+    padding: 30px 0px;
   }
 
   .boxSearch {
-    position: relative;
     display: flex;
+    justify-content: center;
+    position: relative;
+  }
 
-    height: 60px;
-    padding: 44px 10px;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .input-icon {
-    color: #fa6400;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    right: 45px;
-    transform: translateY(-30%);
-    scale: 1.5;
-  }
-  input::placeholder {
-    padding-left: 40px;
-  }
   .inputSearch {
-    padding-right: 30px;
-    /* input-Search */
-
-    /* Auto layout */
-
+    width: 90%;
+    background-color: #ffffff;
     border-bottom: solid rgba(0, 0, 0, 0.12);
     border-top: none;
     border-left: none;
     border-right: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 20px;
-    gap: 16px;
-
-    width: 330px;
-    height: 60px;
-
-    background: #ffffff;
+    padding: 20px 10px;
     border-radius: 6px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 1;
-
     color: var(--gray-medium, #696969);
     font-family: Inter;
     font-size: 12px;
@@ -3509,16 +3453,15 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.14px;
+  }
 
-    /* Gray Medium */
-
-    color: #696969;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+  .input-icon {
+    position: absolute;
+    right: 30px;
+    top: 16px;
+    width: 25px;
+    height: 25px;
+    color: #fa6400;
   }
 
   .button4 {
@@ -3561,26 +3504,13 @@
   /* fin barra buscar */
 
   /* inicio somos galicia */
-
-  .somosGalicia {
-    height: 681px;
-    display: flex;
-    padding: 50px 0px 66px 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
   .somosGaliciaBoxTexto {
     display: flex;
-    width: 386px;
-    height: 132px;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
   }
 
   .somosGaliciaTexto1 {
-    margin-top: -5px;
     width: 100%;
     text-align: center;
     color: var(--gray-medium, #696969);
@@ -3588,7 +3518,6 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
     letter-spacing: -1.44px;
   }
 
@@ -3597,7 +3526,7 @@
   }
 
   .somosGaliciaTexto2 {
-    margin-top: 0px;
+    margin-top: 8px;
     width: 100%;
     text-align: center;
     color: var(--gray-medium, #696969);
@@ -3605,7 +3534,6 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    line-height: 44px; /* 183.333% */
   }
 
   .line {
@@ -3619,37 +3547,19 @@
 
   /* inicio tarjetas */
 
-  .slider-solapas-rotation-center {
-    width: 100%;
-    height: 525px;
-  }
-
-  .sliderSolapas {
-    width: 50%;
-    margin-left: -14%;
-    margin-top: -35%;
-  }
-
   .items {
     user-select: none;
+    padding: 3rem 0px;
+    position: relative;
   }
 
   /* slider tarjetas */
 
   .items .itemMobile {
-    /* margin-top: -1800px;
-  margin-left: 500px; */
     position: absolute;
-    margin-top: 200px;
-    margin-left: 310px;
-    /* top: 50%;
-  left: 50%; */
-    transform: translate(-50%, -0%);
-    width: 197px;
-    height: 197px;
-    scale: 140%;
-
-    overflow: hidden;
+    top: 100%; /* Coloca el borde superior en el 50% del contenedor */
+    left: 50%; /* Coloca el borde izquierdo en el 50% del contenedor */
+    transform: translate(-50%, -50%);
     transition: all 300ms ease-in-out;
     z-index: -1;
     opacity: 0;
@@ -3684,7 +3594,6 @@
   .sliderindicatorCircularMobile-container {
     text-align: center;
     position: relative;
-    margin-left: -50px;
     margin-top: 20px;
   }
 
@@ -3699,15 +3608,14 @@
   }
 
   .sliderindicatorCircularMobile {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 600px;
+    height: 300px;
     overflow: hidden;
   }
 
   .sliderindicatorCircularMobile-wrapper {
     display: flex;
-
     height: 100%;
     transition: left 0.5s ease-in-out;
   }
@@ -3715,7 +3623,7 @@
   .progress-indicatorCirculars {
     position: absolute;
     bottom: 20px;
-    left: 66%;
+    left: 64%;
     transform: translateX(-50%);
     display: flex;
   }
@@ -3814,17 +3722,9 @@
   .queBuscamos {
     /* Que buscamos */
     max-width: 100%;
-    margin: 0 auto;
-
+    margin: 400px auto 0px auto;
     width: 100%;
-    height: 600px;
-
-    /* Gray Light */
-
     background: #f2f2f2;
-
-    /* Inside auto layout */
-
     flex: none;
     order: 3;
     flex-grow: 0;
@@ -3834,7 +3734,6 @@
     background-color: #f2f2f2;
     position: relative;
     overflow-x: hidden;
-
     height: 600px;
     margin: 0 auto;
   }
@@ -3878,7 +3777,7 @@
   }
 
   #barra-botonesScroll {
-    margin-right: 25%;
+    width: 100%;
     display: flex;
     justify-content: center;
   }
@@ -3924,20 +3823,15 @@
 
   .Ejes-BoxColors {
     display: flex;
-    padding: 67px 34px;
     flex-direction: column;
     align-items: center;
     gap: 42px;
     background: #f2f2f2;
-    height: 955px;
   }
 
   .frase {
-    margin-top: 100px;
-    width: 360px;
-    height: 135px;
+    margin-top: 50px;
     display: flex;
-    padding: 0px 8px 10px 9px;
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -3971,7 +3865,7 @@
   .imagen3,
   .imagen4,
   .imagen5 {
-    width: 350px;
+    width: 310px;
     height: 116px;
   }
 
@@ -3988,7 +3882,7 @@
   .imagen3Grande,
   .imagen4Grande,
   .imagen5Grande {
-    width: 350px;
+    width: 310px;
     height: 320px;
   }
 
@@ -4050,11 +3944,9 @@
     /* ¿Creés que un banco puede mejorarle la vida a las personas? */
 
     position: absolute;
-    width: 667px;
     height: 96px;
     left: 35px;
     top: 050px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
@@ -4068,10 +3960,9 @@
   }
 
   .sustentables {
-    width: 309px;
     color: var(--white, #fff);
     font-family: Inter;
-    font-size: 56px;
+    font-size: 53px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -4085,7 +3976,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 26px; /* 118.182% */
-    width: 382px;
   }
 
   .linesOficinas1 {
@@ -4109,7 +3999,6 @@
     font-weight: 600;
     line-height: 24px; /* 133.333% */
     letter-spacing: 0.18px;
-    width: 365px;
   }
 
   .conoceMas {
@@ -4121,11 +4010,9 @@
     align-items: center;
     padding: 16px 24px;
     gap: 10px;
-
     position: absolute;
     width: 185px;
     height: 25px;
-
     top: 558px;
 
     /* Orange */
@@ -4152,7 +4039,6 @@
     position: absolute;
     left: 35px;
     top: 050px;
-    width: 575px;
     height: 160px;
 
     font-family: "Inter";
@@ -4181,21 +4067,17 @@
 
   .espaciosMedida {
     /* Espacios a tu medida */
-
     /* position: absolute; */
     width: 309px;
     height: 77px;
-
     color: var(--white, #fff);
     font-family: Inter;
-    font-size: 56px;
+    font-size: 53px;
     font-style: normal;
     font-weight: 700;
     line-height: 56px; /* 100% */
     letter-spacing: -1.68px;
-
     /* White */
-
     color: #ffffff;
   }
 
@@ -4204,11 +4086,9 @@
 
     /* 
   position: absolute; */
-    width: 375px;
     height: 78px;
     left: 80px;
     top: 280px;
-
     color: var(--white, #fff);
     font-family: Inter;
     font-size: 22px;
@@ -4234,11 +4114,9 @@
     /* En las oficinas vas a encontrar espacios que se acomoden a tus necesidades: gimnasios, comedores, consultorios médicos, lactarios. */
 
     /* position: absolute; */
-    width: 365px;
     height: 96px;
     left: 80px;
     top: 460px;
-
     color: var(--white, #fff);
     font-family: Inter;
     font-size: 18px;
@@ -4250,22 +4128,16 @@
 
   .textslideOficinas3 {
     /* ¿Creés que un banco puede mejorarle la vida a las personas? */
-
     position: absolute;
-    width: 667px;
     height: 96px;
     left: 35px;
     top: 050px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
     letter-spacing: -0.01em;
-
-    /* White */
-
     color: #ffffff;
   }
 
@@ -4273,11 +4145,9 @@
     /* Titulo para sucursales */
 
     /* position: absolute; */
-    width: 655px;
     height: 77px;
     left: 80px;
     top: 195px;
-
     font-family: "Inter";
     font-style: normal;
     font-weight: 700;
@@ -4299,11 +4169,8 @@
     align-items: center;
     padding: 12px 24px;
     gap: 10px;
-
     position: absolute;
-    width: 185px;
     height: 40px;
-
     top: 488px;
 
     /* Orange */
@@ -4661,11 +4528,10 @@
 
   .encontraTuOportunidadSection {
     border: solid transparent;
-    width: 98.5%;
+    width: 98%;
     height: 736px;
     flex-shrink: 0;
     position: relative;
-
     background-size: cover; /* Ajustar la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evitar que la imagen se repita */
     background-position: center; /* Centrar la imagen en el div */
