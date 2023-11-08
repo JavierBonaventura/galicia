@@ -31,7 +31,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const imagenes5 = document.querySelector(".imagenGeneral5");
     const textoImagenes5 = document.querySelector(".textoIconoLinkedin5");
 
-
     const imagenGrandeURL1 = "images/persona1_oscuro_grande.jpg";
     const imagenGrandeURL2 = "images/persona2_oscuro_grande.jpg";
     const imagenGrandeURL3 = "images/persona3_oscuro_grande.jpg";
@@ -89,7 +88,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       imagenes4.src = imagenGrandeURL4;
       // imagenes4.style.width = '338px';
     });
-    
+
     textoImagenes4.addEventListener("mouseenter", () => {
       imagenes4.src = imagenGrandeURL4;
     });
